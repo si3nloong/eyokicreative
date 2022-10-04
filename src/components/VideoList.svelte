@@ -2,6 +2,8 @@
 	import Video from './Video.svelte';
 
 	export let items: any[] = [];
+
+	items = items.slice(0, 4);
 </script>
 
 <ul class="video-list">
@@ -20,15 +22,16 @@
 
 		li {
 			cursor: default;
-			width: 18%;
-			height: 220px;
-			background: #0d101b;
-			// border: 1px solid #0d101b;
-			// transition: all 0.5s;
+			border: 1px solid red;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 22%;
+			transition: all 0.5s;
 
-			// &:hover {
-			// 	transform: scale(1.1);
-			// }
+			&:hover {
+				transform: scale(1.1);
+			}
 		}
 
 		@media screen and (max-width: 600px) {
