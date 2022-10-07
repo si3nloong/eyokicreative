@@ -13,45 +13,6 @@
 			time: '11:00'
 		},
 		{
-			id: '1',
-			title: `My Ba's Radio`,
-			shortDesc: 'An ailing father living in a ',
-			imageUrl: '/images/myba-cover.jpg',
-			labels: ['Short Film'],
-			link: '',
-			time: '11:00'
-		},
-		{
-			id: '1',
-			title: `My Ba's Radio`,
-			shortDesc: 'An ailing father living in a ',
-			imageUrl: '/images/myba-cover.jpg',
-			labels: ['Short Film'],
-			link: '',
-			time: '11:00'
-		},
-		{
-			id: '1',
-			title: `My Ba's Radio`,
-			shortDesc: 'An ailing father living in a ',
-			imageUrl: '/images/myba-cover.jpg',
-			labels: ['Short Film'],
-			link: '',
-			time: '11:00'
-		}
-	];
-
-	const popularVideos = [
-		{
-			id: '1',
-			title: `My Ba's Radio`,
-			shortDesc: 'An ailing father living in a ',
-			imageUrl: '/images/myba-cover.jpg',
-			labels: ['Short Film'],
-			link: '',
-			time: '11:00'
-		},
-		{
 			id: '2',
 			title: `My Ba's Radio`,
 			shortDesc: 'An ailing father living in a ',
@@ -77,6 +38,18 @@
 			labels: ['Short Film'],
 			link: '',
 			time: '11:00'
+		}
+	];
+
+	const popularVideos = [
+		{
+			id: '1',
+			title: `SK magic | Truth or Myth?`,
+			shortDesc: '',
+			imageUrl: '/images/skmagic-cover.png',
+			labels: ['Short Film'],
+			link: 'qDXHVPzqSMQ',
+			time: '04:20'
 		}
 	];
 
