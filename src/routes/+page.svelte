@@ -1,14 +1,131 @@
 <script lang="ts">
-	import VideoPlayer from '../components/VideoPlayer.svelte';
 	import PlayList from '../components/PlayList.svelte';
 	import VideoList from '../components/VideoList.svelte';
 
+	const latestVideos = [
+		{
+			id: '1',
+			title: `My Ba's Radio`,
+			shortDesc: 'An ailing father living in a ',
+			imageUrl: '/images/myba-cover.jpg',
+			labels: ['Short Film'],
+			link: '',
+			time: '11:00'
+		},
+		{
+			id: '1',
+			title: `My Ba's Radio`,
+			shortDesc: 'An ailing father living in a ',
+			imageUrl: '/images/myba-cover.jpg',
+			labels: ['Short Film'],
+			link: '',
+			time: '11:00'
+		},
+		{
+			id: '1',
+			title: `My Ba's Radio`,
+			shortDesc: 'An ailing father living in a ',
+			imageUrl: '/images/myba-cover.jpg',
+			labels: ['Short Film'],
+			link: '',
+			time: '11:00'
+		},
+		{
+			id: '1',
+			title: `My Ba's Radio`,
+			shortDesc: 'An ailing father living in a ',
+			imageUrl: '/images/myba-cover.jpg',
+			labels: ['Short Film'],
+			link: '',
+			time: '11:00'
+		}
+	];
+
 	const popularVideos = [
-		{ id: '1', title: 'Just like Fire', shortDesc: 'Something fire', imageUrl: '', time: '08:00' },
-		{ id: '2', title: 'Just like Fire', shortDesc: 'Something fire', imageUrl: '', time: '12:89' },
-		{ id: '3', title: 'Just like Fire', shortDesc: 'Something fire', imageUrl: '', time: '06:88' },
-		{ id: '4', title: 'Just like Fire', shortDesc: 'Something fire', imageUrl: '', time: '01:11' },
-		{ id: '5', title: 'Just like Fire', shortDesc: 'Something fire', imageUrl: '', time: '03:77' }
+		{
+			id: '1',
+			title: `My Ba's Radio`,
+			shortDesc: 'An ailing father living in a ',
+			imageUrl: '/images/myba-cover.jpg',
+			labels: ['Short Film'],
+			link: '',
+			time: '11:00'
+		},
+		{
+			id: '2',
+			title: `My Ba's Radio`,
+			shortDesc: 'An ailing father living in a ',
+			imageUrl: '/images/myba-cover.jpg',
+			labels: ['Short Film'],
+			link: '',
+			time: '11:00'
+		},
+		{
+			id: '3',
+			title: `My Ba's Radio`,
+			shortDesc: 'An ailing father living in a ',
+			imageUrl: '/images/myba-cover.jpg',
+			labels: ['Short Film'],
+			link: '',
+			time: '11:00'
+		},
+		{
+			id: '4',
+			title: `My Ba's Radio`,
+			shortDesc: 'An ailing father living in a ',
+			imageUrl: '/images/myba-cover.jpg',
+			labels: ['Short Film'],
+			link: '',
+			time: '11:00'
+		}
+	];
+
+	const impactfulVideos = [
+		{
+			id: '1',
+			title: `My Ba's Radio`,
+			shortDesc: 'An ailing father living in a ',
+			imageUrl: '/images/myba-cover.jpg',
+			labels: ['Short Film'],
+			link: '7wQbAer9g4k',
+			time: '11:00'
+		},
+		{
+			id: '2',
+			title: 'VIVO V20 SE Aquamarine',
+			shortDesc: 'Something fire',
+			imageUrl: '/images/vivo-cover.png',
+			labels: ['Ads'],
+			link: 'vvuvjRDAJAk',
+			time: '00:30'
+		},
+		{
+			id: '3',
+			title: 'Nespresso x RED Hong Yi - Doing Is Everything',
+			shortDesc: 'Something fire',
+			imageUrl: '/images/nespresso-cover.jpeg',
+			labels: ['Ads'],
+			link: '7CUmtwdDbi4',
+			time: '04:36'
+		},
+		{
+			id: '4',
+			title: 'The Merdeka dUCk by Kenji Chai',
+			shortDesc: 'Something fire',
+			imageUrl: '/images/duck-cover.png',
+			labels: ['Ads'],
+			link: 'W19dreFxsbQ',
+			time: '01:06'
+		},
+		{
+			id: '5',
+			title: 'Sangka Baik',
+			shortDesc: 'Something fire',
+			imageUrl: '/images/allianz-cover.png',
+			labels: ['Ads'],
+			link: 'L7dfKZ4bBPU',
+			time: '02:17'
+		}
 	];
 </script>
 
@@ -18,18 +135,18 @@
 </section>
 
 <section>
-	<h3>Popular work you may like</h3>
-	<VideoList items={popularVideos} />
+	<h3>Latest work you may like</h3>
+	<VideoList items={latestVideos} />
 </section>
 
 <section class="works">
 	<div>
-		<h3>Most Popular on This Week</h3>
+		<h3>Most Popular on This Year (2022)</h3>
 		<PlayList items={popularVideos} />
 	</div>
 	<div>
 		<h3>Most Impactful</h3>
-		<PlayList items={popularVideos} />
+		<PlayList items={impactfulVideos} />
 	</div>
 </section>
 
@@ -39,11 +156,14 @@
 		font-size: 48px;
 		line-height: 1.1;
 		width: 60%;
-		margin-bottom: 1.5rem;
 	}
 
 	.headline {
 		padding: 6rem 0 8rem;
+
+		@media screen and (max-width: 600px) {
+			padding: 0 0 3.5rem;
+		}
 	}
 
 	.highlight {
