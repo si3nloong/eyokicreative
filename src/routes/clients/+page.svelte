@@ -3,7 +3,7 @@
 </script>
 
 <script lang="ts">
-	import Headline from '../../components/Headline.svelte';
+	import Headline from '$lib/components/Headline.svelte';
 
 	// TODO: set to prerender page
 	const clients = [

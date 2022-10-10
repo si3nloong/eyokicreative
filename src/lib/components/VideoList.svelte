@@ -7,7 +7,7 @@
 </script>
 
 <ul class="video-list">
-	{#each items as item}
+	{#each items as item (item.id)}
 		<li><Video /></li>
 	{/each}
 </ul>

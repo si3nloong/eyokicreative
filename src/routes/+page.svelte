@@ -1,6 +1,6 @@
 <script lang="ts">
-	import PlayList from '../components/PlayList.svelte';
-	import VideoList from '../components/VideoList.svelte';
+	import PlayList from '$lib/components/PlayList.svelte';
+	import VideoList from '$lib/components/VideoList.svelte';
 
 	const latestVideos = [
 		{
@@ -102,26 +102,28 @@
 	];
 </script>
 
-<section class="headline">
-	<h1><span class="highlight">Eyoki Creative</span> is a Next Social Media Production House</h1>
-	<!-- <h2>We are Fun and Young.</h2> -->
-</section>
+<div style="min-height: 500px;">
+	<section class="headline">
+		<h1><span class="highlight">Eyoki Creative</span> is Creative Production House</h1>
+		<!-- <h2>We are Fun and Young.</h2> -->
+	</section>
 
-<section>
-	<h3>Latest work you may like</h3>
-	<VideoList items={latestVideos} />
-</section>
+	<section>
+		<h3>Latest work you may like</h3>
+		<VideoList items={latestVideos} />
+	</section>
 
-<section class="works">
-	<div>
-		<h3>Most Popular on This Year (2022)</h3>
-		<PlayList items={popularVideos} />
-	</div>
-	<div>
-		<h3>Most Impactful</h3>
-		<PlayList items={impactfulVideos} />
-	</div>
-</section>
+	<section class="works">
+		<div>
+			<h3>Most Popular on This Year (2022)</h3>
+			<PlayList items={popularVideos} />
+		</div>
+		<div>
+			<h3>Most Impactful</h3>
+			<PlayList items={impactfulVideos} />
+		</div>
+	</section>
+</div>
 
 <!-- <VideoPlayer /> -->
 <style lang="scss">

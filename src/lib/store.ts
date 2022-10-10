@@ -11,8 +11,20 @@ function createStore() {
 	const { subscribe, set, update } = writable<MediaPlayer>({ show: false });
 
 	let player: YouTubePlayer | null;
-	// if (browser) {
-	// }
+
+	const stopVideo = () => {
+		player?.stop();
+		player = null;
+		update((v) => Object.assign(v, { show: false }));
+	};
+
+	if (browser) {
+		window.addEventListener('keyup', (e) => {
+			if (e.key == 'Escape') {
+				stopVideo();
+			}
+		});
+	}
 
 	return {
 		play: (id: string) => {
@@ -23,11 +35,7 @@ function createStore() {
 				player?.load(id, true);
 			});
 		},
-		stop: () => {
-			player?.stop();
-			player = null;
-			update((v) => Object.assign(v, { show: false }));
-		},
+		stop: stopVideo,
 		subscribe,
 		reset: () => set({ show: false })
 	};

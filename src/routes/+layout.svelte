@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { mediaPlayer } from '$lib/store';
+	import Menu from '$lib/components/Menu.svelte';
 	import { fade } from 'svelte/transition';
 	import './app.scss';
 </script>
@@ -42,17 +43,20 @@
 				<li><a href="/contact-us">Contact Us</a></li>
 			</ul>
 		</nav>
+		<span><Menu /></span>
 	</header>
 
 	<!-- Body section -->
-	<div style="min-height: 500px;"><slot /></div>
+	<slot />
 
 	<!-- Footer section -->
 	<footer>
 		<div>
 			<p>Copyright Reserved © 2022 Eyoki Creative.</p>
 			<div>Registered in Malaysia. (002865528-A)</div>
-			<p>Made by <a href="https://github.com/si3nloong" target="_blank">SianLoong</a>.</p>
+			<p>
+				Designed & Made by <a href="https://github.com/si3nloong" target="_blank">SianLoong</a>.
+			</p>
 		</div>
 
 		<!-- Social Media section -->
@@ -230,9 +234,9 @@
 		}
 
 		@media screen and (max-width: 600px) {
+			text-align: center;
 			flex-direction: column-reverse;
 			padding-bottom: 40px;
-			// align-items: flex-start;
 		}
 	}
 </style>
