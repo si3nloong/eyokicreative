@@ -33,7 +33,7 @@
 				<img src="logo.png" alt="Eyoki Creative" />
 			</a></span
 		>
-		<a class="cta" href="/quotation">Ask for Quotation</a>
+		<!-- <a class="cta" href="/quotation">Ask for Quotation</a> -->
 		<!-- <a href="/quotation">Hamburger</a> -->
 		<nav>
 			<ul class="nav-list">
@@ -43,7 +43,7 @@
 				<li><a href="/contact-us">Contact Us</a></li>
 			</ul>
 		</nav>
-		<span><Menu /></span>
+		<nav class="mini-nav-list"><Menu /></nav>
 	</header>
 
 	<!-- Body section -->
@@ -172,6 +172,10 @@
 			}
 		}
 
+		.mini-nav-list {
+			display: none;
+		}
+
 		.nav-list {
 			display: flex;
 			align-items: center;
@@ -189,6 +193,10 @@
 
 			nav {
 				display: none;
+			}
+
+			.mini-nav-list {
+				display: block;
 			}
 		}
 	}
