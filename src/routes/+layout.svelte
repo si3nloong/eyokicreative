@@ -115,7 +115,7 @@
 	<div class="overlay" in:fade on:click={mediaPlayer.stop}><div id="video" /></div>
 {/if}
 
-<style lang="scss" global>
+<style lang="scss">
 	.overlay {
 		position: fixed;
 		top: 0;
