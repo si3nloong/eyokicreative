@@ -4,6 +4,9 @@
 		title: string;
 		shortDesc: string;
 		imageUrl: string;
+		directors: string[];
+		writers?: string[];
+		casts: string[];
 		labels: string[];
 		link: string;
 		time: string;
@@ -12,13 +15,17 @@
 
 <script lang="ts">
 	import { mediaPlayer } from '$lib/store';
+	import { fade } from 'svelte/transition';
 
 	import Image from './Image.svelte';
 
 	export let items: Item[] = [];
 
-	const onPreview = (e: Event) => {
-		console.log(e);
+	let selectedItem: Item | null = null;
+	let showDialog = false;
+	const onPreview = (item: Item) => () => {
+		selectedItem = item;
+		showDialog = true;
 	};
 
 	const onPlay = (item: Item) => (e: Event) => {
@@ -28,7 +35,7 @@
 
 <ul>
 	{#each items as item (item.id)}
-		<li on:click={onPreview}>
+		<li on:click={onPreview(item)}>
 			<Image src={item.imageUrl} alt="" />
 			<div class="body">
 				<div class="caption">{item.title}</div>
@@ -49,7 +56,39 @@
 	{/each}
 </ul>
 
+{#if showDialog && selectedItem}
+	<div class="modal">
+		<div class="overlay" in:fade out:fade on:click|stopPropagation={() => (showDialog = false)} />
+		<div class="dialog">
+			<div class="cover">
+				<footer>
+					<button class="play-btn">Play</button>
+				</footer>
+			</div>
+			<div class="content">
+				<section class="main">
+					<h2>{selectedItem.title}</h2>
+					<div>Client</div>
+					<div>{selectedItem.time}</div>
+					<div>{selectedItem.shortDesc}</div>
+				</section>
+				<section class="info">
+					<!-- <div>Genre</div> -->
+					<div><span class="label">Director:</span>{selectedItem.directors.join(', ')}</div>
+					{#if selectedItem.writers}
+						<div><span class="label">Writers:</span>{selectedItem.writers.join(', ')}</div>
+					{/if}
+					<div><span class="label">Cast:</span>{selectedItem.casts.join(', ')}</div>
+					<div><span class="label">Produced By:</span> Eyoki Creative</div>
+				</section>
+			</div>
+		</div>
+	</div>
+{/if}
+
 <style lang="scss">
+	$paddingH: 2rem;
+
 	ul {
 		color: #424653;
 		list-style: none;
@@ -58,6 +97,7 @@
 		flex-direction: column;
 
 		li {
+			cursor: default;
 			display: flex;
 			align-items: center;
 			padding: 0.65rem 0;
@@ -95,5 +135,85 @@
 		li:last-child {
 			border: none;
 		}
+	}
+
+	.modal {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 10;
+
+		.overlay {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.3);
+		}
+
+		.dialog {
+			position: relative;
+			// display: flex;
+			top: 2rem;
+			background: #fff;
+			width: 80%;
+			min-height: 100px;
+			margin: 0 auto;
+			overflow: hidden;
+			border-radius: 5px;
+			box-shadow: 0 0 26px rgba(0, 0, 0, 0.3);
+
+			.cover {
+				position: relative;
+				height: 350px;
+				background: #f5f5f5;
+			}
+
+			.content {
+				display: flex;
+				padding-bottom: 100px;
+				width: 100%;
+
+				.main {
+					flex-grow: 1;
+					padding: 1rem $paddingH;
+				}
+
+				.info {
+					min-width: 280px;
+					max-width: 280px;
+					padding: 1rem $paddingH;
+					padding-left: 0;
+				}
+			}
+
+			footer {
+				position: absolute;
+				bottom: 5%;
+				left: $paddingH;
+			}
+			.play-btn {
+				display: block;
+				border: none;
+				min-height: 32px;
+				padding: 0 2.5rem;
+				border-radius: 3px;
+				background: red;
+				color: #fff;
+			}
+		}
+	}
+
+	.label {
+		font-size: 12px;
+		color: #3a3d42;
+		margin-right: 6px;
 	}
 </style>

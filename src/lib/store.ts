@@ -1,6 +1,5 @@
 import { browser } from '$app/environment';
 import { writable } from 'svelte/store';
-// import type YouTubePlayer from 'yt-player';
 import YouTubePlayer from 'yt-player';
 
 interface MediaPlayer {

@@ -1,5 +1,4 @@
-<script>
-	// your script goes here
+<script lang="ts">
 </script>
 
 <h1><slot /></h1>
