@@ -2,11 +2,15 @@
 	type Item = {
 		id: string;
 		title: string;
+		cover: string;
 		shortDesc: string;
 		imageUrl: string;
 		directors: string[];
 		writers?: string[];
+		dps: string[];
+		editors: string[];
 		casts: string[];
+		produces: string[];
 		labels: string[];
 		link: string;
 		time: string;
@@ -15,13 +19,17 @@
 
 <script lang="ts">
 	import { mediaPlayer } from '$lib/store';
+	import YouTubePlayer from 'yt-player';
 	import { fade } from 'svelte/transition';
 
 	import Image from './Image.svelte';
+	import TagList from './TagList.svelte';
 
 	export let items: Item[] = [];
 
+	let videoPLayer: HTMLDivElement;
 	let selectedItem: Item | null = null;
+	let player: YouTubePlayer;
 	let showDialog = false;
 	const onPreview = (item: Item) => () => {
 		selectedItem = item;
@@ -31,12 +39,29 @@
 	const onPlay = (item: Item) => (e: Event) => {
 		mediaPlayer.play(item.link);
 	};
+
+	const closeDialog = () => {
+		player?.destroy();
+		showDialog = false;
+		playing = false;
+	};
+
+	let playing = false;
+	const playVideo = () => {
+		if (!player) {
+			player = new YouTubePlayer(videoPLayer);
+		}
+		if (selectedItem) {
+			player.load(selectedItem.link, true);
+			playing = true;
+		}
+	};
 </script>
 
 <ul>
 	{#each items as item (item.id)}
 		<li on:click={onPreview(item)}>
-			<Image src={item.imageUrl} alt="" />
+			<Image src={item.imageUrl} alt={item.title} />
 			<div class="body">
 				<div class="caption">{item.title}</div>
 				<!-- <div class="desc">{item.shortDesc}</div> -->
@@ -58,12 +83,25 @@
 
 {#if showDialog && selectedItem}
 	<div class="modal">
-		<div class="overlay" in:fade out:fade on:click|stopPropagation={() => (showDialog = false)} />
+		<div class="overlay" in:fade out:fade on:click|stopPropagation={closeDialog} />
 		<div class="dialog">
-			<div class="cover">
-				<footer>
-					<button class="play-btn">Play</button>
-				</footer>
+			<span class="close-btn" on:click={closeDialog}
+				>{@html `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M18 6L6 18" stroke="#33363F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M6 6L18 18" stroke="#33363F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`}</span
+			>
+			<div class="aspect-ratio-box">
+				<div class="cover">
+					<div class="video-player" bind:this={videoPLayer} />
+					{#if !playing}
+						<img class="cover-img" src={selectedItem.cover} alt={selectedItem.title} />
+					{/if}
+				</div>
+				{#if !playing}
+					<footer>
+						<button class="play-btn" on:click={playVideo}>Play</button>
+					</footer>
+				{/if}
 			</div>
 			<div class="content">
 				<section class="main">
@@ -74,9 +112,24 @@
 				</section>
 				<section class="info">
 					<!-- <div>Genre</div> -->
-					<div><span class="label">Director:</span>{selectedItem.directors.join(', ')}</div>
+					<div>
+						<span class="label">Director:</span>
+						<span><TagList items={selectedItem.directors} /></span>
+					</div>
 					{#if selectedItem.writers}
-						<div><span class="label">Writers:</span>{selectedItem.writers.join(', ')}</div>
+						<div>
+							<span class="label">Writer:</span>
+							<span><TagList items={selectedItem.writers} /></span>
+						</div>
+					{/if}
+					{#if selectedItem.dps}
+						<div>
+							<span class="label">Director of Photography:</span>
+							<span><TagList items={selectedItem.dps} /></span>
+						</div>
+					{/if}
+					{#if selectedItem.editors}
+						<div><span class="label">Editor:</span>{selectedItem.editors.join(', ')}</div>
 					{/if}
 					<div><span class="label">Cast:</span>{selectedItem.casts.join(', ')}</div>
 					<div><span class="label">Produced By:</span> Eyoki Creative</div>
@@ -170,10 +223,28 @@
 			border-radius: 5px;
 			box-shadow: 0 0 26px rgba(0, 0, 0, 0.3);
 
-			.cover {
-				position: relative;
-				height: 350px;
-				background: #f5f5f5;
+			.close-btn {
+				position: absolute;
+				cursor: pointer;
+				top: 1rem;
+				right: 1rem;
+				border-radius: 50%;
+				width: 34px;
+				height: 34px;
+				justify-content: center;
+				align-items: center;
+				display: inline-flex;
+				transition: background-color 0.5s;
+				z-index: 1;
+
+				:global(svg) {
+					width: calc(100% - 8px);
+					height: calc(100% - 8px);
+				}
+
+				&:hover {
+					background-color: #dcdcdc;
+				}
 			}
 
 			.content {
@@ -188,7 +259,6 @@
 
 				.info {
 					min-width: 280px;
-					max-width: 280px;
 					padding: 1rem $paddingH;
 					padding-left: 0;
 				}
@@ -209,6 +279,30 @@
 				color: #fff;
 			}
 		}
+	}
+
+	.aspect-ratio-box {
+		position: relative;
+		display: block;
+		padding-top: 56.25%;
+		height: 0;
+		overflow: hidden;
+		background: #f5f5f5;
+
+		.cover,
+		.cover-img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.video-player {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
 	}
 
 	.label {
