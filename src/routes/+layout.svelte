@@ -41,6 +41,7 @@
 				<li><a href="/clients">Our Clients</a></li>
 				<li><a href="/about-us">About Us</a></li>
 				<li><a href="/contact-us">Contact Us</a></li>
+				<li><a href="/careers">Careers</a></li>
 			</ul>
 		</nav>
 		<nav class="mini-nav-list"><Menu /></nav>

@@ -121,21 +121,21 @@
 			title: `The Kingdom and The Beauty`,
 			shortDesc:
 				'An ailing father living in a bubble continues to find connections with his deceased wife through a small radio. This is much to the disapproval of his adult son who has returned from the city to take care of him.',
-			cover: '/images/cover/lg-puri-care.webp',
-			imageUrl: '/images/myba-cover.jpg',
+			cover: '/images/cover/kingdom-and-beauty.webp',
+			imageUrl: '/images/cover/kingdom-and-beauty.webp',
 			directors: ['Victor Yee Fei Chen'],
-			dps: ['Yuki'],
+			dps: ['Yuki (Eyoki Creative)'],
 			writers: ['Victor Yee Fei Chen', 'Andy Darrel Gomes'],
-			casts: ['Fai Chen', 'Yee Swee Tam'],
+			casts: ['Fabian Loo', 'Pearlly Chua'],
 			labels: ['Short Film'],
 			link: 'N41rOM88c40',
-			time: '11:00'
+			time: '14:59'
 		},
 		{
 			id: '2',
 			title: 'VIVO V20 SE Aquamarine',
-			shortDesc: 'Something fire',
-			cover: '/images/cover/lg-puri-care.webp',
+			shortDesc: `The new trendsetter has arrived! vivo V20 SE #Aquamarine is picking up steam in 2020 with its trendy new colour!`,
+			cover: '/images/cover/vivo-v20.webp',
 			imageUrl: '/images/vivo-cover.png',
 			directors: ['Byran'],
 			dps: ['Yuki (Eyoki Creative)'],
@@ -147,46 +147,60 @@
 		},
 		{
 			id: '3',
-			title: 'Nespresso x RED Hong Yi - Doing Is Everything',
-			shortDesc: 'Something fire',
-			cover: '/images/cover/nepresso-redhongyi.webp',
-			imageUrl: '/images/nespresso-cover.jpeg',
-			directors: ['Chong Kern Wei'],
-			dps: ['Yuki (Eyoki Creative)'],
-			editors: ['Chong Kern Wei'],
-			casts: ['RED HongYi, Wong KaiYi', 'CheeChung', 'Cedric', 'YuEn'],
-			labels: ['Ads'],
-			link: '7CUmtwdDbi4',
-			time: '04:36'
-		},
-		{
-			id: '4',
-			title: 'The Merdeka dUCk by Kenji Chai',
-			shortDesc: 'Something fire',
-			cover: '/images/cover/duck.webp',
-			imageUrl: '/images/duck-cover.png',
-			directors: ['Kern Wei'],
-			dps: ['Yuki (Eyoki Creative)'],
-			editors: ['Chong Kern Wei'],
-			casts: [],
-			labels: ['Ads'],
-			link: 'W19dreFxsbQ',
-			time: '01:06'
-		},
-		{
-			id: '5',
-			title: 'Sangka Baik',
+			title: '凡人不懂愛',
 			shortDesc: 'Something fire',
 			cover: '/images/cover/lg-puri-care.webp',
-			imageUrl: '/images/allianz-cover.png',
-			directors: [],
+			imageUrl: '/images/vivo-cover.png',
+			directors: ['Yuki (Eyoki Creative)'],
 			dps: ['Yuki (Eyoki Creative)'],
-			editors: ['Chong Kern Wei'],
-			casts: [],
-			labels: ['Ads'],
-			link: 'L7dfKZ4bBPU',
-			time: '02:17'
+			editors: ['WT (Eyoki Creative)'],
+			casts: ['Juztin Lan'],
+			labels: ['MV'],
+			link: 'rJiLFWnyrD8',
+			time: '03:31'
 		}
+		// {
+		// 	id: '3',
+		// 	title: 'Nespresso x RED Hong Yi - Doing Is Everything',
+		// 	shortDesc: 'Something fire',
+		// 	cover: '/images/cover/nepresso-redhongyi.webp',
+		// 	imageUrl: '/images/nespresso-cover.jpeg',
+		// 	directors: ['Chong Kern Wei'],
+		// 	dps: ['Yuki (Eyoki Creative)'],
+		// 	editors: ['Chong Kern Wei'],
+		// 	casts: ['RED HongYi, Wong KaiYi', 'CheeChung', 'Cedric', 'YuEn'],
+		// 	labels: ['Ads'],
+		// 	link: '7CUmtwdDbi4',
+		// 	time: '04:36'
+		// },
+		// {
+		// 	id: '4',
+		// 	title: 'The Merdeka dUCk by Kenji Chai',
+		// 	shortDesc: 'Something fire',
+		// 	cover: '/images/cover/duck.webp',
+		// 	imageUrl: '/images/duck-cover.png',
+		// 	directors: ['Kern Wei'],
+		// 	dps: ['Yuki (Eyoki Creative)'],
+		// 	editors: ['Chong Kern Wei'],
+		// 	casts: [],
+		// 	labels: ['Ads'],
+		// 	link: 'W19dreFxsbQ',
+		// 	time: '01:06'
+		// },
+		// {
+		// 	id: '5',
+		// 	title: 'Sangka Baik',
+		// 	shortDesc: 'Something fire',
+		// 	cover: '/images/cover/lg-puri-care.webp',
+		// 	imageUrl: '/images/allianz-cover.png',
+		// 	directors: [],
+		// 	dps: ['Yuki (Eyoki Creative)'],
+		// 	editors: ['Chong Kern Wei'],
+		// 	casts: [],
+		// 	labels: ['Ads'],
+		// 	link: 'L7dfKZ4bBPU',
+		// 	time: '02:17'
+		// }
 	];
 </script>
 
@@ -207,7 +221,7 @@
 			<PlayList items={popularVideos} />
 		</div>
 		<div>
-			<h3>Most Impactful</h3>
+			<h3>Most Favourite</h3>
 			<PlayList items={impactfulVideos} />
 		</div>
 	</section>

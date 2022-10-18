@@ -3,7 +3,7 @@
 </script>
 
 <section>
-	<p>EYOKI CREATIVE was founded by Yuki Eyok in 2018.</p>
+	<p>EYOKI CREATIVE was founded by Yuki Eyok (Female Director of Photography) in 2018.</p>
 	<p>
 		We are a team of creative specialist, who believes in creative storytelling. We strive to
 		enhance our client's experience with a mission to provide powerful visuals and contents to help
@@ -11,6 +11,7 @@
 	</p>
 </section>
 
-<style>
-	/* your styles go here */
+<style lang="scss">
+	section {
+	}
 </style>

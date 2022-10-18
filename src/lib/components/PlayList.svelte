@@ -34,6 +34,9 @@
 	const onPreview = (item: Item) => () => {
 		selectedItem = item;
 		showDialog = true;
+		const { scrollY } = window;
+		document.body.setAttribute('style', `position: fixed; margin-top: -${scrollY}px`);
+		document.body.setAttribute('data-scrolly', `${scrollY}`);
 	};
 
 	const onPlay = (item: Item) => (e: Event) => {
@@ -41,9 +44,11 @@
 	};
 
 	const closeDialog = () => {
-		player?.destroy();
+		player?.stop();
 		showDialog = false;
 		playing = false;
+		document.body.removeAttribute('style');
+		window.scrollTo(0, Number(document.body.getAttribute('data-scrolly')) || 0);
 	};
 
 	let playing = false;
@@ -99,14 +104,18 @@
 				</div>
 				{#if !playing}
 					<footer>
-						<button class="play-btn" on:click={playVideo}>Play</button>
+						<button class="play-btn" on:click={playVideo}>
+							<span>Play</span>
+							{@html `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M16.1378 10.5689L9.60498 7.30252C8.40816 6.70411 7 7.5744 7 8.91249V15.0876C7 16.4257 8.40816 17.2959 9.60498 16.6975L16.1378 13.4311C17.3171 12.8415 17.3171 11.1586 16.1378 10.5689Z" fill="#222222"/></svg>`}
+						</button>
 					</footer>
 				{/if}
 			</div>
 			<div class="content">
 				<section class="main">
 					<h2>{selectedItem.title}</h2>
-					<div>Client</div>
+					<!-- <div>Client</div> -->
 					<div>{selectedItem.time}</div>
 					<div>{selectedItem.shortDesc}</div>
 				</section>
@@ -207,7 +216,8 @@
 			right: 0;
 			bottom: 0;
 			width: 100%;
-			height: 100%;
+			overflow-y: auto;
+			min-height: 100%;
 			background: rgba(0, 0, 0, 0.3);
 		}
 
@@ -219,6 +229,7 @@
 			width: 80%;
 			min-height: 100px;
 			margin: 0 auto;
+			max-width: 1280px;
 			overflow: hidden;
 			border-radius: 5px;
 			box-shadow: 0 0 26px rgba(0, 0, 0, 0.3);
@@ -270,7 +281,8 @@
 				left: $paddingH;
 			}
 			.play-btn {
-				display: block;
+				display: flex;
+				align-items: center;
 				border: none;
 				min-height: 32px;
 				padding: 0 2.5rem;
