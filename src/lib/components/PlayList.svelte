@@ -106,8 +106,8 @@
 					<footer>
 						<button class="play-btn" on:click={playVideo}>
 							<span>Play</span>
-							{@html `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M16.1378 10.5689L9.60498 7.30252C8.40816 6.70411 7 7.5744 7 8.91249V15.0876C7 16.4257 8.40816 17.2959 9.60498 16.6975L16.1378 13.4311C17.3171 12.8415 17.3171 11.1586 16.1378 10.5689Z" fill="#222222"/></svg>`}
+							{@html `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M16.1378 10.5689L9.60498 7.30252C8.40816 6.70411 7 7.5744 7 8.91249V15.0876C7 16.4257 8.40816 17.2959 9.60498 16.6975L16.1378 13.4311C17.3171 12.8415 17.3171 11.1586 16.1378 10.5689Z" fill="#fff"/></svg>`}
 						</button>
 					</footer>
 				{/if}
@@ -117,7 +117,7 @@
 					<h2>{selectedItem.title}</h2>
 					<!-- <div>Client</div> -->
 					<div>{selectedItem.time}</div>
-					<div>{selectedItem.shortDesc}</div>
+					<div>{@html selectedItem.shortDesc}</div>
 				</section>
 				<section class="info">
 					<!-- <div>Genre</div> -->
@@ -246,6 +246,7 @@
 				align-items: center;
 				display: inline-flex;
 				transition: background-color 0.5s;
+				background-color: #dcdcdc;
 				z-index: 1;
 
 				:global(svg) {
@@ -253,9 +254,9 @@
 					height: calc(100% - 8px);
 				}
 
-				&:hover {
-					background-color: #dcdcdc;
-				}
+				// &:hover {
+				// 	background-color: #dcdcdc;
+				// }
 			}
 
 			.content {
@@ -285,7 +286,7 @@
 				align-items: center;
 				border: none;
 				min-height: 32px;
-				padding: 0 2.5rem;
+				padding: 0 2rem 0 2.5rem;
 				border-radius: 3px;
 				background: red;
 				color: #fff;

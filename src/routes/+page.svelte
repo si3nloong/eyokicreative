@@ -148,9 +148,22 @@
 		{
 			id: '3',
 			title: '凡人不懂愛',
-			shortDesc: 'Something fire',
-			cover: '/images/cover/lg-puri-care.webp',
-			imageUrl: '/images/vivo-cover.png',
+			shortDesc: `天空漆黑 星不會光照我<br/>輾轉反側 悲傷裡躺臥<br/>
+我亦習慣一個 怕又試不小心惹禍<br/>無用呼救了 誰又會救助<br/><br/>風中穿梭 只得你心痛我<br/>
+低聲哭泣 只得你可以聆聽我<br/>如沒身份的魔 凡人不懂愛我<br/>無從解釋對錯 但你卻徹底相信我<br/><br/>無須刻意想起 仍然深刻銘記<br/>
+如若心聲相通 憑直覺都可感覺你<br/>若消散成為氧氣<br/>停留世界靜靜懷抱你<br/>掉眼淚 原來是掛念你<br/><br/>風中穿梭 只得你温暖我<br/>
+低聲哭泣 只得你敢再行近我<br/>
+如沒身份的魔 凡人不懂愛我<br/>
+懷疑給詛咒過 但你卻放膽擁抱我<br/><br/>
+無須刻意想起 仍然深刻銘記<br/>
+如若心聲相通 憑直覺都可感覺你<br/>
+若灰飛成為氧氣<br/>
+停留世界靜靜懷抱你<br/>
+掉眼淚 原來我掛念你<br/>
+當天真的灰心到 很想拋棄自己<br/>
+你卻拼命只想與我一起<br/>才明白愛情 超出生與死<br/><br/>無須刻意想起 仍然深刻銘記<br/>如若心聲相通 憑直覺都可感覺你<br/>若灰飛成為氧氣 我只要剩低一口氣<br/>未氣絕 都想叫喚你<br/>掉眼淚 只因掛念你`,
+			cover: '/images/cover/justin-lan.webp',
+			imageUrl: '/images/justin-lan.webp',
 			directors: ['Yuki (Eyoki Creative)'],
 			dps: ['Yuki (Eyoki Creative)'],
 			editors: ['WT (Eyoki Creative)'],
