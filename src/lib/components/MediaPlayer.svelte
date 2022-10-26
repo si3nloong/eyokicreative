@@ -29,6 +29,10 @@
 	const playVideo = () => {
 		if (!ytPlayer) {
 			ytPlayer = new YouTubePlayer(player);
+			ytPlayer.on('playing', () => {
+				console.log(ytPlayer.getDuration()); // => 351.521
+			});
+			ytPlayer.on('timeupdate', console.log);
 		}
 		playing = true;
 		ytPlayer.load(video.link, true);
@@ -71,7 +75,13 @@
 						<span>{item}</span>
 					{/each}
 				</div>
-				<div>{@html video.shortDesc}</div>
+				{#if video.shortDesc}
+					<div>{@html video.shortDesc}</div>
+				{:else if video.lyrics}
+					{#each video.lyrics as [_, lyric]}
+						<div>{lyric}</div>
+					{/each}
+				{/if}
 			</section>
 			<section class="info">
 				<!-- <div>Genre</div> -->

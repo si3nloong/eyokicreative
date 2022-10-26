@@ -1,12 +1,13 @@
-export type Video = {
+type Media = {
 	id: string;
 	title: string;
+	shortDesc?: string;
 	cover: string;
-	shortDesc: string;
 	imageUrl: string;
 	directors: string[];
 	writers?: string[];
 	dps: string[];
+	lyrics?: [time: number, lryic: string][];
 	editors: string[];
 	casts: string[];
 	produces: string[];
@@ -14,3 +15,5 @@ export type Video = {
 	link: string;
 	time: string;
 };
+
+export type Video = Media;

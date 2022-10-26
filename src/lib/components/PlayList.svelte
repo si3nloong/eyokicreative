@@ -1,42 +1,24 @@
-<script context="module" lang="ts">
-	type Item = {
-		id: string;
-		title: string;
-		cover: string;
-		shortDesc: string;
-		imageUrl: string;
-		directors: string[];
-		writers?: string[];
-		dps: string[];
-		editors: string[];
-		casts: string[];
-		produces: string[];
-		labels: string[];
-		link: string;
-		time: string;
-	};
-</script>
-
 <script lang="ts">
 	import { mediaPlayer } from '$lib/store';
 	import YouTubePlayer from 'yt-player';
 
 	import Image from './Image.svelte';
 	import MediaPlayer from './MediaPlayer.svelte';
+	import type { Video } from './';
 
-	export let items: Item[] = [];
+	export let items: Video[] = [];
 
 	let videoPLayer: HTMLDivElement;
-	let selectedItem: Item | null = null;
+	let selectedItem: Video | null = null;
 	let player: YouTubePlayer;
 	let showDialog = false;
 
-	const onPreview = (item: Item) => () => {
+	const onPreview = (item: Video) => () => {
 		selectedItem = item;
 		showDialog = true;
 	};
 
-	const onPlay = (item: Item) => () => {
+	const onPlay = (item: Video) => () => {
 		mediaPlayer.play(item.link);
 	};
 
