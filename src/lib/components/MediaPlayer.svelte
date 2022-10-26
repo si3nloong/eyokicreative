@@ -1,27 +1,44 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
+	import YouTubePlayer from 'yt-player';
 	import type { Video } from './';
 	import TagList from './TagList.svelte';
 
 	export let video: Video;
+	export let show = false;
 
-	let show = false;
 	let player: HTMLDivElement;
+	let ytPlayer: YouTubePlayer;
 	let playing = false;
 
-	const closeDialog = () => {
-		// player?.stop();
-		show = false;
-		playing = false;
+	$: if (show) {
+		const { scrollY } = window;
+		document.body.setAttribute('style', `position: fixed; top: -${scrollY}px;`);
+		document.body.setAttribute('data-scrolly', `${scrollY}`);
+	} else {
 		document.body.removeAttribute('style');
 		window.scrollTo(0, Number(document.body.getAttribute('data-scrolly')) || 0);
+	}
+
+	const closeDialog = () => {
+		show = false;
+		playing = false;
+		ytPlayer.stop();
 	};
 
-	const playVideo = () => {};
+	const playVideo = () => {
+		if (!ytPlayer) {
+			ytPlayer = new YouTubePlayer(player);
+		}
+		playing = true;
+		ytPlayer.load(video.link, true);
+	};
 </script>
 
-<div class="overlay" in:fade out:fade on:click|stopPropagation={closeDialog} />
-<div class="modal-box">
+{#if show}
+	<div class="overlay" in:fade out:fade on:click|stopPropagation={closeDialog} />
+{/if}
+<div class="modal-box" class:hidden={!show}>
 	<div class="dialog">
 		<span class="close-btn" on:click={closeDialog}
 			>{@html `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -82,7 +99,6 @@
 			</section>
 		</div>
 	</div>
-	<div style="display: block; height: 20px" />
 </div>
 
 <style lang="scss">
@@ -100,7 +116,7 @@
 	}
 
 	.modal-box {
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 0;
 		width: 100%;
@@ -110,6 +126,10 @@
 		overflow-y: auto;
 		will-change: scroll-position;
 		z-index: 3;
+
+		&.hidden {
+			display: none;
+		}
 	}
 
 	.dialog {
@@ -178,6 +198,7 @@
 			left: $paddingHorizontal;
 
 			.play-btn {
+				cursor: pointer;
 				display: flex;
 				align-items: center;
 				border: none;
@@ -200,7 +221,7 @@
 			}
 
 			.info {
-				min-width: 280px;
+				min-width: 260px;
 				padding: 1rem $paddingHorizontal;
 				padding-left: 0;
 			}
