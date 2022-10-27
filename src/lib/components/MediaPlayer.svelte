@@ -231,7 +231,7 @@
 			}
 
 			.info {
-				min-width: 260px;
+				min-width: 280px;
 				padding: 1rem $paddingHorizontal;
 				padding-left: 0;
 			}

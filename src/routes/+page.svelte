@@ -47,7 +47,7 @@
 			id: '1',
 			title: `SK magic | Truth or Myth?`,
 			shortDesc: '',
-			cover: '/images/cover/lg-puri-care.webp',
+			cover: '/images/cover/truth-or-myth.webp',
 			imageUrl: '/images/skmagic-cover.png',
 			directors: ['Esham'],
 			dps: ['Yuki (Eyoki Creative)'],
