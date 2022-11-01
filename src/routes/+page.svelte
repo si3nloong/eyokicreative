@@ -52,7 +52,7 @@
 			directors: ['Esham'],
 			dps: ['Yuki (Eyoki Creative)'],
 			editors: ['Billy Lau'],
-			casts: [],
+			casts: ['Arnold', 'Justin'],
 			labels: ['Short Film'],
 			link: 'qDXHVPzqSMQ',
 			time: '04:20'
@@ -84,21 +84,21 @@
 			labels: ['Short Film'],
 			link: '52r0k2qptKI',
 			time: '01:30'
-		},
-		{
-			id: '4',
-			title: `OPPO Find X5 Pro 5G featuring Owen Yap`,
-			shortDesc: '',
-			cover: '/images/cover/oppo.webp',
-			imageUrl: '/images/lg-cover.jpeg',
-			directors: ['CK Lim'],
-			dps: ['Yuki (Eyoki Creative)'],
-			editors: ['Chong Kern Wei'],
-			casts: [],
-			labels: ['Short Film'],
-			link: '52r0k2qptKI',
-			time: '01:00'
 		}
+		// {
+		// 	id: '4',
+		// 	title: `OPPO Find X5 Pro 5G featuring Owen Yap`,
+		// 	shortDesc: '',
+		// 	cover: '/images/cover/oppo.webp',
+		// 	imageUrl: '/images/lg-cover.jpeg',
+		// 	directors: ['CK Lim'],
+		// 	dps: ['Yuki (Eyoki Creative)'],
+		// 	editors: ['Chong Kern Wei'],
+		// 	casts: [],
+		// 	labels: ['Short Film'],
+		// 	link: '52r0k2qptKI',
+		// 	time: '01:00'
+		// }
 	];
 
 	const impactfulVideos = [
