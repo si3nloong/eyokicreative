@@ -1,32 +1,23 @@
 <script lang="ts">
+	import { browser } from '$app/environment';
 	import { fade } from 'svelte/transition';
 	import YouTubePlayer from 'yt-player';
-	import type { Video } from './';
+	import type { Media } from './';
 	import TagList from './TagList.svelte';
-
-	export let video: Video;
-	export let show = false;
 
 	let player: HTMLDivElement;
 	let ytPlayer: YouTubePlayer;
 	let playing = false;
 
-	$: if (show) {
-		const { scrollY } = window;
-		document.body.setAttribute('style', `position: fixed; top: -${scrollY}px;`);
-		document.body.setAttribute('data-scrolly', `${scrollY}`);
-	} else {
-		document.body.removeAttribute('style');
-		window.scrollTo(0, Number(document.body.getAttribute('data-scrolly')) || 0);
-	}
+	export let video: Media;
+	export let show = false;
 
-	const closeDialog = () => {
+	export const close = () => {
 		show = false;
 		playing = false;
-		ytPlayer.stop();
+		ytPlayer?.stop();
 	};
-
-	const playVideo = () => {
+	export const play = () => {
 		if (!ytPlayer) {
 			ytPlayer = new YouTubePlayer(player);
 			ytPlayer.on('playing', () => {
@@ -37,14 +28,23 @@
 		playing = true;
 		ytPlayer.load(video.link, true);
 	};
+
+	$: if (browser && show) {
+		const { scrollY } = window;
+		document.body.setAttribute('style', `position: fixed; top: -${scrollY}px;`);
+		document.body.setAttribute('data-scrolly', `${scrollY}`);
+	} else if (browser && !show) {
+		document.body.removeAttribute('style');
+		window.scrollTo(0, Number(document.body.getAttribute('data-scrolly')) || 0);
+	}
 </script>
 
 {#if show}
-	<div class="overlay" in:fade out:fade on:click|stopPropagation={closeDialog} />
+	<div class="overlay" in:fade out:fade on:click|stopPropagation={close} />
 {/if}
 <div class="modal-box" class:hidden={!show}>
 	<div class="dialog">
-		<span class="close-btn" on:click={closeDialog}
+		<span class="close-btn" on:click={close}
 			>{@html `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M18 6L6 18" stroke="#33363F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M6 6L18 18" stroke="#33363F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`}</span
@@ -58,7 +58,7 @@
 			</div>
 			{#if !playing}
 				<div class="control-list">
-					<button class="play-btn" on:click={playVideo}>
+					<button class="play-btn" on:click={play}>
 						{@html `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16.1378 10.5689L9.60498 7.30252C8.40816 6.70411 7 7.5744 7 8.91249V15.0876C7 16.4257 8.40816 17.2959 9.60498 16.6975L16.1378 13.4311C17.3171 12.8415 17.3171 11.1586 16.1378 10.5689Z" fill="#fff"/></svg>`}
 						<span>Play</span>
@@ -66,48 +66,50 @@
 				</div>
 			{/if}
 		</div>
-		<div class="content">
-			<section class="main">
-				<h2>{video.title}</h2>
-				<div class="extra-info">
-					<span>{video.time}</span>
-					{#each video.labels as item}
-						<span>{item}</span>
-					{/each}
-				</div>
-				{#if video.shortDesc}
-					<div>{@html video.shortDesc}</div>
-				{:else if video.lyrics}
-					{#each video.lyrics as [_, lyric]}
-						<div>{lyric}</div>
-					{/each}
-				{/if}
-			</section>
-			<section class="info">
-				<!-- <div>Genre</div> -->
-				<div>
-					<span class="label">Director:</span>
-					<span><TagList items={video.directors} /></span>
-				</div>
-				{#if video.writers}
-					<div>
-						<span class="label">Writer:</span>
-						<span><TagList items={video.writers} /></span>
+		{#if video}
+			<div class="content">
+				<section class="main">
+					<h2>{video.title}</h2>
+					<div class="extra-info">
+						<span>{video.time}</span>
+						{#each video.labels as item}
+							<span>{item}</span>
+						{/each}
 					</div>
-				{/if}
-				{#if video.dps}
+					{#if video.shortDesc}
+						<div>{@html video.shortDesc}</div>
+					{:else if video.lyrics}
+						{#each video.lyrics as [_, lyric]}
+							<div>{lyric}</div>
+						{/each}
+					{/if}
+				</section>
+				<section class="info">
+					<!-- <div>Genre</div> -->
 					<div>
-						<span class="label">Director of Photography:</span>
-						<span><TagList items={video.dps} /></span>
+						<span class="label">Director:</span>
+						<span><TagList items={video.directors} /></span>
 					</div>
-				{/if}
-				{#if video.editors}
-					<div><span class="label">Editor:</span>{video.editors.join(', ')}</div>
-				{/if}
-				<div><span class="label">Cast:</span>{video.casts.join(', ')}</div>
-				<div><span class="label">Produced By:</span> Eyoki Creative</div>
-			</section>
-		</div>
+					{#if video.writers}
+						<div>
+							<span class="label">Writer:</span>
+							<span><TagList items={video.writers} /></span>
+						</div>
+					{/if}
+					{#if video.dps}
+						<div>
+							<span class="label">Director of Photography:</span>
+							<span><TagList items={video.dps} /></span>
+						</div>
+					{/if}
+					{#if video.editors}
+						<div><span class="label">Editor:</span>{video.editors.join(', ')}</div>
+					{/if}
+					<div><span class="label">Cast:</span>{video.casts.join(', ')}</div>
+					<div><span class="label">Produced By:</span> Eyoki Creative</div>
+				</section>
+			</div>
+		{/if}
 	</div>
 </div>
 

@@ -1,14 +1,20 @@
 <script lang="ts">
+	import { store } from '$lib/store';
+	import type { Media } from '.';
 	import Video from './Video.svelte';
 
-	export let items: any[] = [];
+	export let items: Media[] = [];
 
-	items = items.slice(0, 4);
+	items = items.splice(0, 4);
+
+	const onPreview = (item: Media) => () => {
+		store.preview(item);
+	};
 </script>
 
 <ul class="video-list">
 	{#each items as item (item.id)}
-		<li><Video /></li>
+		<li on:click={onPreview(item)}><Video video={item} /></li>
 	{/each}
 </ul>
 
@@ -18,19 +24,14 @@
 		list-style-position: inside;
 		display: flex;
 		justify-content: space-between;
-		padding: 1rem 0;
 
 		li {
 			cursor: default;
-			border: 1px solid red;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: 22%;
+			width: 23.5%;
 			transition: all 0.5s;
 
 			&:hover {
-				transform: scale(1.1);
+				transform: scale(1.05);
 			}
 		}
 

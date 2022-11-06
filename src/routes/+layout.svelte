@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { mediaPlayer } from '$lib/store';
+	import MediaPlayer from '$lib/components/MediaPlayer.svelte';
 	import Menu from '$lib/components/Menu.svelte';
+	import { store } from '$lib/store';
 	import { fade } from 'svelte/transition';
 	import './app.scss';
 </script>
@@ -111,9 +112,8 @@
 	</footer>
 </main>
 
-<!-- Media Player section -->
-{#if $mediaPlayer.show}
-	<div class="overlay" in:fade on:click={mediaPlayer.stop}><div id="video" /></div>
+{#if $store.video}
+	<MediaPlayer show={true} video={$store.video} />
 {/if}
 
 <style lang="scss">

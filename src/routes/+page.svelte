@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Header from '$lib/components/Header.svelte';
 	import PlayList from '$lib/components/PlayList.svelte';
 	import VideoList from '$lib/components/VideoList.svelte';
 
@@ -12,6 +13,21 @@
 			labels: ['Short Film'],
 			link: '',
 			time: '11:00'
+		},
+		{
+			id: '2.1',
+			title: 'VIVO V20 SE Aquamarine',
+			shortDesc: `The new trendsetter has arrived! vivo V20 SE #Aquamarine is picking up steam in 2020 with its trendy new colour!`,
+			cover: '/images/cover/vivo-v20.webp',
+			imageUrl: '/images/vivo-cover.png',
+			produces: ['Eyoki Creative'],
+			directors: ['Byran'],
+			dps: ['Yuki (Eyoki Creative)'],
+			editors: ['WT (Eyoki Creative)'],
+			casts: ['Girl'],
+			labels: ['Commercial'],
+			link: 'vvuvjRDAJAk',
+			time: '00:30'
 		},
 		{
 			id: '2',
@@ -137,7 +153,7 @@
 			time: '14:59'
 		},
 		{
-			id: '2',
+			id: '2.1',
 			title: 'VIVO V20 SE Aquamarine',
 			shortDesc: `The new trendsetter has arrived! vivo V20 SE #Aquamarine is picking up steam in 2020 with its trendy new colour!`,
 			cover: '/images/cover/vivo-v20.webp',
@@ -166,6 +182,22 @@
 			labels: ['MV'],
 			link: 'rJiLFWnyrD8',
 			time: '03:31'
+		},
+		{
+			id: '4',
+			title: '心声愿',
+			shortDesc: `天空漆黑 星不會光照我<br/>輾轉反側 悲傷裡躺臥<br/>我亦習慣一個 怕又試不小心惹禍<br/>無用呼救了 誰又會救助<br/><br/>風中穿梭 只得你心痛我<br/>低聲哭泣 只得你可以聆聽我<br/>如沒身份的魔 凡人不懂愛我<br/>無從解釋對錯 但你卻徹底相信我<br/><br/>無須刻意想起 仍然深刻銘記<br/>如若心聲相通 憑直覺都可感覺你<br/>若消散成為氧氣<br/>停留世界靜靜懷抱你<br/>掉眼淚 原來是掛念你<br/><br/>風中穿梭 只得你温暖我<br/>
+低聲哭泣 只得你敢再行近我<br/>如沒身份的魔 凡人不懂愛我<br/>懷疑給詛咒過 但你卻放膽擁抱我<br/><br/>無須刻意想起 仍然深刻銘記<br/>如若心聲相通 憑直覺都可感覺你<br/>若灰飛成為氧氣<br/>停留世界靜靜懷抱你<br/>掉眼淚 原來我掛念你<br/><br/>當天真的灰心到 很想拋棄自己<br/>你卻拼命只想與我一起<br/>才明白愛情 超出生與死<br/><br/>無須刻意想起 仍然深刻銘記<br/>如若心聲相通 憑直覺都可感覺你<br/>若灰飛成為氧氣 我只要剩低一口氣<br/>未氣絕 都想叫喚你<br/>掉眼淚 只因掛念你`,
+			cover: '/images/koe-yeet-cover.webp',
+			imageUrl: '/images/cover/koe-yeet.webp',
+			produces: ['Eyoki Creative'],
+			directors: ['Yuki (Eyoki Creative)'],
+			dps: ['Yuki (Eyoki Creative)'],
+			editors: ['Willie (Eyoki Creative)'],
+			casts: ['Koe Yeet'],
+			labels: ['MV'],
+			link: '1GY8f2zwUh8',
+			time: '03:22'
 		}
 		// {
 		// 	id: '3',
@@ -218,10 +250,10 @@
 		<!-- <h2>We are Fun and Young.</h2> -->
 	</section>
 
-	<!-- <section>
-		<h3>Latest work you may like</h3>
-		<VideoList items={latestVideos} />
-	</section> -->
+	<section class="">
+		<Header href="/">Latest work you may like</Header>
+		<VideoList items={impactfulVideos.slice()} />
+	</section>
 
 	<section class="works">
 		<div>
@@ -235,12 +267,15 @@
 	</section>
 </div>
 
-<!-- <VideoPlayer /> -->
 <style lang="scss">
 	h1 {
 		font-size: 48px;
 		line-height: 1.1;
 		width: 60%;
+	}
+
+	section {
+		padding: 1rem 0;
 	}
 
 	.headline {

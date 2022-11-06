@@ -1,22 +1,11 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import YTPlayer from 'yt-player';
-	import {
-		fromEvent,
-		debounceTime,
-		tap,
-		takeUntil,
-		from,
-		throttleTime,
-		interval,
-		bufferToggle,
-		EMPTY,
-		timer
-	} from 'rxjs';
 	import { onMount } from 'svelte';
+	import type { Media } from '.';
+
+	export let video: Media;
 
 	let container: HTMLDivElement;
-	let video: HTMLVideoElement;
+	// let video: HTMLVideoElement;
 	let loaded = false;
 	let clientWidth = 0;
 
@@ -63,30 +52,27 @@
 	});
 </script>
 
-<div bind:this={container} class="video" bind:clientWidth style="background: red">
-	<video bind:this={video} width="100%" controls playsinline={true} muted={true}>
-		<!-- <source src="/SK Magic Jiksoo Ria Water Purifier.mp4" type="video/mp4" /> -->
-	</video>
-	{#if !loaded}
-		<div class="cover"><img src="/favicon.png" alt="cover" /></div>
-	{/if}
+<div class="video" bind:clientWidth>
+	<img src={video.imageUrl} alt={video.title} />
 </div>
 
 <style lang="scss">
 	.video {
+		position: relative;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		width: 100%;
-		height: 180px;
+		padding-top: 100%; /* 1:1 Aspect Ratio */
 		text-align: center;
 
 		img {
 			display: block;
-		}
-
-		video {
-			display: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
 		}
 	}
 </style>
