@@ -18,6 +18,13 @@ body {
 	font-family: 'Lato', sans-serif;
 }
 
+.d-16-9 {
+	position: relative;
+	display: block;
+	padding-top: 56.25%;
+	height: 0;
+}
+
 a {
 	color: inherit;
 	text-decoration: none;

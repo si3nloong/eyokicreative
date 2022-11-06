@@ -3,6 +3,8 @@
 	import PlayList from '$lib/components/PlayList.svelte';
 	import VideoList from '$lib/components/VideoList.svelte';
 
+	export let data;
+	console.log(data);
 	const latestVideos = [
 		{
 			id: '1',
@@ -250,7 +252,7 @@
 	</section>
 
 	<section class="">
-		<Header href="/">Latest work you may like</Header>
+		<Header href="/favourite">Most Favourite of All Time</Header>
 		<VideoList items={impactfulVideos.slice()} />
 	</section>
 
@@ -260,7 +262,7 @@
 			<PlayList items={popularVideos} />
 		</div>
 		<div>
-			<h3>Most Favourite of All Time</h3>
+			<Header href="/">Latest work you may like</Header>
 			<PlayList items={impactfulVideos} />
 		</div>
 	</section>
