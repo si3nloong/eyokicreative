@@ -1,14 +1,17 @@
 <script lang="ts">
-	import { store } from '$lib/store';
+	import { getContext } from 'svelte';
 	import type { Media } from '.';
+	import { KEY, type MediaPlayer } from './MediaPlayer.svelte';
 	import Video from './Video.svelte';
 
 	export let items: Media[] = [];
 
 	items = items.splice(0, 4);
 
+	const player = getContext(KEY) as MediaPlayer;
+
 	const onPreview = (item: Media) => () => {
-		store.preview(item);
+		player.preview(item);
 	};
 </script>
 

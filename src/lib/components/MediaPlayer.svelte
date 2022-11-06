@@ -1,5 +1,16 @@
+<script context="module" lang="ts">
+	export const KEY = {};
+
+	export type MediaPlayer = {
+		preview: (v: Media) => void;
+		play: (v: Media) => void;
+		close: () => void;
+	};
+</script>
+
 <script lang="ts">
 	import { browser } from '$app/environment';
+	import { setContext } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import YouTubePlayer from 'yt-player';
 	import type { Media } from './';
@@ -9,15 +20,21 @@
 	let ytPlayer: YouTubePlayer;
 	let playing = false;
 
-	export let video: Media;
+	export let video: Media | null = null;
 	export let show = false;
 
-	export const close = () => {
+	const close = () => {
 		show = false;
 		playing = false;
 		ytPlayer?.stop();
 	};
-	export const play = () => {
+
+	const preview = (item: Media) => {
+		video = item;
+		show = true;
+	};
+
+	const play = (item: Media) => {
 		if (!ytPlayer) {
 			ytPlayer = new YouTubePlayer(player);
 			ytPlayer.on('playing', () => {
@@ -26,8 +43,14 @@
 			ytPlayer.on('timeupdate', console.log);
 		}
 		playing = true;
-		ytPlayer.load(video.link, true);
+		ytPlayer.load(item.link, true);
 	};
+
+	setContext<MediaPlayer>(KEY, {
+		close,
+		preview,
+		play
+	});
 
 	$: if (browser && show) {
 		const { scrollY } = window;
@@ -37,12 +60,17 @@
 		document.body.removeAttribute('style');
 		window.scrollTo(0, Number(document.body.getAttribute('data-scrolly')) || 0);
 	}
+
+	const playVideo = (item: Media) => () => {
+		play(item);
+	};
 </script>
 
+<slot />
 {#if show}
 	<div class="overlay" in:fade out:fade on:click|stopPropagation={close} />
 {/if}
-<div class="modal-box" class:hidden={!show}>
+<div class="modal-box" class:hidden={!show || !video}>
 	<div class="dialog">
 		<span class="close-btn" on:click={close}
 			>{@html `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -52,13 +80,13 @@
 		<div class="aspect-ratio">
 			<div class="cover">
 				<div class="video-player" bind:this={player} />
-				{#if !playing}
+				{#if video && !playing}
 					<img class="cover-img" src={video.cover} alt={video.title} />
 				{/if}
 			</div>
-			{#if !playing}
+			{#if video && !playing}
 				<div class="control-list">
-					<button class="play-btn" on:click={play}>
+					<button class="play-btn" on:click={playVideo(video)}>
 						{@html `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16.1378 10.5689L9.60498 7.30252C8.40816 6.70411 7 7.5744 7 8.91249V15.0876C7 16.4257 8.40816 17.2959 9.60498 16.6975L16.1378 13.4311C17.3171 12.8415 17.3171 11.1586 16.1378 10.5689Z" fill="#fff"/></svg>`}
 						<span>Play</span>
