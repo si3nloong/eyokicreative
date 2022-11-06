@@ -1,36 +1,15 @@
 <script lang="ts">
-	import { mediaPlayer } from '$lib/store';
-	import YouTubePlayer from 'yt-player';
-
 	import Image from './Image.svelte';
-	import MediaPlayer from './MediaPlayer.svelte';
-	import type { Video } from './';
+	import type { Media } from './';
+	import { KEY, type MediaPlayer } from './MediaPlayer.svelte';
+	import { getContext } from 'svelte';
 
-	export let items: Video[] = [];
+	export let items: Media[] = [];
 
-	let videoPLayer: HTMLDivElement;
-	let selectedItem: Video | null = null;
-	let player: YouTubePlayer;
-	let showDialog = false;
+	const player = getContext(KEY) as MediaPlayer;
 
-	const onPreview = (item: Video) => () => {
-		selectedItem = item;
-		showDialog = true;
-	};
-
-	const onPlay = (item: Video) => () => {
-		mediaPlayer.play(item.link);
-	};
-
-	let playing = false;
-	const playVideo = () => {
-		if (!player) {
-			player = new YouTubePlayer(videoPLayer);
-		}
-		if (selectedItem) {
-			player.load(selectedItem.link, true);
-			playing = true;
-		}
+	const onPreview = (item: Media) => () => {
+		player.preview(item);
 	};
 </script>
 
@@ -56,10 +35,6 @@
 		</li>
 	{/each}
 </ul>
-
-{#if selectedItem}
-	<MediaPlayer bind:show={showDialog} video={selectedItem} />
-{/if}
 
 <style lang="scss">
 	ul {

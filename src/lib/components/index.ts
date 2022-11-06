@@ -1,4 +1,4 @@
-type Media = {
+export type Media = {
 	id: string;
 	title: string;
 	shortDesc?: string;
@@ -15,5 +15,3 @@ type Media = {
 	link: string;
 	time: string;
 };
-
-export type Video = Media;

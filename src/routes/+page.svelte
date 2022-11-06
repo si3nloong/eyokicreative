@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Header from '$lib/components/Header.svelte';
 	import PlayList from '$lib/components/PlayList.svelte';
 	import VideoList from '$lib/components/VideoList.svelte';
 
@@ -12,6 +13,21 @@
 			labels: ['Short Film'],
 			link: '',
 			time: '11:00'
+		},
+		{
+			id: '2.1',
+			title: 'VIVO V20 SE Aquamarine',
+			shortDesc: `The new trendsetter has arrived! vivo V20 SE #Aquamarine is picking up steam in 2020 with its trendy new colour!`,
+			cover: '/images/cover/vivo-v20.webp',
+			imageUrl: '/images/vivo-cover.png',
+			produces: ['Eyoki Creative'],
+			directors: ['Byran'],
+			dps: ['Yuki (Eyoki Creative)'],
+			editors: ['WT (Eyoki Creative)'],
+			casts: ['Girl'],
+			labels: ['Commercial'],
+			link: 'vvuvjRDAJAk',
+			time: '00:30'
 		},
 		{
 			id: '2',
@@ -113,7 +129,7 @@
 			directors: ['Victor Yee Fei Chen'],
 			dps: ['Yuki (Eyoki Creative)'],
 			writers: ['Victor Yee Fei Chen', 'Andy Darrel Gomes'],
-			editors: ['Anonymous'],
+			editors: ['Willie (Eyoki Creative)'],
 			casts: ['Fai Chen', 'Yee Swee Tam'],
 			labels: ['Short Film'],
 			link: '7wQbAer9g4k',
@@ -130,14 +146,14 @@
 			directors: ['Victor Yee Fei Chen'],
 			dps: ['Yuki (Eyoki Creative)'],
 			writers: ['Victor Yee Fei Chen', 'Andy Darrel Gomes'],
-			editors: ['Anonymous'],
+			editors: ['Willie (Eyoki Creative)'],
 			casts: ['Fabian Loo', 'Pearlly Chua'],
 			labels: ['Short Film'],
 			link: 'N41rOM88c40',
 			time: '14:59'
 		},
 		{
-			id: '2',
+			id: '2.1',
 			title: 'VIVO V20 SE Aquamarine',
 			shortDesc: `The new trendsetter has arrived! vivo V20 SE #Aquamarine is picking up steam in 2020 with its trendy new colour!`,
 			cover: '/images/cover/vivo-v20.webp',
@@ -166,6 +182,21 @@
 			labels: ['MV'],
 			link: 'rJiLFWnyrD8',
 			time: '03:31'
+		},
+		{
+			id: '4',
+			title: '心声愿',
+			shortDesc: `再大的风雨 那又何妨<br/>只要同心哪儿 都是晴朗<br/>再远的距离又怎样<br/>有梦的人就有 翅膀飞翔<br/><br/>身在世界不同的 地方<br/>只要同心哪儿都一样<br/>同行就不再怕孤单br因为我有了正能量<br/>梦想 让肩膀 长出翅膀翱翔<br/>飞到最远最高的地方<br/>手牵着手 凝聚 力量<br/>让我们共同创造无限的桥梁<br/>梦想 让我们 挥舞翅膀翱翔<br/>心连心同个方向共闯<br/>一种理念 一同期盼<br/>`,
+			cover: '/images/koe-yeet-cover.webp',
+			imageUrl: '/images/cover/koe-yeet.webp',
+			produces: ['Eyoki Creative'],
+			directors: ['Yuki (Eyoki Creative)'],
+			dps: ['Yuki (Eyoki Creative)'],
+			editors: ['Willie (Eyoki Creative)'],
+			casts: ['Koe Yeet'],
+			labels: ['MV'],
+			link: '1GY8f2zwUh8',
+			time: '03:22'
 		}
 		// {
 		// 	id: '3',
@@ -218,10 +249,10 @@
 		<!-- <h2>We are Fun and Young.</h2> -->
 	</section>
 
-	<!-- <section>
-		<h3>Latest work you may like</h3>
-		<VideoList items={latestVideos} />
-	</section> -->
+	<section class="">
+		<Header href="/">Latest work you may like</Header>
+		<VideoList items={impactfulVideos.slice()} />
+	</section>
 
 	<section class="works">
 		<div>
@@ -235,12 +266,15 @@
 	</section>
 </div>
 
-<!-- <VideoPlayer /> -->
 <style lang="scss">
 	h1 {
 		font-size: 48px;
 		line-height: 1.1;
 		width: 60%;
+	}
+
+	section {
+		padding: 1rem 0;
 	}
 
 	.headline {
