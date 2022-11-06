@@ -115,25 +115,28 @@
 				<section class="info">
 					<!-- <div>Genre</div> -->
 					<div>
-						<span class="label">Director:</span>
+						<span class="label">{`Director${video.directors.length > 1 ? 's' : ''}:`}</span>
 						<span><TagList items={video.directors} /></span>
 					</div>
 					{#if video.writers}
 						<div>
-							<span class="label">Writer:</span>
+							<span class="label">{`Writers${video.writers.length > 1 ? 's' : ''}:`}:</span>
 							<span><TagList items={video.writers} /></span>
 						</div>
 					{/if}
 					{#if video.dps}
 						<div>
-							<span class="label">Director of Photography:</span>
+							<span class="label">{`Cinematographer${video.dps.length > 1 ? 's' : ''}:`}</span>
 							<span><TagList items={video.dps} /></span>
 						</div>
 					{/if}
 					{#if video.editors}
-						<div><span class="label">Editor:</span>{video.editors.join(', ')}</div>
+						<div><span class="label">Editor:</span><TagList items={video.editors} /></div>
 					{/if}
-					<div><span class="label">Cast:</span>{video.casts.join(', ')}</div>
+					<div>
+						<span class="label">Cast:</span>
+						<TagList items={video.casts} />
+					</div>
 					<div><span class="label">Produced By:</span> Eyoki Creative</div>
 				</section>
 			</div>

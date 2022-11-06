@@ -2,7 +2,10 @@
 	export let items: string[] = [];
 </script>
 
-{#each items as item}
+{#each items as item, i}
+	{#if i > 0}
+		<span style="margin-right: 2px">,</span>
+	{/if}
 	<span>{item}</span>
 {/each}
 
