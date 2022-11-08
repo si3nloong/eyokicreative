@@ -1,8 +1,6 @@
 <script lang="ts">
 	import MediaPlayer from '$lib/components/MediaPlayer.svelte';
 	import Menu from '$lib/components/Menu.svelte';
-	import { store } from '$lib/store';
-	import { fade } from 'svelte/transition';
 	import './app.scss';
 </script>
 
@@ -115,31 +113,6 @@
 </MediaPlayer>
 
 <style lang="scss">
-	.overlay {
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background: rgba(0, 0, 0, 0.85);
-		z-index: 100;
-
-		#video {
-			width: 80%;
-			height: 80%;
-		}
-
-		@media screen and (max-width: 600px) {
-			#video {
-				width: 100%;
-				height: 100%;
-			}
-		}
-	}
-
 	header {
 		display: flex;
 		align-items: center;

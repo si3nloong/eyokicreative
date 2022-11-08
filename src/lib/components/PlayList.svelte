@@ -1,12 +1,11 @@
 <script lang="ts">
 	import Image from './Image.svelte';
 	import type { Media } from './';
-	import { KEY, type MediaPlayer } from './MediaPlayer.svelte';
-	import { getContext } from 'svelte';
+	import { useMediaPlayer } from './MediaPlayer.svelte';
 
 	export let items: Media[] = [];
 
-	const player = getContext(KEY) as MediaPlayer;
+	const player = useMediaPlayer();
 
 	const onPreview = (item: Media) => () => {
 		player.preview(item);
@@ -14,7 +13,7 @@
 </script>
 
 <ul>
-	{#each items as item (item.id)}
+	{#each items as item, i (`play-${i}`)}
 		<li on:click={onPreview(item)}>
 			<Image src={item.imageUrl} alt={item.title} />
 			<div class="body">

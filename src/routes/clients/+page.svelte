@@ -3,7 +3,7 @@
 </script>
 
 <script lang="ts">
-	import Headline from '$lib/components/Headline.svelte';
+	import Header from '$lib/components/Header.svelte';
 
 	// TODO: set to prerender page
 	const clients = [
@@ -114,7 +114,7 @@
 	];
 </script>
 
-<Headline>Our Clients</Headline>
+<Header>Our Clients</Header>
 
 <ul class="client-list">
 	{#each clients as item}
