@@ -13,6 +13,7 @@
 	<meta property="og:locale" content="en_GB" />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Eyoki Creative" />
+	<meta property="og:image" content="/logo.png" />
 	<meta
 		property="og:description"
 		content="Eyoki Creative is a creative production company that led by an award-winning female director of photography (DP) in Malaysia."
