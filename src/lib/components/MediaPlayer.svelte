@@ -1,16 +1,21 @@
 <script context="module" lang="ts">
-	export const KEY = {};
+	import { getContext, setContext } from 'svelte';
 
-	export type MediaPlayer = {
+	const KEY = {};
+
+	type MediaPlayer = {
 		preview: (v: Media) => void;
 		play: (v: Media) => void;
 		close: () => void;
+	};
+
+	export const useMediaPlayer = () => {
+		return getContext(KEY) as MediaPlayer;
 	};
 </script>
 
 <script lang="ts">
 	import { browser } from '$app/environment';
-	import { setContext } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import YouTubePlayer from 'yt-player';
 	import type { Media } from './';
@@ -43,6 +48,7 @@
 			ytPlayer.on('timeupdate', console.log);
 		}
 		playing = true;
+		ytPlayer.setVolume(100);
 		ytPlayer.load(item.link, true);
 	};
 
@@ -137,7 +143,7 @@
 						<span class="label">Cast:</span>
 						<TagList items={video.casts} />
 					</div>
-					<div><span class="label">Produced By:</span> Eyoki Creative</div>
+					<div><span class="label">Produced By:</span>{video.produceBy}</div>
 				</section>
 			</div>
 		{/if}

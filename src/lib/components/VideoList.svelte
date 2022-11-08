@@ -1,14 +1,13 @@
 <script lang="ts">
-	import { getContext } from 'svelte';
 	import type { Media } from '.';
-	import { KEY, type MediaPlayer } from './MediaPlayer.svelte';
+	import { useMediaPlayer } from './MediaPlayer.svelte';
 	import Video from './Video.svelte';
 
 	export let items: Media[] = [];
 
-	items = items.splice(0, 4);
+	const result = items.slice().splice(0, 4);
 
-	const player = getContext(KEY) as MediaPlayer;
+	const player = useMediaPlayer();
 
 	const onPreview = (item: Media) => () => {
 		player.preview(item);
@@ -16,7 +15,7 @@
 </script>
 
 <ul class="video-list">
-	{#each items as item (item.id)}
+	{#each result as item, i (`video-${i}`)}
 		<li on:click={onPreview(item)}><Video video={item} /></li>
 	{/each}
 </ul>
@@ -29,7 +28,7 @@
 		justify-content: space-between;
 
 		li {
-			cursor: default;
+			cursor: pointer;
 			width: 23.5%;
 			transition: all 0.5s;
 
