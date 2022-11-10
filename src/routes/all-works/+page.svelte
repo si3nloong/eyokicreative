@@ -46,17 +46,18 @@
 		padding: 2rem 0;
 	}
 
-	ul {
+	.video-list {
 		list-style: none;
 		list-style-position: inside;
 		display: flex;
 		padding-top: 0.5rem;
-		flex-wrap: wrap;
+		margin: 0 -10px;
+		flex-flow: row wrap;
 		justify-content: space-between;
 
 		li {
 			width: 100%;
-			margin: 10px 0;
+			padding: 10px;
 
 			.thumbnail {
 				cursor: pointer;
@@ -72,16 +73,21 @@
 			}
 
 			@media screen and (min-width: 480px) {
-				width: 48%;
+				width: 50%;
 			}
 
 			@media screen and (min-width: 800px) {
-				width: 31%;
+				width: 33.33%;
 			}
 
 			@media screen and (min-width: 1024px) {
-				width: 23.5%;
+				width: 25%;
 			}
+		}
+
+		&::after {
+			content: '';
+			flex: auto;
 		}
 	}
 </style>
