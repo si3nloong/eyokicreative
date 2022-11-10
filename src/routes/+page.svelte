@@ -1,10 +1,10 @@
 <script lang="ts">
+	import type { Media } from '$lib/components';
 	import Header from '$lib/components/Header.svelte';
 	import PlayList from '$lib/components/PlayList.svelte';
 	import VideoList from '$lib/components/VideoList.svelte';
-	import selfProduce from '$lib/data/self-produce';
 
-	const popularVideos = selfProduce.slice();
+	export let data: { popularVideos: Media[] } = { popularVideos: [] };
 
 	const getRedirectLink = () => {
 		return `/all-works?section=favourite`;
@@ -18,7 +18,7 @@
 
 	<section class="">
 		<Header href={getRedirectLink()}>All Time Favourite</Header>
-		<VideoList items={popularVideos} />
+		<VideoList items={data.popularVideos.slice()} />
 	</section>
 
 	<section class="works">

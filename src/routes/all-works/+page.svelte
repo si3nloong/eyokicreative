@@ -29,7 +29,7 @@
 </section>
 
 <section>
-	<h2>Videography works</h2>
+	<h2>Cinematography works</h2>
 	<ul class="video-list">
 		{#each data.dps as item, i (getID(item, i))}
 			<li>

@@ -126,7 +126,7 @@
 					</div>
 					{#if video.writers}
 						<div>
-							<span class="label">{`Writers${video.writers.length > 1 ? 's' : ''}:`}:</span>
+							<span class="label">{`Writer${video.writers.length > 1 ? 's' : ''}:`}</span>
 							<span><TagList items={video.writers} /></span>
 						</div>
 					{/if}

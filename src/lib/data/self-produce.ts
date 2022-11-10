@@ -89,20 +89,20 @@ export default [
 		link: '52r0k2qptKI',
 		time: '01:30'
 	},
-	{
-		title: `SK magic | Truth or Myth?`,
-		shortDesc: '',
-		cover: '/images/cover/truth-or-myth.webp',
-		imageUrl: '/images/skmagic-cover.png',
-		produceBy: 'Eyoki Creative',
-		directors: ['Esham'],
-		dps: ['Yuki (Eyoki Creative)'],
-		editors: ['Billy Lau'],
-		casts: ['Arnold', 'Justin'],
-		labels: ['Commercial'],
-		link: 'qDXHVPzqSMQ',
-		time: '04:20'
-	},
+	// {
+	// 	title: `SK magic | Truth or Myth?`,
+	// 	shortDesc: '',
+	// 	cover: '/images/cover/truth-or-myth.webp',
+	// 	imageUrl: '/images/skmagic-cover.png',
+	// 	produceBy: 'Eyoki Creative',
+	// 	directors: ['Esham'],
+	// 	dps: ['Yuki (Eyoki Creative)'],
+	// 	editors: ['Billy Lau'],
+	// 	casts: ['Arnold', 'Justin'],
+	// 	labels: ['Commercial'],
+	// 	link: 'qDXHVPzqSMQ',
+	// 	time: '04:20'
+	// },
 	{
 		title: `Aun Soon Confectionery 安顺糕饼家：豆沙饼`,
 		shortDesc: '',
@@ -130,5 +130,33 @@ export default [
 		labels: ['Commercial'],
 		link: 'HlNOU1LwVI8',
 		time: '00:55'
+	},
+	{
+		title: `We are the Makeover Guys`,
+		shortDesc: '',
+		cover: '/images/cover/tmog.webp',
+		imageUrl: '/images/skmagic-cover.png',
+		produceBy: 'Eyoki Creative',
+		directors: ['Chong Kern Wei'],
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: ['Chong Kern Wei'],
+		casts: [],
+		labels: ['Commercial'],
+		link: 'K0yaVQ6vmro',
+		time: '01:33'
+	},
+	{
+		title: `SK Magic | Aedy Ashraf & Alif Hilman masak juadah Ramadan VIRAL!`,
+		shortDesc: '',
+		cover: '/images/cover/sk-magic-ramadan.webp',
+		imageUrl: '/images/lg-cover.jpeg',
+		produceBy: '',
+		directors: [''],
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: [''],
+		casts: [''],
+		labels: ['Commercial'],
+		link: 'J-s6ql-Gjhw',
+		time: '03:54'
 	}
 ];
