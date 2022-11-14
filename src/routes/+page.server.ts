@@ -5,6 +5,7 @@ import dp from '$lib/data/dp';
 export async function load() {
 	return {
 		popularVideos: selfProduce.slice().splice(0, 4),
-		dps: dp.slice()
+		dps: dp.slice(),
+		latestVideos: selfProduce.slice().splice(0, 5)
 	};
 }

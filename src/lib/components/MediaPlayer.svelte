@@ -105,10 +105,14 @@
 				<section class="main">
 					<h2>{video.title}</h2>
 					<div class="extra-info">
-						<span>{video.time}</span>
+						{#if video.client}
+							<span class="client"><img src={video.client.imageUrl} alt="" /></span>
+							<span class="name">{video.client.name}</span>
+						{/if}
+						<!-- <span class="timerange">{video.time}</span>
 						{#each video.labels as item}
 							<span>{item}</span>
-						{/each}
+						{/each} -->
 					</div>
 					{#if video.shortDesc}
 						<div>{@html video.shortDesc}</div>
@@ -146,6 +150,11 @@
 					<div><span class="label">Produced By:</span>{video.produceBy}</div>
 				</section>
 			</div>
+			<!-- {#if video.bts}
+				<section>
+					<h1>Behind the Scene</h1>
+				</section>
+			{/if} -->
 		{/if}
 	</div>
 </div>
@@ -193,7 +202,7 @@
 		margin: 0 auto;
 		max-width: 1024px;
 		overflow: hidden;
-		border-radius: 8px;
+		border-radius: 12px;
 		box-shadow: 0 0 26px rgba(0, 0, 0, 0.3);
 
 		.close-btn {
@@ -277,7 +286,31 @@
 		}
 
 		.extra-info {
+			display: flex;
+			align-items: center;
+			// justify-content: space-around;
 			padding: 0.5rem 0;
+
+			.client {
+				width: 50px;
+				height: 50px;
+				border-radius: 2px;
+				overflow: hidden;
+			}
+
+			.name {
+				margin-left: 12px;
+			}
+
+			.timerange {
+				display: inline-flex;
+				border: 1px solid #dcdcdc;
+				line-height: 24px;
+				height: 26px;
+				padding: 0 8px;
+				border-radius: 3px;
+				font-size: 12px;
+			}
 		}
 
 		.label {

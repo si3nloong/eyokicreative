@@ -11,6 +11,11 @@ export type Media = {
 	casts: string[];
 	produceBy: string;
 	labels: string[];
+	bts?: string;
+	client?: {
+		name: string;
+		imageUrl: string;
+	};
 	link: string;
 	time: string;
 };
