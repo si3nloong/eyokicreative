@@ -70,7 +70,7 @@ export default [
 		link: 'rJiLFWnyrD8',
 		time: '03:31',
 		client: {
-			name: '刘界辉',
+			name: '刘界辉 (Juztin Lan)',
 			imageUrl: '/images/justin-lan.webp'
 		}
 	},
@@ -89,7 +89,7 @@ export default [
 		link: '1GY8f2zwUh8',
 		time: '03:22',
 		client: {
-			name: '高艺',
+			name: '高艺 (Koe Yeet)',
 			imageUrl: '/logo/koe-yeet.webp'
 		}
 	},
