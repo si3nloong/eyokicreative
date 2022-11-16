@@ -12,7 +12,7 @@
 	};
 </script>
 
-<ul>
+<ul class="play-list">
 	{#each items as item, i (`play-${i}`)}
 		<li on:click={onPreview(item)}>
 			<Image src={item.imageUrl} alt={item.title} />
@@ -36,7 +36,7 @@
 </ul>
 
 <style lang="scss">
-	ul {
+	.play-list {
 		color: #424653;
 		list-style: none;
 		list-style-position: inside;

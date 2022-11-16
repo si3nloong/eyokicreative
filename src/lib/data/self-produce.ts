@@ -29,21 +29,31 @@ export default [
 		casts: ['Fabian Loo', 'Pearlly Chua'],
 		labels: ['Short Film'],
 		link: 'N41rOM88c40',
-		time: '14:59'
+		time: '14:59',
+		bts: {
+			link: 'D9JvcFP2pN4'
+		}
 	},
 	{
 		title: 'VIVO V20 SE Aquamarine',
-		shortDesc: `The new trendsetter has arrived! vivo V20 SE #Aquamarine is picking up steam in 2020 with its trendy new colour!`,
+		shortDesc: `The new trendsetter has arrived! VIVO V20 SE #Aquamarine is picking up steam in 2020 with its trendy new colour!`,
 		cover: '/images/cover/vivo-v20.webp',
 		imageUrl: '/images/vivo-cover.png',
 		produceBy: 'Eyoki Creative',
-		directors: ['Bryan'],
+		directors: ['Bryan Sim'],
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: ['WT (Eyoki Creative)'],
-		casts: ['Girl'],
+		casts: ['Dianne Dean'],
 		labels: ['Commercial'],
 		link: 'vvuvjRDAJAk',
-		time: '00:30'
+		time: '00:30',
+		client: {
+			name: 'VIVO',
+			imageUrl: '/images/vivo-cover.png'
+		},
+		bts: {
+			link: 'nEVLkBp6gyc'
+		}
 	},
 	{
 		title: '凡人不懂愛',
@@ -58,7 +68,11 @@ export default [
 		casts: ['Juztin Lan'],
 		labels: ['MV'],
 		link: 'rJiLFWnyrD8',
-		time: '03:31'
+		time: '03:31',
+		client: {
+			name: '刘界辉 (Juztin Lan)',
+			imageUrl: '/images/justin-lan.webp'
+		}
 	},
 	{
 		title: '心声愿',
@@ -73,36 +87,44 @@ export default [
 		casts: ['Koe Yeet'],
 		labels: ['MV'],
 		link: '1GY8f2zwUh8',
-		time: '03:22'
+		time: '03:22',
+		client: {
+			name: '高艺 (Koe Yeet)',
+			imageUrl: '/logo/koe-yeet.webp'
+		}
 	},
 	{
 		title: `LG PuriCare™ Self-Service Tankless Water Purifier`,
 		shortDesc: '',
 		cover: '/images/cover/lg-puri-care.webp',
 		imageUrl: '/images/lg.jpeg',
-		directors: [],
+		directors: ['Esham'],
 		produceBy: 'Eyoki Creative',
 		dps: ['Yuki (Eyoki Creative)'],
-		editors: [],
-		casts: [],
+		editors: ['Greyhound Studio'],
+		casts: [''],
 		labels: ['Commercial'],
 		link: '52r0k2qptKI',
-		time: '01:30'
+		time: '01:30',
+		client: {
+			name: 'LG',
+			imageUrl: '/images/lg.jpeg'
+		}
 	},
-	{
-		title: `SK magic | Truth or Myth?`,
-		shortDesc: '',
-		cover: '/images/cover/truth-or-myth.webp',
-		imageUrl: '/images/skmagic-cover.png',
-		produceBy: 'Eyoki Creative',
-		directors: ['Esham'],
-		dps: ['Yuki (Eyoki Creative)'],
-		editors: ['Billy Lau'],
-		casts: ['Arnold', 'Justin'],
-		labels: ['Commercial'],
-		link: 'qDXHVPzqSMQ',
-		time: '04:20'
-	},
+	// {
+	// 	title: `SK magic | Truth or Myth?`,
+	// 	shortDesc: '',
+	// 	cover: '/images/cover/truth-or-myth.webp',
+	// 	imageUrl: '/images/skmagic-cover.png',
+	// 	produceBy: 'Eyoki Creative',
+	// 	directors: ['Esham'],
+	// 	dps: ['Yuki (Eyoki Creative)'],
+	// 	editors: ['Billy Lau'],
+	// 	casts: ['Arnold', 'Justin'],
+	// 	labels: ['Commercial'],
+	// 	link: 'qDXHVPzqSMQ',
+	// 	time: '04:20'
+	// },
 	{
 		title: `Aun Soon Confectionery 安顺糕饼家：豆沙饼`,
 		shortDesc: '',
@@ -115,7 +137,11 @@ export default [
 		casts: ['Kok Liang'],
 		labels: ['Commercial'],
 		link: 'pNw6Xj3KUhc',
-		time: '00:40'
+		time: '00:40',
+		client: {
+			name: '安顺糕饼家',
+			imageUrl: '/images/lg.jpeg'
+		}
 	},
 	{
 		title: `Vitruvio Gym`,
@@ -129,6 +155,46 @@ export default [
 		casts: [],
 		labels: ['Commercial'],
 		link: 'HlNOU1LwVI8',
-		time: '00:55'
+		time: '00:55',
+		client: {
+			name: 'Vitruvio Gym',
+			imageUrl: '/logo/vitruvio-gym.webp'
+		}
+	},
+	{
+		title: `We are the Makeover Guys - Manifesto`,
+		shortDesc: '',
+		cover: '/images/cover/tmog.webp',
+		imageUrl: '/images/skmagic-cover.png',
+		produceBy: 'Eyoki Creative',
+		directors: ['Chong Kern Wei'],
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: ['Chong Kern Wei'],
+		casts: ['TMOG Staffs'],
+		labels: ['Commercial'],
+		link: 'K0yaVQ6vmro',
+		time: '01:33',
+		client: {
+			name: 'The Makeover Guy',
+			imageUrl: '/logo/tmog.webp'
+		}
+	},
+	{
+		title: `SK Magic | Aedy Ashraf & Alif Hilman masak juadah Ramadan VIRAL!`,
+		shortDesc: `Korang rasa Aedy boleh masak tak? Jom kita tengok Aedy Ashraf dan Alif Hilman mencabar diri mereka untuk sediakan makanan bazar Ramadan yang paling VIRAL untuk berbuka puasa!`,
+		cover: '/images/cover/sk-magic-ramadan.webp',
+		imageUrl: '/images/lg-cover.jpeg',
+		produceBy: 'Eyoki Creative',
+		directors: ['Bryan Sim'],
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: ['So FC'],
+		casts: ['Aedy Ashraf', 'Alif Hilman'],
+		labels: ['Commercial'],
+		link: 'J-s6ql-Gjhw',
+		time: '03:54',
+		client: {
+			name: 'SK Magic',
+			imageUrl: '/logo/sk-magic.webp'
+		}
 	}
 ];

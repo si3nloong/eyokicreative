@@ -1,10 +1,13 @@
 <script lang="ts">
+	import type { Media } from '$lib/components';
 	import Header from '$lib/components/Header.svelte';
 	import PlayList from '$lib/components/PlayList.svelte';
 	import VideoList from '$lib/components/VideoList.svelte';
-	import selfProduce from '$lib/data/self-produce';
 
-	const popularVideos = selfProduce.slice();
+	export let data: { latestVideos: Media[]; popularVideos: Media[] } = {
+		latestVideos: [],
+		popularVideos: []
+	};
 
 	const getRedirectLink = () => {
 		return `/all-works?section=favourite`;
@@ -13,18 +16,19 @@
 
 <div style="min-height: 500px;">
 	<section class="headline">
-		<h1><span class="highlight">Eyoki Creative</span> is Creative Production House</h1>
+		<!-- <h1><span class="highlight">Eyoki Creative</span> is Creative Production House</h1> -->
+		<h1>AWARD-WINNING FILM PRODUCTION COMPANY</h1>
 	</section>
 
 	<section class="">
 		<Header href={getRedirectLink()}>All Time Favourite</Header>
-		<VideoList items={popularVideos} />
+		<VideoList items={data.popularVideos.slice()} />
 	</section>
 
 	<section class="works">
 		<div>
 			<Header href={getRedirectLink()}>Latest work you may like</Header>
-			<PlayList items={[]} />
+			<PlayList items={data.latestVideos.slice()} />
 		</div>
 		<div>
 			<Header href={getRedirectLink()}>Most Popular on This Year (2022)</Header>
