@@ -1,5 +1,6 @@
 export type Media = {
 	title: string;
+	year: number;
 	shortDesc?: string;
 	cover: string;
 	imageUrl: string;
@@ -11,7 +12,7 @@ export type Media = {
 	casts: string[];
 	produceBy: string;
 	labels: string[];
-	bts?: string;
+	bts?: Pick<Media, 'title' | 'imageUrl' | 'link' | 'time'>;
 	client?: {
 		name: string;
 		imageUrl: string;

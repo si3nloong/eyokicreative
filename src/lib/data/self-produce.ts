@@ -31,6 +31,8 @@ export default [
 		link: 'N41rOM88c40',
 		time: '14:59',
 		bts: {
+			title: 'BMW Shorties 2019 (ALOT FUN MOMENTS)',
+			imageUrl: '/images/cover/kingdom-and-beauty.webp',
 			link: 'D9JvcFP2pN4'
 		}
 	},
@@ -140,7 +142,7 @@ export default [
 		time: '00:40',
 		client: {
 			name: '安顺糕饼家',
-			imageUrl: '/images/lg.jpeg'
+			imageUrl: '/logo/aun-soon.webp'
 		}
 	},
 	{
@@ -195,6 +197,40 @@ export default [
 		client: {
 			name: 'SK Magic',
 			imageUrl: '/logo/sk-magic.webp'
+		}
+	},
+	{
+		title: 'Appeton The Fighter',
+		cover: '',
+		imageUrl: '',
+		produceBy: 'Eyoki Creative',
+		directors: ['Bryan Sim'],
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: ['Jun Liew (Eyoki Creative)'],
+		casts: [''],
+		labels: ['Commercial'],
+		link: 'Sis3cytosgU',
+		time: '00:20',
+		client: {
+			name: 'Appeton',
+			imageUrl: '/logo/appeton.webp'
+		}
+	},
+	{
+		title: 'Appeton Infomercial',
+		cover: '/images/cover/appeton-infomercial.webp',
+		imageUrl: '/images/cover/appeton-infomercial.webp',
+		produceBy: 'Eyoki Creative',
+		directors: ['Bryan Sim'],
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: ['Jun Liew (Eyoki Creative)'],
+		casts: [''],
+		labels: ['Commercial'],
+		link: 'OdqyG1EhEzM',
+		time: '00:20',
+		client: {
+			name: 'Appeton',
+			imageUrl: '/logo/appeton.webp'
 		}
 	}
 ];

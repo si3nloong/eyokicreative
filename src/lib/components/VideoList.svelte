@@ -16,6 +16,7 @@
 
 <ul class="video-list">
 	{#each result as item, i (`video-${i}`)}
+		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<li on:click={onPreview(item)}><Video video={item} /></li>
 	{/each}
 </ul>
