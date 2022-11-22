@@ -39,7 +39,7 @@
 		show = true;
 	};
 
-	const play = (item: Media) => {
+	const play = (item: { link: string }) => {
 		if (!ytPlayer) {
 			ytPlayer = new YouTubePlayer(player);
 			ytPlayer.on('playing', () => {
@@ -67,17 +67,19 @@
 		window.scrollTo(0, Number(document.body.getAttribute('data-scrolly')) || 0);
 	}
 
-	const playVideo = (item: Media) => () => {
+	const playVideo = (item: { link: string }) => () => {
 		play(item);
 	};
 </script>
 
 <slot />
 {#if show}
+	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<div class="overlay" in:fade out:fade on:click|stopPropagation={close} />
 {/if}
 <div class="modal-box" class:hidden={!show || !video}>
 	<div class="dialog">
+		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<span class="close-btn" on:click={close}
 			>{@html `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M18 6L6 18" stroke="#33363F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -87,7 +89,7 @@
 			<div class="cover">
 				<div class="video-player" bind:this={player} />
 				{#if video && !playing}
-					<img class="cover-img" src={video.cover} alt={video.title} />
+					<img out:fade class="cover-img" src={video.cover} alt={video.title} />
 				{/if}
 			</div>
 			{#if video && !playing}
@@ -100,62 +102,79 @@
 				</div>
 			{/if}
 		</div>
-		{#if video}
-			<div class="content">
-				<section class="main">
-					<h2>{video.title}</h2>
-					<div class="extra-info">
-						{#if video.client}
-							<span class="client"><img src={video.client.imageUrl} alt="" /></span>
-							<span class="name">{video.client.name}</span>
+		<div class="container">
+			{#if video}
+				<section class="content">
+					<section class="main">
+						<h2>{video.title}</h2>
+						<div class="extra-info">
+							{#if video.client}
+								<span class="client"><img src={video.client.imageUrl} alt="" /></span>
+								<span class="name">{video.client.name}</span>
+							{/if}
+							<!-- <span class="timerange">{video.time}</span>
+							{#each video.labels as item}
+								<span>{item}</span>
+							{/each} -->
+						</div>
+						{#if video.shortDesc}
+							<div>{@html video.shortDesc}</div>
+						{:else if video.lyrics}
+							{#each video.lyrics as [_, lyric]}
+								<div>{lyric}</div>
+							{/each}
 						{/if}
-						<!-- <span class="timerange">{video.time}</span>
-						{#each video.labels as item}
-							<span>{item}</span>
-						{/each} -->
-					</div>
-					{#if video.shortDesc}
-						<div>{@html video.shortDesc}</div>
-					{:else if video.lyrics}
-						{#each video.lyrics as [_, lyric]}
-							<div>{lyric}</div>
-						{/each}
-					{/if}
-				</section>
-				<section class="info">
-					<!-- <div>Genre</div> -->
-					<div>
-						<span class="label">{`Director${video.directors.length > 1 ? 's' : ''}:`}</span>
-						<span><TagList items={video.directors} /></span>
-					</div>
-					{#if video.writers}
+					</section>
+					<section class="info">
+						<!-- <div>Genre</div> -->
 						<div>
-							<span class="label">{`Writer${video.writers.length > 1 ? 's' : ''}:`}</span>
-							<span><TagList items={video.writers} /></span>
+							<span class="label">{`Director${video.directors.length > 1 ? 's' : ''}:`}</span>
+							<span><TagList items={video.directors} /></span>
 						</div>
-					{/if}
-					{#if video.dps}
+						{#if video.writers}
+							<div>
+								<span class="label">{`Writer${video.writers.length > 1 ? 's' : ''}:`}</span>
+								<span><TagList items={video.writers} /></span>
+							</div>
+						{/if}
+						{#if video.dps}
+							<div>
+								<span class="label">{`Cinematographer${video.dps.length > 1 ? 's' : ''}:`}</span>
+								<span><TagList items={video.dps} /></span>
+							</div>
+						{/if}
+						{#if video.editors}
+							<div><span class="label">Editor:</span><TagList items={video.editors} /></div>
+						{/if}
 						<div>
-							<span class="label">{`Cinematographer${video.dps.length > 1 ? 's' : ''}:`}</span>
-							<span><TagList items={video.dps} /></span>
+							<span class="label">Cast:</span>
+							<TagList items={video.casts} />
 						</div>
-					{/if}
-					{#if video.editors}
-						<div><span class="label">Editor:</span><TagList items={video.editors} /></div>
-					{/if}
-					<div>
-						<span class="label">Cast:</span>
-						<TagList items={video.casts} />
-					</div>
-					<div><span class="label">Produced By:</span>{video.produceBy}</div>
+						<div><span class="label">Produced By:</span>{video.produceBy}</div>
+					</section>
 				</section>
-			</div>
-			<!-- {#if video.bts}
-				<section>
-					<h1>Behind the Scene</h1>
-				</section>
-			{/if} -->
-		{/if}
+				{#if video.bts}
+					<br />
+					<section>
+						<h1>Behind the Scene</h1>
+					</section>
+					<ul class="related-video-list">
+						<li>
+							<div style="width: 30%;">
+								<div class="aspect-ratio">
+									<img class="cover-img" src={video.bts.imageUrl} alt={video.bts.title} />
+								</div>
+							</div>
+							<div class="video-info">
+								<h3>{video.bts.title}</h3>
+								<!-- svelte-ignore a11y-click-events-have-key-events -->
+								<span on:click={playVideo(video.bts)}>Play now</span>
+							</div>
+						</li>
+					</ul>
+				{/if}
+			{/if}
+		</div>
 	</div>
 </div>
 
@@ -268,19 +287,23 @@
 			}
 		}
 
+		.container {
+			padding: 1rem $paddingHorizontal;
+			padding-bottom: 60px;
+		}
+
 		.content {
 			display: flex;
-			padding-bottom: 60px;
 			width: 100%;
 
 			.main {
 				flex-grow: 1;
-				padding: 1rem $paddingHorizontal;
+				padding-right: $paddingHorizontal;
 			}
 
 			.info {
 				min-width: 280px;
-				padding: 1rem $paddingHorizontal;
+				padding: 1rem 0;
 				padding-left: 0;
 			}
 		}
@@ -289,7 +312,7 @@
 			display: flex;
 			align-items: center;
 			// justify-content: space-around;
-			padding: 0.5rem 0;
+			padding: 0.65rem 0;
 
 			.client {
 				width: 50px;
@@ -302,21 +325,52 @@
 				margin-left: 12px;
 			}
 
-			.timerange {
-				display: inline-flex;
-				border: 1px solid #dcdcdc;
-				line-height: 24px;
-				height: 26px;
-				padding: 0 8px;
-				border-radius: 3px;
-				font-size: 12px;
-			}
+			// .timerange {
+			// 	display: inline-flex;
+			// 	border: 1px solid #dcdcdc;
+			// 	line-height: 24px;
+			// 	height: 26px;
+			// 	padding: 0 8px;
+			// 	border-radius: 3px;
+			// 	font-size: 12px;
+			// }
 		}
 
 		.label {
 			font-size: 12px;
 			color: #3a3d42;
 			margin-right: 6px;
+		}
+
+		.related-video-list {
+			list-style: none;
+			list-style-position: inside;
+			margin-top: 12px;
+
+			li {
+				display: flex;
+				// align-items: center;
+
+				.video-info {
+					padding: 0.65rem 1rem;
+					flex-grow: 1;
+				}
+			}
+		}
+
+		.d-16-9 {
+			position: relative;
+			display: block;
+			padding-top: 56.25%;
+			height: 0;
+
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
 		}
 	}
 </style>

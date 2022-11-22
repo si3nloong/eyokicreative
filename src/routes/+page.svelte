@@ -17,7 +17,10 @@
 <div style="min-height: 500px;">
 	<section class="headline">
 		<!-- <h1><span class="highlight">Eyoki Creative</span> is Creative Production House</h1> -->
-		<h1>AWARD-WINNING FILM PRODUCTION COMPANY</h1>
+		<h1>
+			WE FOCUS ON <span class="highlight">TEAM</span> AND
+			<span class="highlight">CULTURE</span>
+		</h1>
 	</section>
 
 	<section class="">

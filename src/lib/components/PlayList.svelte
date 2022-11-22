@@ -14,6 +14,7 @@
 
 <ul class="play-list">
 	{#each items as item, i (`play-${i}`)}
+		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<li on:click={onPreview(item)}>
 			<Image src={item.imageUrl} alt={item.title} />
 			<div class="body">

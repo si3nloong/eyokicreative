@@ -1,5 +1,8 @@
+export type BehindTheScreen = Required<Pick<Media, 'title' | 'imageUrl' | 'link' | 'time'>>;
+
 export type Media = {
 	title: string;
+	date: [month: number, year: number];
 	shortDesc?: string;
 	cover: string;
 	imageUrl: string;
@@ -11,7 +14,7 @@ export type Media = {
 	casts: string[];
 	produceBy: string;
 	labels: string[];
-	bts?: string;
+	bts?: BehindTheScreen;
 	client?: {
 		name: string;
 		imageUrl: string;
