@@ -42,10 +42,9 @@ export default [
 		cover: '/images/cover/allianz-sangka-baik.webp',
 		imageUrl: '/images/allianz-cover.png',
 		produceBy: 'Think Tank',
-		directors: [''],
+		directors: ['Azman'],
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: [''],
-		casts: [''],
 		labels: ['Commercial'],
 		link: 'L7dfKZ4bBPU',
 		time: '02:17',
@@ -83,7 +82,11 @@ export default [
 		casts: ['Emily'],
 		labels: ['Short Film'],
 		link: 'cmXBpjxE9',
-		time: '16:23'
+		time: '16:23',
+		client: {
+			name: 'Jinnyboy TV',
+			imageUrl: '/logo/jinnyboy-tv.webp'
+		}
 	},
 	{
 		title: 'Every Bulan Puasa',
@@ -96,7 +99,11 @@ export default [
 		casts: ['Jinnyboy', 'Adib', 'Shu Faye', 'Alexis Sue Anne', 'Dennis Yin', 'Arwind Kumar'],
 		labels: ['Short Film'],
 		link: 'bNBPko3m5E0',
-		time: '05:46'
+		time: '05:46',
+		client: {
+			name: 'Jinnyboy TV',
+			imageUrl: '/logo/jinnyboy-tv.webp'
+		}
 	},
 	{
 		title: `OPPO Find X5 Pro 5G featuring Owen Yap`,
@@ -110,7 +117,11 @@ export default [
 		casts: ['Owen Yap'],
 		labels: ['Commercial'],
 		link: '52r0k2qptKI',
-		time: '01:00'
+		time: '01:00',
+		client: {
+			name: 'Oppo Malaysia',
+			imageUrl: '/logo/oppo.webp'
+		}
 	},
 	{
 		title: `Kami Nak 100% Makanan Laut`,

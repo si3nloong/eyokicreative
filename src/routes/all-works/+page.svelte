@@ -1,10 +1,20 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import type { Media } from '$lib/components';
 	import { useMediaPlayer } from '$lib/components/MediaPlayer.svelte';
 
 	export let data: { producedBys: Media[]; dps: Media[] } = { dps: [], producedBys: [] };
 
+	const params = new URLSearchParams($page.url.hash.substring(1));
+	const id = params.get('id');
 	const player = useMediaPlayer();
+
+	if (id) {
+		const video = data.producedBys.concat(data.dps).find((v) => v.title == id);
+		if (video) {
+			player.preview(video);
+		}
+	}
 
 	const onPreview = (item: Media) => () => {
 		player.preview(item);
