@@ -17,7 +17,6 @@
 		padding: 1rem 0;
 
 		.link {
-			color: red;
 			font-size: 12px;
 			font-weight: bold;
 		}

@@ -40,3 +40,14 @@ img {
 	height: 100%;
 	object-fit: cover;
 }
+
+@media (prefers-color-scheme: dark) {
+	body {
+		color: #fff;
+		background: #121212;
+	}
+
+	a {
+		color: #da0037;
+	}
+}

@@ -171,6 +171,12 @@
 				display: block;
 			}
 		}
+
+		@media (prefers-color-scheme: dark) {
+			.logo {
+				display: none;
+			}
+		}
 	}
 
 	main {
