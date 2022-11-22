@@ -2,7 +2,7 @@ export default [
 	{
 		title: 'Nespresso x RED Hong Yi - Doing Is Everything',
 		shortDesc: `Discover all that went into the journey of our latest collaboration on sustainability with @redhongyi as she shares her vision and inspiration - sparking off the stunning creation made from 24,000 used Nespresso capsules.`,
-		year: 2021,
+		year: [12, 2021],
 		cover: '/images/cover/nepresso-redhongyi.webp',
 		imageUrl: '/images/nespresso-cover.jpeg',
 		produceBy: 'Arts In Motion',
@@ -75,7 +75,7 @@ export default [
 	{
 		title: 'When We Were',
 		shortDesc: `When We Were - Emily and Jake have had their future planned out together, but what will Emily do when life steps in a rewrites her next chapter?<br/><br/>A story about how cancer came in between the relationship of Emily and Jake, and built an even stronger one after.`,
-		cover: '',
+		cover: '/images/cover/when-we-were.webp',
 		imageUrl: '',
 		produceBy: 'Jinnyboy TV',
 		directors: ['Zhao Quan'],

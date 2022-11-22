@@ -39,7 +39,7 @@
 		show = true;
 	};
 
-	const play = (item: Media) => {
+	const play = (item: { link: string }) => {
 		if (!ytPlayer) {
 			ytPlayer = new YouTubePlayer(player);
 			ytPlayer.on('playing', () => {
@@ -67,7 +67,7 @@
 		window.scrollTo(0, Number(document.body.getAttribute('data-scrolly')) || 0);
 	}
 
-	const playVideo = (item: Media) => () => {
+	const playVideo = (item: { link: string }) => () => {
 		play(item);
 	};
 </script>
@@ -89,7 +89,7 @@
 			<div class="cover">
 				<div class="video-player" bind:this={player} />
 				{#if video && !playing}
-					<img class="cover-img" src={video.cover} alt={video.title} />
+					<img out:fade class="cover-img" src={video.cover} alt={video.title} />
 				{/if}
 			</div>
 			{#if video && !playing}
@@ -164,6 +164,11 @@
 								<div class="aspect-ratio">
 									<img class="cover-img" src={video.bts.imageUrl} alt={video.bts.title} />
 								</div>
+							</div>
+							<div class="video-info">
+								<h3>{video.bts.title}</h3>
+								<!-- svelte-ignore a11y-click-events-have-key-events -->
+								<span on:click={playVideo(video.bts)}>Play now</span>
 							</div>
 						</li>
 					</ul>
@@ -307,7 +312,7 @@
 			display: flex;
 			align-items: center;
 			// justify-content: space-around;
-			padding: 0.5rem 0;
+			padding: 0.65rem 0;
 
 			.client {
 				width: 50px;
@@ -340,6 +345,17 @@
 		.related-video-list {
 			list-style: none;
 			list-style-position: inside;
+			margin-top: 12px;
+
+			li {
+				display: flex;
+				// align-items: center;
+
+				.video-info {
+					padding: 0.65rem 1rem;
+					flex-grow: 1;
+				}
+			}
 		}
 
 		.d-16-9 {

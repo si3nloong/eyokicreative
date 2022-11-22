@@ -3,6 +3,7 @@ export default [
 		title: `My Ba's Radio`,
 		shortDesc:
 			'An ailing father living in a bubble continues to find connections with his deceased wife through a small radio. This is much to the disapproval of his adult son who has returned from the city to take care of him.',
+		date: [1, 2019],
 		cover: '/images/cover/myba-radio.webp',
 		imageUrl: '/images/myba-cover.jpg',
 		produceBy: 'Eyoki Creative',
@@ -19,6 +20,7 @@ export default [
 		title: `The Kingdom and The Beauty`,
 		shortDesc:
 			'An ailing father living in a bubble continues to find connections with his deceased wife through a small radio. This is much to the disapproval of his adult son who has returned from the city to take care of him.',
+		date: [9, 2019],
 		cover: '/images/cover/kingdom-and-beauty.webp',
 		imageUrl: '/images/cover/kingdom-and-beauty.webp',
 		produceBy: 'Eyoki Creative',
@@ -39,6 +41,7 @@ export default [
 	{
 		title: 'VIVO V20 SE Aquamarine',
 		shortDesc: `The new trendsetter has arrived! VIVO V20 SE #Aquamarine is picking up steam in 2020 with its trendy new colour!`,
+		date: [12, 2021],
 		cover: '/images/cover/vivo-v20.webp',
 		imageUrl: '/images/vivo-cover.png',
 		produceBy: 'Eyoki Creative',
@@ -54,6 +57,8 @@ export default [
 			imageUrl: '/images/vivo-cover.png'
 		},
 		bts: {
+			title: 'BEHIND THE SCENE (EYOKI x VIVO) Be Mer-mazing, Be The Focus',
+			imageUrl: '/images/cover/vivo-v20.webp',
 			link: 'nEVLkBp6gyc'
 		}
 	},
@@ -61,6 +66,7 @@ export default [
 		title: '凡人不懂愛',
 		shortDesc: `天空漆黑 星不會光照我<br/>輾轉反側 悲傷裡躺臥<br/>我亦習慣一個 怕又試不小心惹禍<br/>無用呼救了 誰又會救助<br/><br/>風中穿梭 只得你心痛我<br/>低聲哭泣 只得你可以聆聽我<br/>如沒身份的魔 凡人不懂愛我<br/>無從解釋對錯 但你卻徹底相信我<br/><br/>無須刻意想起 仍然深刻銘記<br/>如若心聲相通 憑直覺都可感覺你<br/>若消散成為氧氣<br/>停留世界靜靜懷抱你<br/>掉眼淚 原來是掛念你<br/><br/>風中穿梭 只得你温暖我<br/>
 	低聲哭泣 只得你敢再行近我<br/>如沒身份的魔 凡人不懂愛我<br/>懷疑給詛咒過 但你卻放膽擁抱我<br/><br/>無須刻意想起 仍然深刻銘記<br/>如若心聲相通 憑直覺都可感覺你<br/>若灰飛成為氧氣<br/>停留世界靜靜懷抱你<br/>掉眼淚 原來我掛念你<br/><br/>當天真的灰心到 很想拋棄自己<br/>你卻拼命只想與我一起<br/>才明白愛情 超出生與死<br/><br/>無須刻意想起 仍然深刻銘記<br/>如若心聲相通 憑直覺都可感覺你<br/>若灰飛成為氧氣 我只要剩低一口氣<br/>未氣絕 都想叫喚你<br/>掉眼淚 只因掛念你`,
+		date: [12, 2020],
 		cover: '/images/cover/justin-lan.webp',
 		imageUrl: '/images/justin-lan.webp',
 		produceBy: 'Eyoki Creative',
@@ -96,6 +102,25 @@ export default [
 		}
 	},
 	{
+		title: `We are the Makeover Guys - Manifesto`,
+		shortDesc: '',
+		date: [1, 2022],
+		cover: '/images/cover/tmog.webp',
+		imageUrl: '/images/skmagic-cover.png',
+		produceBy: 'Eyoki Creative',
+		directors: ['Chong Kern Wei'],
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: ['Chong Kern Wei'],
+		casts: ['TMOG Staffs'],
+		labels: ['Commercial'],
+		link: 'K0yaVQ6vmro',
+		time: '01:33',
+		client: {
+			name: 'The Makeover Guy',
+			imageUrl: '/logo/tmog.webp'
+		}
+	},
+	{
 		title: `LG PuriCare™ Self-Service Tankless Water Purifier`,
 		shortDesc: '',
 		cover: '/images/cover/lg-puri-care.webp',
@@ -128,6 +153,24 @@ export default [
 	// 	time: '04:20'
 	// },
 	{
+		title: `SK Magic | Aedy Ashraf & Alif Hilman masak juadah Ramadan VIRAL!`,
+		shortDesc: `Korang rasa Aedy boleh masak tak? Jom kita tengok Aedy Ashraf dan Alif Hilman mencabar diri mereka untuk sediakan makanan bazar Ramadan yang paling VIRAL untuk berbuka puasa!`,
+		cover: '/images/cover/sk-magic-ramadan.webp',
+		imageUrl: '/images/lg-cover.jpeg',
+		produceBy: 'Eyoki Creative',
+		directors: ['Bryan Sim'],
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: ['So FC'],
+		casts: ['Aedy Ashraf', 'Alif Hilman'],
+		labels: ['Commercial'],
+		link: 'J-s6ql-Gjhw',
+		time: '03:54',
+		client: {
+			name: 'SK Magic',
+			imageUrl: '/logo/sk-magic.webp'
+		}
+	},
+	{
 		title: `Aun Soon Confectionery 安顺糕饼家：豆沙饼`,
 		shortDesc: '',
 		cover: '/images/cover/aun-soon-melaka.webp',
@@ -151,10 +194,10 @@ export default [
 		cover: '/images/cover/vitruvio-gym.webp',
 		imageUrl: '/images/skmagic-cover.png',
 		produceBy: 'Eyoki Creative',
-		directors: [],
-		dps: ['Yuki (Eyoki Creative)'],
-		editors: ['WT (Eyoki Creative)'],
-		casts: [],
+		directors: ['Eyoki Creative'],
+		dps: ['Yuki (Eyoki Creative)', 'Dixon Koay'],
+		editors: ['Zhao Quan'],
+		casts: ['Vitruvio Staffs'],
 		labels: ['Commercial'],
 		link: 'HlNOU1LwVI8',
 		time: '00:55',
@@ -164,50 +207,14 @@ export default [
 		}
 	},
 	{
-		title: `We are the Makeover Guys - Manifesto`,
-		shortDesc: '',
-		cover: '/images/cover/tmog.webp',
-		imageUrl: '/images/skmagic-cover.png',
-		produceBy: 'Eyoki Creative',
-		directors: ['Chong Kern Wei'],
-		dps: ['Yuki (Eyoki Creative)'],
-		editors: ['Chong Kern Wei'],
-		casts: ['TMOG Staffs'],
-		labels: ['Commercial'],
-		link: 'K0yaVQ6vmro',
-		time: '01:33',
-		client: {
-			name: 'The Makeover Guy',
-			imageUrl: '/logo/tmog.webp'
-		}
-	},
-	{
-		title: `SK Magic | Aedy Ashraf & Alif Hilman masak juadah Ramadan VIRAL!`,
-		shortDesc: `Korang rasa Aedy boleh masak tak? Jom kita tengok Aedy Ashraf dan Alif Hilman mencabar diri mereka untuk sediakan makanan bazar Ramadan yang paling VIRAL untuk berbuka puasa!`,
-		cover: '/images/cover/sk-magic-ramadan.webp',
-		imageUrl: '/images/lg-cover.jpeg',
-		produceBy: 'Eyoki Creative',
-		directors: ['Bryan Sim'],
-		dps: ['Yuki (Eyoki Creative)'],
-		editors: ['So FC'],
-		casts: ['Aedy Ashraf', 'Alif Hilman'],
-		labels: ['Commercial'],
-		link: 'J-s6ql-Gjhw',
-		time: '03:54',
-		client: {
-			name: 'SK Magic',
-			imageUrl: '/logo/sk-magic.webp'
-		}
-	},
-	{
 		title: 'Appeton The Fighter',
-		cover: '',
-		imageUrl: '',
+		cover: '/images/cover/appeton-the-fighter.webp',
+		imageUrl: '/images/cover/appeton-the-fighter.webp',
 		produceBy: 'Eyoki Creative',
 		directors: ['Bryan Sim'],
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: ['Jun Liew (Eyoki Creative)'],
-		casts: [''],
+		casts: ['Amelia Chen'],
 		labels: ['Commercial'],
 		link: 'Sis3cytosgU',
 		time: '00:20',
@@ -224,7 +231,7 @@ export default [
 		directors: ['Bryan Sim'],
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: ['Jun Liew (Eyoki Creative)'],
-		casts: [''],
+		casts: ['Amelia Chen'],
 		labels: ['Commercial'],
 		link: 'OdqyG1EhEzM',
 		time: '00:20',
