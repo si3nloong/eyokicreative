@@ -239,5 +239,68 @@ export default [
 			name: 'Appeton',
 			imageUrl: '/logo/appeton.webp'
 		}
+	},
+	{
+		title: `The truth about being a China expat in Malaysia`,
+		cover: '/images/cover/ksk-china.webp',
+		produceBy: 'Eyoki Creative',
+		directors: ['Jin Xian'],
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: ['WT (Eyoki Creative)'],
+		labels: ['Commercial'],
+		link: 'B5e8HWMWGBU',
+		time: '01:50',
+		casts: ['冉冉 Ran Ran'],
+		client: {
+			name: 'KSK Land',
+			imageUrl: '/logo/ksk-land.webp'
+		}
+	},
+	{
+		title: `The truth about being a Hong Kong expat in Malaysia`,
+		cover: '/images/cover/ksk-hk.webp',
+		produceBy: 'Eyoki Creative',
+		directors: ['Jin Xian'],
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: ['WT (Eyoki Creative)'],
+		labels: ['Commercial'],
+		link: 'Pi-5FoiVjo0',
+		time: '01:39',
+		client: {
+			name: 'KSK Land',
+			imageUrl: '/logo/ksk-land.webp'
+		}
+	},
+	{
+		title: `KSK Japanese Junji in Malaysia`,
+		cover: '/images/cover/ksk-japanese.webp',
+		produceBy: 'Eyoki Creative',
+		directors: ['Jin Xian'],
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: ['WT (Eyoki Creative)'],
+		casts: ['Kenji Suzuki'],
+		labels: ['Commercial'],
+		link: 'LR7u7gtOaVQ',
+		time: '02:06',
+		client: {
+			name: 'KSK Land',
+			imageUrl: '/logo/ksk-land.webp'
+		}
+	},
+	{
+		title: `The Lady In Red Who Saved Christmas`,
+		cover: '/images/cover/ksk-christmas.webp',
+		produceBy: 'Eyoki Creative',
+		directors: ['Jin Xian'],
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: ['WT (Eyoki Creative)'],
+		casts: ['Chanel'],
+		labels: ['Commercial'],
+		link: 'SuwpDPN1RJs',
+		time: '01:18',
+		client: {
+			name: 'KSK Land',
+			imageUrl: '/logo/ksk-land.webp'
+		}
 	}
 ];
