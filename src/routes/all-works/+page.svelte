@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
-	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import type { Media } from '$lib/components';
 	import { useMediaPlayer } from '$lib/components/MediaPlayer.svelte';
@@ -14,9 +13,9 @@
 	if (browser) {
 		player.subscribe(({ show, video }) => {
 			if (show && video) {
-				location.hash = `id=${video.link}`;
+				history.pushState({}, '', `#id=${video.link}`);
 			} else if (!show) {
-				location.hash = '';
+				history.pushState({}, '', `#`);
 			}
 		});
 	}

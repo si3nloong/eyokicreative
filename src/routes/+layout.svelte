@@ -58,6 +58,7 @@
 				<p>Copyright Reserved © 2022 Eyoki Creative.</p>
 				<div>Registered in Malaysia. (002865528-A)</div>
 				<p>
+					<!-- svelte-ignore security-anchor-rel-noreferrer -->
 					Designed & Made by <a href="https://github.com/si3nloong" target="_blank">SianLoong</a>.
 				</p>
 			</div>
@@ -65,6 +66,7 @@
 			<!-- Social Media section -->
 			<ul class="social-media-list">
 				<li>
+					<!-- svelte-ignore security-anchor-rel-noreferrer -->
 					<a href="https://www.tiktok.com/@yukieyok0131" target="_blank"
 						>{@html `<svg width="100%" height="100%" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M34.353 17.3269C37.4397 19.5413 41.2211 20.8442 45.3051 20.8442V12.9572C44.5322 12.9574 43.7613 12.8765 43.0051 12.7157V18.9239C38.9214 18.9239 35.1405 17.621 32.053 15.4068V31.5017C32.053 39.5533 25.5492 46.0798 17.5268 46.0798C14.5334 46.0798 11.7512 45.1716 9.44006 43.6141C12.0779 46.3208 15.7565 48 19.8263 48C27.8492 48 34.3534 41.4734 34.3534 33.4215V17.3269H34.353ZM37.1904 9.36999C35.6129 7.64045 34.5772 5.40535 34.353 2.93435V1.91992H32.1735C32.7221 5.06056 34.5934 7.74374 37.1904 9.36999ZM14.5142 37.4356C13.6329 36.2759 13.1566 34.8572 13.1587 33.3985C13.1587 29.716 16.1336 26.7302 19.8037 26.7302C20.4877 26.7301 21.1675 26.8352 21.8194 27.0427V18.9795C21.0576 18.8748 20.2888 18.8303 19.5203 18.8466V25.1226C18.868 24.915 18.1878 24.8096 17.5037 24.8103C13.8335 24.8103 10.8589 27.7957 10.8589 31.4787C10.8589 34.0828 12.3458 36.3373 14.5142 37.4356Z" fill="#FF004F"/>
@@ -74,6 +76,7 @@
 					>
 				</li>
 				<li>
+					<!-- svelte-ignore security-anchor-rel-noreferrer -->
 					<a href="https://www.instagram.com/eyokicreative" target="_blank">
 						{@html `<svg width="100%" height="100%" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<g clip-path="url(#clip0_17_27)">
@@ -84,6 +87,7 @@
 					</a>
 				</li>
 				<li>
+					<!-- svelte-ignore security-anchor-rel-noreferrer -->
 					<a href="https://www.youtube.com/channel/UC6sQbwlRTG-BK743HBNLLNw" target="_blank">
 						{@html `<svg width="100%" height="100%" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<g clip-path="url(#clip0_17_47)">
@@ -93,6 +97,7 @@
 					</a>
 				</li>
 				<li>
+					<!-- svelte-ignore security-anchor-rel-noreferrer -->
 					<a href="https://www.facebook.com/eyokicreative" target="_blank"
 						>{@html `<svg width="100%" height="100%" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<g clip-path="url(#clip0_17_24)">
@@ -102,6 +107,7 @@
 					>
 				</li>
 				<li>
+					<!-- svelte-ignore security-anchor-rel-noreferrer -->
 					<a href="https://www.linkedin.com/company/eyoki-creative" target="_blank">
 						{@html `<svg width="100%" height="100%" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<g clip-path="url(#clip0_17_32)">
@@ -130,21 +136,21 @@
 			width: 120px;
 		}
 
-		.cta {
-			display: flex;
-			height: 45px;
-			line-height: 45px;
-			white-space: nowrap;
-			font-size: 16px;
-			padding: 0 20px;
-			border-radius: 25px;
-			color: #fff;
-			background: linear-gradient(60deg, red, blue);
+		// .cta {
+		// 	display: flex;
+		// 	height: 45px;
+		// 	line-height: 45px;
+		// 	white-space: nowrap;
+		// 	font-size: 16px;
+		// 	padding: 0 20px;
+		// 	border-radius: 25px;
+		// 	color: #fff;
+		// 	background: linear-gradient(60deg, red, blue);
 
-			@media screen and (max-width: 600px) {
-				display: none !important;
-			}
-		}
+		// 	@media screen and (max-width: 600px) {
+		// 		display: none !important;
+		// 	}
+		// }
 
 		.mini-nav-list {
 			display: none;
