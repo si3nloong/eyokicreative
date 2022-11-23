@@ -7,6 +7,8 @@
 
 	const player = useMediaPlayer();
 
+	player.subscribe(console.log);
+
 	const onPreview = (item: Media) => () => {
 		player.preview(item);
 	};

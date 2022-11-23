@@ -42,10 +42,9 @@ export default [
 		cover: '/images/cover/allianz-sangka-baik.webp',
 		imageUrl: '/images/allianz-cover.png',
 		produceBy: 'Think Tank',
-		directors: [''],
+		directors: ['Azman'],
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: [''],
-		casts: [''],
 		labels: ['Commercial'],
 		link: 'L7dfKZ4bBPU',
 		time: '02:17',
@@ -82,8 +81,12 @@ export default [
 		dps: ['Yuki (Eyoki Creative)'],
 		casts: ['Emily'],
 		labels: ['Short Film'],
-		link: 'cmXBpjxE9',
-		time: '16:23'
+		link: 'cmXBpjxE9-I',
+		time: '16:23',
+		client: {
+			name: 'Jinnyboy TV',
+			imageUrl: '/logo/jinnyboy-tv.webp'
+		}
 	},
 	{
 		title: 'Every Bulan Puasa',
@@ -96,7 +99,28 @@ export default [
 		casts: ['Jinnyboy', 'Adib', 'Shu Faye', 'Alexis Sue Anne', 'Dennis Yin', 'Arwind Kumar'],
 		labels: ['Short Film'],
 		link: 'bNBPko3m5E0',
-		time: '05:46'
+		time: '05:46',
+		client: {
+			name: 'Jinnyboy TV',
+			imageUrl: '/logo/jinnyboy-tv.webp'
+		}
+	},
+	{
+		title: 'Pak Geram',
+		shortDesc: `Devi is a spirited hospital aide who always goes out of her way to make the lives of the patients she cares for a little more meaningful. She knows all her patients by heart! All, except one… Pak Geram.`,
+		cover: '/images/cover/pak-geram.webp',
+		imageUrl: '/images/cover/pak-geram.webp',
+		produceBy: 'Jinnyboy TV',
+		directors: ['Zhao Quan'],
+		dps: ['Yuki (Eyoki Creative)'],
+		casts: ['Jinnyboy', 'Adib', 'Shu Faye', 'Alexis Sue Anne', 'Dennis Yin', 'Arwind Kumar'],
+		labels: ['Short Film'],
+		link: 'iM84W_UxQ-8',
+		time: '10:41',
+		client: {
+			name: 'Jinnyboy TV',
+			imageUrl: '/logo/jinnyboy-tv.webp'
+		}
 	},
 	{
 		title: `OPPO Find X5 Pro 5G featuring Owen Yap`,
@@ -110,14 +134,18 @@ export default [
 		casts: ['Owen Yap'],
 		labels: ['Commercial'],
 		link: '52r0k2qptKI',
-		time: '01:00'
+		time: '01:00',
+		client: {
+			name: 'Oppo Malaysia',
+			imageUrl: '/logo/oppo.webp'
+		}
 	},
 	{
 		title: `Kami Nak 100% Makanan Laut`,
 		shortDesc: '',
-		cover: '/images/cover/oppo.webp',
-		imageUrl: '/images/lg-cover.jpeg',
-		produceBy: 'Studio 17',
+		cover: '',
+		imageUrl: '',
+		produceBy: '',
 		directors: ['Esham'],
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: [''],
