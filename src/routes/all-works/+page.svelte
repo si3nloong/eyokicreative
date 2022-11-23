@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { browser } from '$app/environment';
+	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import type { Media } from '$lib/components';
 	import { useMediaPlayer } from '$lib/components/MediaPlayer.svelte';
@@ -9,8 +11,18 @@
 	const id = params.get('id');
 	const player = useMediaPlayer();
 
+	if (browser) {
+		player.subscribe(({ show, video }) => {
+			if (show && video) {
+				location.hash = `id=${video.link}`;
+			} else if (!show) {
+				location.hash = '';
+			}
+		});
+	}
+
 	if (id) {
-		const video = data.producedBys.concat(data.dps).find((v) => v.title == id);
+		const video = data.producedBys.concat(data.dps).find((v) => v.link == id);
 		if (video) {
 			player.preview(video);
 		}

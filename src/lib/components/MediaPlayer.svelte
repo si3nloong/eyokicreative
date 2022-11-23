@@ -1,13 +1,14 @@
 <script context="module" lang="ts">
 	import { createEventDispatcher, getContext, setContext } from 'svelte';
+	import { writable, type Readable } from 'svelte/store';
 
 	const KEY = {};
 
-	type MediaPlayer = {
+	interface MediaPlayer extends Readable<{ show: boolean; video: Media | null }> {
 		preview: (v: Media) => void;
 		play: (v: Media) => void;
 		close: () => void;
-	};
+	}
 
 	export const useMediaPlayer = () => {
 		return getContext(KEY) as MediaPlayer;
@@ -21,7 +22,7 @@
 	import type { Media } from './';
 	import TagList from './TagList.svelte';
 
-	const dispatch = createEventDispatcher();
+	// const dispatch = createEventDispatcher();
 
 	let player: HTMLDivElement;
 	let ytPlayer: YouTubePlayer;
@@ -30,16 +31,19 @@
 	export let video: Media | null = null;
 	export let show = false;
 
+	const { subscribe, update } = writable({ show, video });
+
 	const close = () => {
 		show = false;
 		playing = false;
 		ytPlayer?.stop();
+		update((v) => Object.assign(v, { show: false, video }));
 	};
 
 	const preview = (item: Media) => {
 		video = item;
 		show = true;
-		dispatch('preview', { show, video });
+		update((v) => Object.assign(v, { show, video }));
 	};
 
 	const play = (item: { link: string }) => {
@@ -58,7 +62,8 @@
 	setContext<MediaPlayer>(KEY, {
 		close,
 		preview,
-		play
+		play,
+		subscribe
 	});
 
 	$: if (browser && show) {
