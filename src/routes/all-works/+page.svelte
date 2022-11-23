@@ -1,10 +1,32 @@
 <script lang="ts">
+	import { browser } from '$app/environment';
+	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
 	import type { Media } from '$lib/components';
 	import { useMediaPlayer } from '$lib/components/MediaPlayer.svelte';
 
 	export let data: { producedBys: Media[]; dps: Media[] } = { dps: [], producedBys: [] };
 
+	const params = new URLSearchParams($page.url.hash.substring(1));
+	const id = params.get('id');
 	const player = useMediaPlayer();
+
+	if (browser) {
+		player.subscribe(({ show, video }) => {
+			if (show && video) {
+				location.hash = `id=${video.link}`;
+			} else if (!show) {
+				location.hash = '';
+			}
+		});
+	}
+
+	if (id) {
+		const video = data.producedBys.concat(data.dps).find((v) => v.link == id);
+		if (video) {
+			player.preview(video);
+		}
+	}
 
 	const onPreview = (item: Media) => () => {
 		player.preview(item);

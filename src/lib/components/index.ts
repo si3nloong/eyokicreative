@@ -11,7 +11,7 @@ export type Media = {
 	dps: string[];
 	lyrics?: [time: number, lryic: string][];
 	editors: string[];
-	casts: string[];
+	casts?: string[];
 	produceBy: string;
 	labels: string[];
 	bts?: BehindTheScreen;

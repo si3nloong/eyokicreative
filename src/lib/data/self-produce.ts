@@ -24,9 +24,9 @@ export default [
 		cover: '/images/cover/kingdom-and-beauty.webp',
 		imageUrl: '/images/cover/kingdom-and-beauty.webp',
 		produceBy: 'Eyoki Creative',
-		directors: ['Victor Yee Fei Chen'],
+		directors: ['Ong Yui Huan'],
 		dps: ['Yuki (Eyoki Creative)'],
-		writers: ['Victor Yee Fei Chen', 'Andy Darrel Gomes'],
+		writers: ['Ong Yui Huan', 'Andy'],
 		editors: ['Willie (Eyoki Creative)'],
 		casts: ['Fabian Loo', 'Pearlly Chua'],
 		labels: ['Short Film'],
@@ -54,7 +54,7 @@ export default [
 		time: '00:30',
 		client: {
 			name: 'VIVO',
-			imageUrl: '/images/vivo-cover.png'
+			imageUrl: '/logo/vivo.webp'
 		},
 		bts: {
 			title: 'BEHIND THE SCENE (EYOKI x VIVO) Be Mer-mazing, Be The Focus',
@@ -129,7 +129,6 @@ export default [
 		produceBy: 'Eyoki Creative',
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: ['Greyhound Studio'],
-		casts: [''],
 		labels: ['Commercial'],
 		link: '52r0k2qptKI',
 		time: '01:30',
@@ -138,20 +137,6 @@ export default [
 			imageUrl: '/images/lg.jpeg'
 		}
 	},
-	// {
-	// 	title: `SK magic | Truth or Myth?`,
-	// 	shortDesc: '',
-	// 	cover: '/images/cover/truth-or-myth.webp',
-	// 	imageUrl: '/images/skmagic-cover.png',
-	// 	produceBy: 'Eyoki Creative',
-	// 	directors: ['Esham'],
-	// 	dps: ['Yuki (Eyoki Creative)'],
-	// 	editors: ['Billy Lau'],
-	// 	casts: ['Arnold', 'Justin'],
-	// 	labels: ['Commercial'],
-	// 	link: 'qDXHVPzqSMQ',
-	// 	time: '04:20'
-	// },
 	{
 		title: `SK Magic | Aedy Ashraf & Alif Hilman masak juadah Ramadan VIRAL!`,
 		shortDesc: `Korang rasa Aedy boleh masak tak? Jom kita tengok Aedy Ashraf dan Alif Hilman mencabar diri mereka untuk sediakan makanan bazar Ramadan yang paling VIRAL untuk berbuka puasa!`,
@@ -171,8 +156,60 @@ export default [
 		}
 	},
 	{
-		title: `Aun Soon Confectionery 安顺糕饼家：豆沙饼`,
+		title: `VIVO Y77 - 5G`,
 		shortDesc: '',
+		cover: '/images/cover/vivo-y77-5g.webp',
+		imageUrl: '/images/lg.jpeg',
+		directors: ['Eyoki Creative'],
+		produceBy: 'Eyoki Creative',
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: ['Jun Liew (Eyoki Creative)'],
+		labels: ['Commercial'],
+		link: 'IWfy2KafeYc',
+		time: '00:30',
+		client: {
+			name: 'VIVO',
+			imageUrl: '/logo/vivo.webp'
+		}
+	},
+	{
+		title: `VIVO Y77 Phone Unboxing`,
+		shortDesc: '',
+		cover: '/images/cover/vivo-y77.webp',
+		imageUrl: '/images/cover/vivo-y77.webp',
+		directors: ['Eyoki Creative'],
+		produceBy: 'Eyoki Creative',
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: ['Jun Liew (Eyoki Creative)'],
+		labels: ['Commercial'],
+		link: 'IWfy2KafeYc',
+		time: '00:30',
+		client: {
+			name: 'VIVO',
+			imageUrl: '/logo/vivo.webp'
+		}
+	},
+	{
+		title: `SK magic | Truth or Myth?`,
+		shortDesc: `Is it true that indoor air is cleaner than outdoor air? Or that air purifiers can't protect us from haze? Join Arnold Loh and Justin Yip as they debunk the myths about air pollution and air purifiers while tackling surprise challenges in SK Magic's Truth or Myth! `,
+		cover: '/images/cover/truth-or-myth.webp',
+		imageUrl: '/images/skmagic-cover.png',
+		produceBy: 'Eyoki Creative',
+		directors: ['Esham'],
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: ['Billy Lau'],
+		casts: ['Arnold', 'Justin'],
+		labels: ['Commercial'],
+		link: 'qDXHVPzqSMQ',
+		time: '04:20',
+		client: {
+			name: 'SK Magic',
+			imageUrl: '/logo/sk-magic.webp'
+		}
+	},
+	{
+		title: `Aun Soon Confectionery 安顺糕饼家：豆沙饼`,
+		shortDesc: `Malacca top rated chinese traditional biscuits.`,
 		cover: '/images/cover/aun-soon-melaka.webp',
 		imageUrl: '/images/skmagic-cover.png',
 		produceBy: 'Eyoki Creative',
@@ -211,7 +248,7 @@ export default [
 		cover: '/images/cover/appeton-the-fighter.webp',
 		imageUrl: '/images/cover/appeton-the-fighter.webp',
 		produceBy: 'Eyoki Creative',
-		directors: ['Bryan Sim'],
+		directors: ['Boon'],
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: ['Jun Liew (Eyoki Creative)'],
 		casts: ['Amelia Chen'],
@@ -228,7 +265,7 @@ export default [
 		cover: '/images/cover/appeton-infomercial.webp',
 		imageUrl: '/images/cover/appeton-infomercial.webp',
 		produceBy: 'Eyoki Creative',
-		directors: ['Bryan Sim'],
+		directors: ['Boon'],
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: ['Jun Liew (Eyoki Creative)'],
 		casts: ['Amelia Chen'],
