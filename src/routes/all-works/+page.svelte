@@ -30,6 +30,7 @@
 	<ul class="video-list">
 		{#each data.producedBys as item, i (getID(item, i))}
 			<li>
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<div class="d-16-9 thumbnail" on:click={onPreview(item)}>
 					<img src={item.cover} alt={item.title} />
 				</div>
@@ -43,6 +44,7 @@
 	<ul class="video-list">
 		{#each data.dps as item, i (getID(item, i))}
 			<li>
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<div class="d-16-9 thumbnail" on:click={onPreview(item)}>
 					<img src={item.cover} alt={item.title} />
 				</div>

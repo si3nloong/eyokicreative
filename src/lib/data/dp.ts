@@ -81,7 +81,7 @@ export default [
 		dps: ['Yuki (Eyoki Creative)'],
 		casts: ['Emily'],
 		labels: ['Short Film'],
-		link: 'cmXBpjxE9',
+		link: 'cmXBpjxE9-I',
 		time: '16:23',
 		client: {
 			name: 'Jinnyboy TV',
@@ -126,9 +126,9 @@ export default [
 	{
 		title: `Kami Nak 100% Makanan Laut`,
 		shortDesc: '',
-		cover: '/images/cover/oppo.webp',
-		imageUrl: '/images/lg-cover.jpeg',
-		produceBy: 'Studio 17',
+		cover: '',
+		imageUrl: '',
+		produceBy: '',
 		directors: ['Esham'],
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: [''],
