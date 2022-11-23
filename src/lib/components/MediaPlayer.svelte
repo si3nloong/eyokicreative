@@ -214,7 +214,6 @@
 		width: 100%;
 		left: auto;
 		top: 0;
-		transform-origin: 50% 12.5%;
 		background: #fff;
 		min-height: 100px;
 		margin: 0 auto;
@@ -284,7 +283,7 @@
 		}
 
 		.container {
-			padding: 1rem $paddingHorizontal;
+			padding: 1rem 1.5rem;
 			padding-bottom: 60px;
 		}
 
@@ -354,8 +353,7 @@
 				}
 
 				.video-info {
-					padding: 0.65rem 1rem;
-					flex-grow: 1;
+					padding: 0.65rem 0;
 				}
 			}
 		}
@@ -382,6 +380,10 @@
 			border-radius: 12px;
 			box-shadow: 0 0 26px rgba(0, 0, 0, 0.3);
 
+			.dialog {
+				transform-origin: 50% 12.5%;
+			}
+
 			.content {
 				flex-direction: row;
 			}
@@ -392,6 +394,11 @@
 
 					.thumbnail {
 						max-width: 320px;
+					}
+
+					.video-info {
+						padding: 0.65rem 1rem;
+						flex-grow: 1;
 					}
 				}
 			}
