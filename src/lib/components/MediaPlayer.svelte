@@ -154,24 +154,25 @@
 					</section>
 				</section>
 				{#if video.bts}
-					<br />
-					<section>
-						<h1>Behind the Scene</h1>
-					</section>
-					<ul class="related-video-list">
-						<li>
-							<div class="thumbnail">
-								<div class="aspect-ratio">
-									<img class="cover-img" src={video.bts.imageUrl} alt={video.bts.title} />
+					<section style="padding-top: 40px">
+						<header>
+							<h1>Behind the Scene</h1>
+						</header>
+						<ul class="related-video-list">
+							<li>
+								<div class="thumbnail">
+									<div class="aspect-ratio">
+										<img class="cover-img" src={video.bts.imageUrl} alt={video.bts.title} />
+									</div>
 								</div>
-							</div>
-							<div class="video-info">
-								<h3>{video.bts.title}</h3>
-								<!-- svelte-ignore a11y-click-events-have-key-events -->
-								<span on:click={playVideo(video.bts)}>Play now</span>
-							</div>
-						</li>
-					</ul>
+								<div class="video-info">
+									<h3>{video.bts.title}</h3>
+									<!-- svelte-ignore a11y-click-events-have-key-events -->
+									<span on:click={playVideo(video.bts)}>Play now</span>
+								</div>
+							</li>
+						</ul>
+					</section>
 				{/if}
 			{/if}
 		</div>
