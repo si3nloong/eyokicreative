@@ -55,7 +55,7 @@ export default [
 	},
 	{
 		title: `#BikinSampaiJadi Caraku, Karyaku | Street Artist Kenji Chai`,
-		shortDesc: '',
+		shortDesc: `No matter your passion, street artist Kenji Chai believes that as long as you love what you do, you can #BikinSampaiJadi your way, too.<br/><br/>Watch the film to uncover his story today! In an exclusive partnership with Hotlink, Kenji shows us exactly what it means to #BikinSampaiJadi when he brought his passion for graffiti art to life, all whilst paying tribute to his home-state of Sabah.<br/><br/>Got dreams of your own? #BikinSampaiJadi your way with Hotlink Prepaid. Now with unlimited internet or high-speed internet passes from only RM2. `,
 		cover: '/images/cover/maxis-kenji-chai.webp',
 		imageUrl: '/images/hotlink-cover.png',
 		produceBy: 'Arts In Motion',
@@ -67,8 +67,8 @@ export default [
 		link: 'ibc3ViFGL6U',
 		time: '06:43',
 		client: {
-			name: 'Maxis',
-			imageUrl: ''
+			name: 'Hotlink',
+			imageUrl: '/logo/hotlink.webp'
 		}
 	},
 	{
