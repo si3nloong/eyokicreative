@@ -35,7 +35,7 @@
 		</div>
 		<div>
 			<Header href={getRedirectLink()}>Most Popular on This Year (2022)</Header>
-			<PlayList items={[]} />
+			<PlayList items={data.latestVideos.slice()} />
 		</div>
 	</section>
 </div>

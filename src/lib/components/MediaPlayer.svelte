@@ -154,24 +154,25 @@
 					</section>
 				</section>
 				{#if video.bts}
-					<br />
-					<section>
-						<h1>Behind the Scene</h1>
-					</section>
-					<ul class="related-video-list">
-						<li>
-							<div style="width: 30%;">
-								<div class="aspect-ratio">
-									<img class="cover-img" src={video.bts.imageUrl} alt={video.bts.title} />
+					<section style="padding-top: 40px">
+						<header>
+							<h1>Behind the Scene</h1>
+						</header>
+						<ul class="related-video-list">
+							<li>
+								<div class="thumbnail">
+									<div class="aspect-ratio">
+										<img class="cover-img" src={video.bts.imageUrl} alt={video.bts.title} />
+									</div>
 								</div>
-							</div>
-							<div class="video-info">
-								<h3>{video.bts.title}</h3>
-								<!-- svelte-ignore a11y-click-events-have-key-events -->
-								<span on:click={playVideo(video.bts)}>Play now</span>
-							</div>
-						</li>
-					</ul>
+								<div class="video-info">
+									<h3>{video.bts.title}</h3>
+									<!-- svelte-ignore a11y-click-events-have-key-events -->
+									<span on:click={playVideo(video.bts)}>Play now</span>
+								</div>
+							</li>
+						</ul>
+					</section>
 				{/if}
 			{/if}
 		</div>
@@ -211,18 +212,13 @@
 
 	.dialog {
 		position: absolute;
-		width: 80%;
+		width: 100%;
 		left: auto;
-		top: 2em;
-		transform-origin: 50% 12.5%;
+		top: 0;
 		background: #fff;
-		width: 80%;
 		min-height: 100px;
 		margin: 0 auto;
-		max-width: 1024px;
 		overflow: hidden;
-		border-radius: 12px;
-		box-shadow: 0 0 26px rgba(0, 0, 0, 0.3);
 
 		.close-btn {
 			position: absolute;
@@ -288,12 +284,13 @@
 		}
 
 		.container {
-			padding: 1rem $paddingHorizontal;
+			padding: 1rem 1.5rem;
 			padding-bottom: 60px;
 		}
 
 		.content {
 			display: flex;
+			flex-direction: column;
 			width: 100%;
 
 			.main {
@@ -349,11 +346,15 @@
 
 			li {
 				display: flex;
+				flex-direction: column;
 				// align-items: center;
 
+				.thumbnail {
+					width: 100%;
+				}
+
 				.video-info {
-					padding: 0.65rem 1rem;
-					flex-grow: 1;
+					padding: 0.65rem 0;
 				}
 			}
 		}
@@ -370,6 +371,37 @@
 				left: 0;
 				width: 100%;
 				height: 100%;
+			}
+		}
+
+		@media screen and (min-width: 680px) {
+			width: 80%;
+			top: 2rem;
+			max-width: 1024px;
+			border-radius: 12px;
+			box-shadow: 0 0 26px rgba(0, 0, 0, 0.3);
+
+			.dialog {
+				transform-origin: 50% 12.5%;
+			}
+
+			.content {
+				flex-direction: row;
+			}
+
+			.related-video-list {
+				li {
+					flex-direction: row;
+
+					.thumbnail {
+						max-width: 320px;
+					}
+
+					.video-info {
+						padding: 0.65rem 1rem;
+						flex-grow: 1;
+					}
+				}
 			}
 		}
 	}
