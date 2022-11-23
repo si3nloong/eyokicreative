@@ -1,10 +1,31 @@
 <script lang="ts">
+	import { browser } from '$app/environment';
+	import { page } from '$app/stores';
 	import type { Media } from '$lib/components';
 	import { useMediaPlayer } from '$lib/components/MediaPlayer.svelte';
 
 	export let data: { producedBys: Media[]; dps: Media[] } = { dps: [], producedBys: [] };
 
+	const params = new URLSearchParams($page.url.hash.substring(1));
+	const id = params.get('id');
 	const player = useMediaPlayer();
+
+	if (browser) {
+		player.subscribe(({ show, video }) => {
+			if (show && video) {
+				history.pushState({}, '', `#id=${video.link}`);
+			} else if (!show) {
+				history.pushState({}, '', `#`);
+			}
+		});
+	}
+
+	if (id) {
+		const video = data.producedBys.concat(data.dps).find((v) => v.link == id);
+		if (video) {
+			player.preview(video);
+		}
+	}
 
 	const onPreview = (item: Media) => () => {
 		player.preview(item);
@@ -20,6 +41,7 @@
 	<ul class="video-list">
 		{#each data.producedBys as item, i (getID(item, i))}
 			<li>
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<div class="d-16-9 thumbnail" on:click={onPreview(item)}>
 					<img src={item.cover} alt={item.title} />
 				</div>
@@ -33,6 +55,7 @@
 	<ul class="video-list">
 		{#each data.dps as item, i (getID(item, i))}
 			<li>
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<div class="d-16-9 thumbnail" on:click={onPreview(item)}>
 					<img src={item.cover} alt={item.title} />
 				</div>
