@@ -160,7 +160,7 @@
 					</section>
 					<ul class="related-video-list">
 						<li>
-							<div style="width: 30%;">
+							<div class="thumbnail">
 								<div class="aspect-ratio">
 									<img class="cover-img" src={video.bts.imageUrl} alt={video.bts.title} />
 								</div>
@@ -211,18 +211,14 @@
 
 	.dialog {
 		position: absolute;
-		width: 80%;
+		width: 100%;
 		left: auto;
-		top: 2em;
+		top: 0;
 		transform-origin: 50% 12.5%;
 		background: #fff;
-		width: 80%;
 		min-height: 100px;
 		margin: 0 auto;
-		max-width: 1024px;
 		overflow: hidden;
-		border-radius: 12px;
-		box-shadow: 0 0 26px rgba(0, 0, 0, 0.3);
 
 		.close-btn {
 			position: absolute;
@@ -294,6 +290,7 @@
 
 		.content {
 			display: flex;
+			flex-direction: column;
 			width: 100%;
 
 			.main {
@@ -349,7 +346,12 @@
 
 			li {
 				display: flex;
+				flex-direction: column;
 				// align-items: center;
+
+				.thumbnail {
+					width: 100%;
+				}
 
 				.video-info {
 					padding: 0.65rem 1rem;
@@ -370,6 +372,28 @@
 				left: 0;
 				width: 100%;
 				height: 100%;
+			}
+		}
+
+		@media screen and (min-width: 680px) {
+			width: 80%;
+			top: 2rem;
+			max-width: 1024px;
+			border-radius: 12px;
+			box-shadow: 0 0 26px rgba(0, 0, 0, 0.3);
+
+			.content {
+				flex-direction: row;
+			}
+
+			.related-video-list {
+				li {
+					flex-direction: row;
+
+					.thumbnail {
+						max-width: 320px;
+					}
+				}
 			}
 		}
 	}
