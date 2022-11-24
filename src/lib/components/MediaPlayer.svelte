@@ -346,7 +346,7 @@
 
 		.label {
 			font-size: 12px;
-			color: #3a3d42;
+			color: var(--subtitle-color);
 			margin-right: 6px;
 		}
 

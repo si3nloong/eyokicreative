@@ -51,9 +51,7 @@
 			display: flex;
 			align-items: center;
 			padding: 0.65rem 0;
-			// color: #aeb8ca;
-			// border-bottom: 1px solid #424653;
-			border-bottom: 1px solid #aeb8ca;
+			border-bottom: 1px solid var(--border-color);
 
 			.body {
 				padding-left: 10px;
