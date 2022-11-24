@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
 
+:root {
+	--text-color: #000;
+	--background-color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--text-color: #fff;
+		--background-color: #121212;
+	}
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -14,8 +26,9 @@ body {
 
 body {
 	line-height: 1.5;
-	// background: #151720;
 	font-family: 'Lato', sans-serif;
+	color: var(--text-color);
+	background: var(--background-color);
 }
 
 .d-16-9 {

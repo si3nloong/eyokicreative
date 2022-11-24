@@ -40,7 +40,7 @@
 
 <style lang="scss">
 	.play-list {
-		color: #424653;
+		// color: #424653;
 		list-style: none;
 		list-style-position: inside;
 		display: flex;
