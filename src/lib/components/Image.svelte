@@ -26,14 +26,17 @@
 	.cover {
 		position: relative;
 		display: inline-flex;
-		background: #f5f5f5;
+		background-color: var(--image-placeholder-color);
 
 		&::after {
-			display: block;
 			content: '';
-			width: 100%;
-			height: 100%;
-			border: 1px solid rgba(255, 255, 255, 0.1);
+			position: absolute;
+			display: block;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			border: 1px solid rgba(255, 255, 255, 0.05);
 		}
 	}
 </style>

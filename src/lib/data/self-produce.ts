@@ -187,8 +187,8 @@ export default [
 		}
 	},
 	{
-		title: `VIVO Y77 - 5G`,
-		shortDesc: '',
+		title: `VIVO Y77 - That's Y`,
+		shortDesc: `It's big, it's clear and it's long, That's Y It's Superb to own vivo  #Y775G ! 😍 Pre-order now for only RM1,299 with exclusive free gifts worth up to RM597!`,
 		date: [7, 2022],
 		cover: '/images/cover/vivo-y77-5g.webp',
 		imageUrl: '/images/lg.jpeg',
@@ -299,6 +299,7 @@ export default [
 	},
 	{
 		title: 'Appeton Infomercial',
+		shortDesc: ``,
 		date: [7, 2022],
 		cover: '/images/cover/appeton-infomercial.webp',
 		imageUrl: '/images/cover/appeton-infomercial.webp',
@@ -370,8 +371,8 @@ export default [
 	{
 		title: `The Lady In Red Who Saved Christmas`,
 		shortDesc: `Little Chanel wants to throw a special surprise for her family this Christmas, and she knows just the perfect person to ask - the Lady in Red at YOO8 serviced by Kempinski.<br/>YOO8 serviced by Kempinski is a development by KSK Land. For more details, visit <a href="https://www.8conlay.com/yoo8-residences/enquire" target="_blank">www.8conlay.com/yoo8-residences/enquire</a>`,
+		date: [12, 2020],
 		cover: '/images/cover/ksk-christmas.webp',
-		year: [12, 2020],
 		produceBy: 'Eyoki Creative',
 		directors: ['Jin Xian'],
 		dps: ['Yuki (Eyoki Creative)'],

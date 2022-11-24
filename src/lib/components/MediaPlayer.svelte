@@ -161,9 +161,9 @@
 				</section>
 				{#if $store$.video.bts}
 					<section style="padding-top: 40px">
-						<header>
+						<!-- <header>
 							<h1>Behind the Scene</h1>
-						</header>
+						</header> -->
 						<ul class="related-video-list">
 							<li>
 								<div class="thumbnail">
