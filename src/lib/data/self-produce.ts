@@ -14,7 +14,11 @@ export default [
 		casts: ['Fai Chen', 'Yee Swee Tam'],
 		labels: ['Short Film'],
 		link: '7wQbAer9g4k',
-		time: '11:00'
+		time: '11:00',
+		client: {
+			name: 'Eyoki Creative',
+			imageUrl: '/logo/eyoki-creative.webp'
+		}
 	},
 	{
 		title: `The Kingdom and The Beauty`,
@@ -36,6 +40,10 @@ export default [
 			title: 'BMW Shorties 2019 (ALOT FUN MOMENTS)',
 			imageUrl: '/images/cover/kingdom-and-beauty.webp',
 			link: 'D9JvcFP2pN4'
+		},
+		client: {
+			name: 'Eyoki Creative',
+			imageUrl: '/logo/eyoki-creative.webp'
 		}
 	},
 	{
@@ -299,7 +307,7 @@ export default [
 		labels: ['Commercial'],
 		link: 'B5e8HWMWGBU',
 		time: '01:50',
-		casts: ['Ran Ran 冉冉'],
+		casts: ['Ran Ran - 冉冉'],
 		client: {
 			name: 'KSK Land',
 			imageUrl: '/logo/ksk-land.webp'

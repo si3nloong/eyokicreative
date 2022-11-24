@@ -130,7 +130,7 @@ export default [
 	},
 	{
 		title: `OPPO Find X5 Pro 5G featuring Owen Yap`,
-		shortDesc: '',
+		shortDesc: `Explore the breathtaking side of life with #OPPOFindX5Pro5G and change your story forever. Breath in the power of the OPPO Find X5 Pro 5G's camera that is co-developed with #Hasselblad and powered by OPPO's self-developed #MariSiliconX Imaging NPU, enabling users to take crisp #4KUltraNightVideo like never before.<br/><br/>Witness the fascinating moments with Owen Yap and experience a spectacular journey.`,
 		cover: '/images/cover/oppo.webp',
 		imageUrl: '/images/lg-cover.jpeg',
 		produceBy: 'Studio 17',
@@ -139,7 +139,7 @@ export default [
 		editors: ['Oliver Onn'],
 		casts: ['Owen Yap'],
 		labels: ['Commercial'],
-		link: '52r0k2qptKI',
+		link: 'FND3WiqojLc',
 		time: '01:00',
 		client: {
 			name: 'Oppo Malaysia',
@@ -149,9 +149,9 @@ export default [
 	{
 		title: `Kami Nak 100% Makanan Laut`,
 		shortDesc: '',
-		cover: '',
+		cover: '/images/cover/pro-diet-parlimeow.webp',
 		imageUrl: '',
-		produceBy: '',
+		produceBy: 'Artisia Productions',
 		directors: ['Esham'],
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: [''],
