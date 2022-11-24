@@ -47,6 +47,26 @@ export default [
 		}
 	},
 	{
+		title: `Gameboy`,
+		shortDesc: `Chasing your dream may be scary, but not even trying may be a lifetime of regret. Inspired by true events, this is a story of P'ng Yi Wei, a Penang boy who gathered his courage to take the road less travelled amidst the family expectations and challenges.<br/><br/>Learn more about the local talent and how you too can realise your creative dream: <a href="https://toa.edu.my/showcase/story/yiwei/?r=youtube">https://toa.edu.my</a>`,
+		date: [11, 2022],
+		cover: '/images/cover/gameboy.webp',
+		imageUrl: '/images/gameboy.webp',
+		produceBy: 'Eyoki Creative',
+		directors: ['Victor Yee Fei Chen'],
+		writers: ['Victor Yee Fei Chen', 'GLL (Eyoki Creative)'],
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: ['Willie (Eyoki Creative)'],
+		casts: ['Eric Chen', 'Shao Hang'],
+		labels: ['Commercial'],
+		link: '8csb2zvPgSs',
+		time: '11:22',
+		client: {
+			name: 'The One Academy',
+			imageUrl: '/logo/toa.webp'
+		}
+	},
+	{
 		title: 'VIVO V20 SE Aquamarine',
 		shortDesc: `The new trendsetter has arrived! VIVO V20 SE #Aquamarine is picking up steam in 2020 with its trendy new colour!`,
 		date: [12, 2021],
@@ -242,7 +262,7 @@ export default [
 	},
 	{
 		title: `Vitruvio Gym`,
-		shortDesc: '',
+		shortDesc: `Breakaway from the boring way of training and start getting addicted to training with us. At Vitruvio, we believe your body should be trained as a whole. Each workout will let you leave wanting for more, knowing that you have trained efficiently.`,
 		date: [4, 2019],
 		cover: '/images/cover/vitruvio-gym.webp',
 		imageUrl: '/images/skmagic-cover.png',
@@ -315,6 +335,7 @@ export default [
 	},
 	{
 		title: `The truth about being a Hong Kong expat in Malaysia`,
+		shortDesc: `Follow Shirley Ng as she reveals the perks of living a semi-retirement life in Kuala Lumpur.`,
 		date: [10, 2020],
 		cover: '/images/cover/ksk-hk.webp',
 		produceBy: 'Eyoki Creative',
