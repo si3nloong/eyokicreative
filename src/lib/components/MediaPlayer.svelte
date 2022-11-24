@@ -226,7 +226,7 @@
 		width: 100%;
 		left: auto;
 		top: 0;
-		background: #fff;
+		background: var(--background-color);
 		min-height: 100px;
 		margin: 0 auto;
 		overflow: hidden;

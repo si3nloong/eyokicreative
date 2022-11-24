@@ -17,6 +17,7 @@
 		padding: 1rem 0;
 
 		.link {
+			color: #da0037;
 			font-size: 12px;
 			font-weight: bold;
 		}
