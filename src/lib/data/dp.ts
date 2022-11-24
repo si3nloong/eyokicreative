@@ -2,7 +2,7 @@ export default [
 	{
 		title: 'Nespresso x RED Hong Yi - Doing Is Everything',
 		shortDesc: `Discover all that went into the journey of our latest collaboration on sustainability with @redhongyi as she shares her vision and inspiration - sparking off the stunning creation made from 24,000 used Nespresso capsules.`,
-		year: [12, 2021],
+		date: [12, 2021],
 		cover: '/images/cover/nepresso-redhongyi.webp',
 		imageUrl: '/images/nespresso-cover.jpeg',
 		produceBy: 'Arts In Motion',
@@ -21,6 +21,7 @@ export default [
 	{
 		title: 'The Merdeka dUCk by Kenji Chai',
 		shortDesc: `A Merdeka collection that would make anyone drool, even if you're not hungry. On top of that, we got Kenji Chai, a very special and might I add, extremely talented chef, to cook us some delicious fares for this year's national day!`,
+		date: [8, 2021],
 		cover: '/images/cover/duck.webp',
 		imageUrl: '/images/duck-cover.png',
 		produceBy: 'Arts In Motion x Eyoki Creative',
@@ -39,6 +40,7 @@ export default [
 	{
 		title: 'Sangka Baik',
 		shortDesc: `Mungkin ramai yang meragui dan memandang serong pekerjaan Abang Mail, tetap dia bangga dengan kerjayanya.<br/><br/>Selamat pulang ke kampung, pandu dengan cermat ke pangkuan yang tersayang. Hubungi 1800 22 5542 untuk Allianz Road Rangers jika anda perlukan bantuan di jalan.`,
+		date: [4, 2022],
 		cover: '/images/cover/allianz-sangka-baik.webp',
 		imageUrl: '/images/allianz-cover.png',
 		produceBy: 'Think Tank',
@@ -56,6 +58,7 @@ export default [
 	{
 		title: `#BikinSampaiJadi Caraku, Karyaku | Street Artist Kenji Chai`,
 		shortDesc: `No matter your passion, street artist Kenji Chai believes that as long as you love what you do, you can #BikinSampaiJadi your way, too.<br/><br/>Watch the film to uncover his story today! In an exclusive partnership with Hotlink, Kenji shows us exactly what it means to #BikinSampaiJadi when he brought his passion for graffiti art to life, all whilst paying tribute to his home-state of Sabah.<br/><br/>Got dreams of your own? #BikinSampaiJadi your way with Hotlink Prepaid. Now with unlimited internet or high-speed internet passes from only RM2. `,
+		date: [4, 2022],
 		cover: '/images/cover/maxis-kenji-chai.webp',
 		imageUrl: '/images/hotlink-cover.png',
 		produceBy: 'Arts In Motion',
@@ -74,6 +77,7 @@ export default [
 	{
 		title: 'When We Were',
 		shortDesc: `When We Were - Emily and Jake have had their future planned out together, but what will Emily do when life steps in a rewrites her next chapter?<br/><br/>A story about how cancer came in between the relationship of Emily and Jake, and built an even stronger one after.`,
+		date: [10, 2020],
 		cover: '/images/cover/when-we-were.webp',
 		imageUrl: '',
 		produceBy: 'Jinnyboy TV',
@@ -91,6 +95,7 @@ export default [
 	{
 		title: 'Every Bulan Puasa',
 		shortDesc: `Meet Jamal, the lone Muslim at his workplace. Around the same time every year, strange things tend to happen to him and around him - all thanks to his... overprotective friends.`,
+		date: [4, 2021],
 		cover: '/images/cover/every-bulan-puasa.webp',
 		imageUrl: '/images/cover/every-bulan-puasa.webp',
 		produceBy: 'Jinnyboy TV',
@@ -108,6 +113,7 @@ export default [
 	{
 		title: 'Pak Geram',
 		shortDesc: `Devi is a spirited hospital aide who always goes out of her way to make the lives of the patients she cares for a little more meaningful. She knows all her patients by heart! All, except one… Pak Geram.`,
+		date: [12, 2020],
 		cover: '/images/cover/pak-geram.webp',
 		imageUrl: '/images/cover/pak-geram.webp',
 		produceBy: 'Jinnyboy TV',
