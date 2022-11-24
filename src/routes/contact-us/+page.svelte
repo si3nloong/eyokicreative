@@ -59,6 +59,12 @@
 				width: 24px;
 				height: 24px;
 				margin-right: 10px;
+
+				@media (prefers-color-scheme: dark) {
+					:global(svg) {
+						fill: #fff;
+					}
+				}
 			}
 		}
 	}
