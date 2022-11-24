@@ -74,12 +74,11 @@
 </script>
 
 <slot />
-{#if $store$.show}
+
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<div class="modal-box" class:hidden={!$store$.show || !$store$.video} on:click={close}>
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
-	<div class="overlay" in:fade out:fade on:click|stopPropagation={close} />
-{/if}
-<div class="modal-box" class:hidden={!$store$.show || !$store$.video}>
-	<div class="dialog">
+	<div class="dialog" role="dialog" on:click|stopPropagation>
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<span class="close-btn" on:click={close}
 			>{@html `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -190,6 +189,11 @@
 	</div>
 </div>
 
+{#if $store$.show}
+	<!-- svelte-ignore a11y-click-events-have-key-events -->
+	<div class="overlay" in:fade out:fade />
+{/if}
+
 <style lang="scss">
 	$paddingHorizontal: 2rem;
 
@@ -202,6 +206,7 @@
 		width: 100%;
 		height: 100%;
 		background: rgba(0, 0, 0, 0.6);
+		z-index: 1;
 	}
 
 	.modal-box {
