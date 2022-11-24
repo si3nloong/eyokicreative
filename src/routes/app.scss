@@ -3,12 +3,16 @@
 :root {
 	--text-color: #000;
 	--background-color: #fff;
+	--border-color: #aeb8ca;
+	--subtitle-color: #3a3d42;
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
 		--text-color: #fff;
 		--background-color: #121212;
+		--border-color: #363636;
+		--subtitle-color: #fff;
 	}
 }
 
@@ -39,7 +43,8 @@ body {
 }
 
 a {
-	color: inherit;
+	// color: #08c;
+	color: #3ea6ff;
 	text-decoration: none;
 
 	&:hover {
