@@ -50,6 +50,7 @@ export default [
 		directors: ['Azman'],
 		dps: ['Yuki (Eyoki Creative)'],
 		type: 'Commercial',
+		audios: ['Bahasa Melayu'],
 		link: 'L7dfKZ4bBPU',
 		time: '02:17',
 		client: {

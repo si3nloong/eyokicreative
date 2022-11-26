@@ -130,7 +130,7 @@
 						</div>
 						<div class="video-info">
 							<span
-								>{`${monthNames[$store$.video.date[0]].substring(0, 3)} ${
+								>{`${monthNames[$store$.video.date[0] - 1].substring(0, 3)} ${
 									$store$.video.date[1]
 								}`}</span
 							>

@@ -55,7 +55,7 @@ export default [
 		shortDesc: `Chasing your dream may be scary, but not even trying may be a lifetime of regret. Inspired by true events, this is a story of P'ng Yi Wei, a Penang boy who gathered his courage to take the road less travelled amidst the family expectations and challenges.<br/><br/>Learn more about the local talent and how you too can realise your creative dream: <a href="https://toa.edu.my/showcase/story/yiwei/?r=youtube">https://toa.edu.my</a>`,
 		date: [11, 2022],
 		cover: '/images/cover/gameboy.webp',
-		imageUrl: '/images/gameboy.webp',
+		imageUrl: '/images/cover/gameboy.webp',
 		produceBy: 'Eyoki Creative',
 		directors: ['Victor Yee Fei Chen'],
 		writers: ['Victor Yee Fei Chen', 'GLL (Eyoki Creative)'],
