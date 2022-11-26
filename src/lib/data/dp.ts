@@ -10,7 +10,8 @@ export default [
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: ['Chong Kern Wei'],
 		casts: ['RED HongYi, Wong KaiYi', 'CheeChung', 'Cedric', 'YuEn'],
-		labels: ['Commercial'],
+		type: 'Commercial',
+		audios: ['English'],
 		link: '7CUmtwdDbi4',
 		time: '04:36',
 		client: {
@@ -29,7 +30,9 @@ export default [
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: ['Chong Kern Wei'],
 		casts: ['Kenji Chai'],
-		labels: ['Commercial'],
+		type: 'Commercial',
+		audios: ['English'],
+		subtitles: ['Bahasa Melayu', 'Simplified Chinese (简体中文)'],
 		link: 'W19dreFxsbQ',
 		time: '01:06',
 		client: {
@@ -46,7 +49,7 @@ export default [
 		produceBy: 'Think Tank',
 		directors: ['Azman'],
 		dps: ['Yuki (Eyoki Creative)'],
-		labels: ['Commercial'],
+		type: 'Commercial',
 		link: 'L7dfKZ4bBPU',
 		time: '02:17',
 		client: {
@@ -65,7 +68,9 @@ export default [
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: ['Chong Kern Wei'],
 		casts: ['Kenji Chai'],
-		labels: ['Commercial'],
+		type: 'Commercial',
+		audios: ['English', 'Cantonese (粤语)'],
+		subtitles: ['Bahasa Melayu', 'English'],
 		link: 'ibc3ViFGL6U',
 		time: '06:43',
 		client: {
@@ -84,7 +89,8 @@ export default [
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: ['Zhao Quan'],
 		casts: ['Marianne Tan'],
-		labels: ['Short Film'],
+		type: 'Short Film',
+		audios: ['English'],
 		link: 'cmXBpjxE9-I',
 		time: '16:23',
 		client: {
@@ -102,7 +108,9 @@ export default [
 		directors: ['Zhao Quan'],
 		dps: ['Yuki (Eyoki Creative)'],
 		casts: ['Jinnyboy', 'Adib', 'Shu Faye', 'Alexis Sue Anne', 'Dennis Yin', 'Arwind Kumar'],
-		labels: ['Short Film'],
+		type: 'Short Film',
+		audios: ['English', 'Bahasa Melayu'],
+		subtitles: ['English'],
 		link: 'bNBPko3m5E0',
 		time: '05:46',
 		client: {
@@ -120,7 +128,9 @@ export default [
 		directors: ['Zhao Quan'],
 		dps: ['Yuki (Eyoki Creative)'],
 		casts: ['Jinnyboy', 'Adib', 'Shu Faye', 'Alexis Sue Anne', 'Dennis Yin', 'Arwind Kumar'],
-		labels: ['Short Film'],
+		type: 'Short Film',
+		audios: ['English'],
+		subtitles: ['English'],
 		link: 'iM84W_UxQ-8',
 		time: '10:41',
 		client: {
@@ -131,6 +141,7 @@ export default [
 	{
 		title: `OPPO Find X5 Pro 5G featuring Owen Yap`,
 		shortDesc: `Explore the breathtaking side of life with #OPPOFindX5Pro5G and change your story forever. Breath in the power of the OPPO Find X5 Pro 5G's camera that is co-developed with #Hasselblad and powered by OPPO's self-developed #MariSiliconX Imaging NPU, enabling users to take crisp #4KUltraNightVideo like never before.<br/><br/>Witness the fascinating moments with Owen Yap and experience a spectacular journey.`,
+		date: [1, 2022],
 		cover: '/images/cover/oppo.webp',
 		imageUrl: '/images/lg-cover.jpeg',
 		produceBy: 'Studio 17',
@@ -138,7 +149,8 @@ export default [
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: ['Oliver Onn'],
 		casts: ['Owen Yap'],
-		labels: ['Commercial'],
+		type: 'Commercial',
+		audios: ['English'],
 		link: 'FND3WiqojLc',
 		time: '01:00',
 		client: {
@@ -149,6 +161,7 @@ export default [
 	{
 		title: `Kami Nak 100% Makanan Laut`,
 		shortDesc: '',
+		date: [1, 2022],
 		cover: '/images/cover/pro-diet-parlimeow.webp',
 		imageUrl: '',
 		produceBy: 'Artisia Productions',
@@ -156,7 +169,8 @@ export default [
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: [''],
 		casts: ['Cats'],
-		labels: ['Commercial'],
+		type: 'Commercial',
+		audios: ['English'],
 		link: 'fXV_dYPvJ7c',
 		time: '02:30'
 	}

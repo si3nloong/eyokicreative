@@ -30,11 +30,11 @@
 
 	<section class="works">
 		<div>
-			<Header href={getRedirectLink()}>Latest work you may like</Header>
+			<Header href={getRedirectLink()}>Latest works</Header>
 			<PlayList items={data.latestVideos.slice()} />
 		</div>
 		<div>
-			<Header href={getRedirectLink()}>Most Popular on This Year (2022)</Header>
+			<Header href={getRedirectLink()}>Most Popular</Header>
 			<PlayList items={data.latestVideos.slice()} />
 		</div>
 	</section>
@@ -69,18 +69,19 @@
 	.works {
 		display: flex;
 		padding: 1.5rem 0;
+		flex-direction: column;
 		justify-content: space-between;
 
 		& > div {
-			width: 48%;
+			margin: 1rem 0;
+			width: 100%;
 		}
 
-		@media screen and (max-width: 600px) {
-			flex-direction: column;
+		@media screen and (min-width: 640px) {
+			flex-direction: row;
 
 			& > div {
-				margin: 1rem 0;
-				width: 100%;
+				width: 48%;
 			}
 		}
 	}

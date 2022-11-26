@@ -10,10 +10,12 @@ export type Media = {
 	writers?: string[];
 	dps: string[];
 	lyrics?: [time: number, lryic: string][];
+	type: string;
 	editors: string[];
 	casts?: string[];
 	produceBy: string;
-	labels: string[];
+	audios: string[];
+	subtitles?: string[];
 	bts?: BehindTheScreen;
 	client?: {
 		name: string;
