@@ -42,8 +42,9 @@ export default [
 		time: '14:59',
 		bts: {
 			title: 'BMW Shorties 2019 (ALOT FUN MOMENTS)',
-			imageUrl: '/images/cover/kingdom-and-beauty.webp',
-			link: 'D9JvcFP2pN4'
+			imageUrl: '/images/cover/kingdom-and-beauty-bts.webp',
+			link: 'D9JvcFP2pN4',
+			time: '07:11'
 		},
 		client: {
 			name: 'Eyoki Creative',
@@ -52,7 +53,7 @@ export default [
 	},
 	{
 		title: `Gameboy`,
-		shortDesc: `Chasing your dream may be scary, but not even trying may be a lifetime of regret. Inspired by true events, this is a story of P'ng Yi Wei, a Penang boy who gathered his courage to take the road less travelled amidst the family expectations and challenges.<br/><br/>Learn more about the local talent and how you too can realise your creative dream: <a href="https://toa.edu.my/showcase/story/yiwei/?r=youtube">https://toa.edu.my</a>`,
+		shortDesc: `Chasing your dream may be scary, but not even trying may be a lifetime of regret. Inspired by true events, this is a story of P'ng Yi Wei, a Penang boy who gathered his courage to take the road less travelled amidst the family expectations and challenges.<br/><br/>Learn more about the local talent and how you too can realise your creative dream: <a href="https://toa.edu.my/showcase/story/yiwei/?r=youtube" target="_blank">https://toa.edu.my</a>`,
 		date: [11, 2022],
 		cover: '/images/cover/gameboy.webp',
 		imageUrl: '/images/cover/gameboy.webp',
@@ -93,8 +94,9 @@ export default [
 		},
 		bts: {
 			title: 'BEHIND THE SCENE (EYOKI x VIVO) Be Mer-mazing, Be The Focus',
-			imageUrl: '/images/cover/vivo-v20.webp',
-			link: 'nEVLkBp6gyc'
+			imageUrl: '/images/cover/vivo-v20-bts.webp',
+			link: 'nEVLkBp6gyc',
+			time: '02:07'
 		}
 	},
 	{
