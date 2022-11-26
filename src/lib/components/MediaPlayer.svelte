@@ -182,7 +182,9 @@
 									<TagList items={$store$.video.casts} />
 								</div>
 							{/if}
-							<div><span class="label">Produced By:</span>{$store$.video.produceBy}</div>
+							<div>
+								<span class="label">Produced By:</span><TagList items={[$store$.video.produceBy]} />
+							</div>
 						</div>
 
 						<div style="margin-top: 30px">
