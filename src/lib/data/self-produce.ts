@@ -145,7 +145,7 @@ export default [
 	},
 	{
 		title: `We are the Makeover Guys - Manifesto`,
-		shortDesc: '',
+		shortDesc: `Our team may be large, but we're driven all the same. Our passion to create, to connect and to pave the way for future homes are pretty much the DNA that ties us together.`,
 		date: [1, 2022],
 		cover: '/images/cover/tmog.webp',
 		imageUrl: '/images/skmagic-cover.png',
