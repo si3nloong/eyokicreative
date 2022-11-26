@@ -42,8 +42,9 @@ export default [
 		time: '14:59',
 		bts: {
 			title: 'BMW Shorties 2019 (ALOT FUN MOMENTS)',
-			imageUrl: '/images/cover/kingdom-and-beauty.webp',
-			link: 'D9JvcFP2pN4'
+			imageUrl: '/images/cover/kingdom-and-beauty-bts.webp',
+			link: 'D9JvcFP2pN4',
+			time: '07:11'
 		},
 		client: {
 			name: 'Eyoki Creative',
@@ -93,8 +94,9 @@ export default [
 		},
 		bts: {
 			title: 'BEHIND THE SCENE (EYOKI x VIVO) Be Mer-mazing, Be The Focus',
-			imageUrl: '/images/cover/vivo-v20.webp',
-			link: 'nEVLkBp6gyc'
+			imageUrl: '/images/cover/vivo-v20-bts.webp',
+			link: 'nEVLkBp6gyc',
+			time: '02:07'
 		}
 	},
 	{

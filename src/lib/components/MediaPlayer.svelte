@@ -201,7 +201,7 @@
 				{#if $store$.video.bts}
 					<section style="padding-top: 50px">
 						<ul class="related-video-list">
-							<li>
+							<li on:click={playVideo($store$.video.bts)}>
 								<div class="thumbnail">
 									<div class="aspect-ratio">
 										<img
@@ -213,8 +213,9 @@
 								</div>
 								<div class="video-details">
 									<h3>{$store$.video.bts.title}</h3>
-									<!-- svelte-ignore a11y-click-events-have-key-events -->
-									<span on:click={playVideo($store$.video.bts)}>Play now</span>
+									<div class="video-info" style="margin-top: 10px">
+										<span>{`${$store$.video.bts.time}mins`}</span>
+									</div>
 								</div>
 							</li>
 						</ul>
@@ -360,6 +361,7 @@
 
 		.video-info {
 			color: var(--sub-text-color);
+			font-size: 0.9rem;
 			padding-bottom: 0.65rem;
 
 			.pipe {
@@ -416,7 +418,8 @@
 				}
 
 				.video-details {
-					padding: 0.65rem 0;
+					flex-grow: 1;
+					padding: 0.65rem var(--padding);
 				}
 			}
 		}
@@ -435,6 +438,7 @@
 
 			.related-video-list {
 				li {
+					cursor: pointer;
 					flex-direction: row;
 
 					.thumbnail {
