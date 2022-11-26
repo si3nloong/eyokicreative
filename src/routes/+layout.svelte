@@ -67,7 +67,8 @@
 				<div>Registered in Malaysia. (002865528-A)</div>
 				<p>
 					<!-- svelte-ignore security-anchor-rel-noreferrer -->
-					Designed & Made by <a href="https://github.com/si3nloong" target="_blank">SianLoong</a>.
+					Designed & Made by
+					<a href="https://www.linkedin.com/in/sian-loong-7b4a3037" target="_blank">SianLoong</a>.
 				</p>
 			</div>
 

@@ -13,6 +13,21 @@
 	export const useMediaPlayer = () => {
 		return getContext(KEY) as MediaPlayer;
 	};
+
+	const monthNames = [
+		'January',
+		'February',
+		'March',
+		'April',
+		'May',
+		'June',
+		'July',
+		'August',
+		'September',
+		'October',
+		'November',
+		'December'
+	];
 </script>
 
 <script lang="ts">
@@ -114,7 +129,11 @@
 							{/if}
 						</div>
 						<div class="video-info">
-							<span>{$store$.video.date[1]}</span>
+							<span
+								>{`${monthNames[$store$.video.date[0]].substring(0, 3)} ${
+									$store$.video.date[1]
+								}`}</span
+							>
 							<span class="pipe">|</span>
 							<span>{$store$.video.type}</span>
 							<span class="pipe">|</span>
@@ -181,9 +200,6 @@
 				</section>
 				{#if $store$.video.bts}
 					<section style="padding-top: 50px">
-						<!-- <header>
-							<h1>Behind the Scene</h1>
-						</header> -->
 						<ul class="related-video-list">
 							<li>
 								<div class="thumbnail">
