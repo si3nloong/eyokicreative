@@ -227,7 +227,6 @@
 	}
 
 	footer {
-		// border-top: 1px solid #333949;
 		color: var(--text-color);
 		padding: 2rem 0 100px;
 		font-size: 0.8rem;
@@ -259,7 +258,7 @@
 		@media screen and (max-width: 600px) {
 			text-align: center;
 			flex-direction: column-reverse;
-			padding-bottom: 40px;
+			padding-bottom: 50px;
 		}
 	}
 </style>

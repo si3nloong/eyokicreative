@@ -84,7 +84,7 @@
 
 			.thumbnail {
 				cursor: pointer;
-				background: #f5f5f5;
+				background-color: var(--image-placeholder-color);
 			}
 
 			img {
@@ -96,7 +96,7 @@
 				background-color: var(--image-placeholder-color);
 			}
 
-			@media screen and (min-width: 480px) {
+			@media screen and (min-width: 640px) {
 				width: 50%;
 			}
 

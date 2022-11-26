@@ -59,11 +59,11 @@
 		subscribe: store$.subscribe
 	});
 
-	$: if (browser && show) {
+	$: if (browser && $store$.show) {
 		const { scrollY } = window;
 		document.body.setAttribute('style', `position: fixed; top: -${scrollY}px;`);
 		document.body.setAttribute('data-scrolly', `${scrollY}`);
-	} else if (browser && !show) {
+	} else if (browser && !$store$.show) {
 		document.body.removeAttribute('style');
 		window.scrollTo(0, Number(document.body.getAttribute('data-scrolly')) || 0);
 	}
@@ -112,10 +112,13 @@
 								<span class="client"><img src={$store$.video.client.imageUrl} alt="" /></span>
 								<span class="name">{$store$.video.client.name}</span>
 							{/if}
-							<!-- <span class="timerange">{video.time}</span>
-							{#each video.labels as item}
-								<span>{item}</span>
-							{/each} -->
+						</div>
+						<div class="video-info">
+							<span>{$store$.video.date[1]}</span>
+							<span class="pipe">|</span>
+							<span>{$store$.video.type}</span>
+							<span class="pipe">|</span>
+							<span>{`${$store$.video.time}mins`}</span>
 						</div>
 						{#if $store$.video.shortDesc}
 							<div>{@html $store$.video.shortDesc}</div>
@@ -126,41 +129,58 @@
 						{/if}
 					</section>
 					<section class="info">
-						<!-- <div>Genre</div> -->
 						<div>
-							<span class="label"
-								>{`Director${$store$.video.directors.length > 1 ? 's' : ''}:`}</span
-							>
-							<span><TagList items={$store$.video.directors} /></span>
-						</div>
-						{#if $store$.video.writers}
-							<div>
-								<span class="label">{`Writer${$store$.video.writers.length > 1 ? 's' : ''}:`}</span>
-								<span><TagList items={$store$.video.writers} /></span>
-							</div>
-						{/if}
-						{#if $store$.video.dps}
 							<div>
 								<span class="label"
-									>{`Cinematographer${$store$.video.dps.length > 1 ? 's' : ''}:`}</span
+									>{`Director${$store$.video.directors.length > 1 ? 's' : ''}:`}</span
 								>
-								<span><TagList items={$store$.video.dps} /></span>
+								<span><TagList items={$store$.video.directors} /></span>
 							</div>
-						{/if}
-						{#if $store$.video.editors}
-							<div><span class="label">Editor:</span><TagList items={$store$.video.editors} /></div>
-						{/if}
-						{#if $store$.video.casts}
+							{#if $store$.video.writers}
+								<div>
+									<span class="label"
+										>{`Writer${$store$.video.writers.length > 1 ? 's' : ''}:`}</span
+									>
+									<span><TagList items={$store$.video.writers} /></span>
+								</div>
+							{/if}
+							{#if $store$.video.dps}
+								<div>
+									<span class="label"
+										>{`Cinematographer${$store$.video.dps.length > 1 ? 's' : ''}:`}</span
+									>
+									<span><TagList items={$store$.video.dps} /></span>
+								</div>
+							{/if}
+							{#if $store$.video.editors}
+								<div>
+									<span class="label">Editor:</span><TagList items={$store$.video.editors} />
+								</div>
+							{/if}
+							{#if $store$.video.casts}
+								<div>
+									<span class="label">Cast:</span>
+									<TagList items={$store$.video.casts} />
+								</div>
+							{/if}
+							<div><span class="label">Produced By:</span>{$store$.video.produceBy}</div>
+						</div>
+
+						<div style="margin-top: 30px">
+							<!-- <div><span class="label">Genres:</span><TagList items={$store$.video.labels} /></div> -->
 							<div>
-								<span class="label">Cast:</span>
-								<TagList items={$store$.video.casts} />
+								<span class="label">Audio:</span><TagList items={$store$.video.audios} />
 							</div>
-						{/if}
-						<div><span class="label">Produced By:</span>{$store$.video.produceBy}</div>
+							{#if $store$.video.subtitles}
+								<div>
+									<span class="label">Subtitles:</span><TagList items={$store$.video.subtitles} />
+								</div>
+							{/if}
+						</div>
 					</section>
 				</section>
 				{#if $store$.video.bts}
-					<section style="padding-top: 40px">
+					<section style="padding-top: 50px">
 						<!-- <header>
 							<h1>Behind the Scene</h1>
 						</header> -->
@@ -175,7 +195,7 @@
 										/>
 									</div>
 								</div>
-								<div class="video-info">
+								<div class="video-details">
 									<h3>{$store$.video.bts.title}</h3>
 									<!-- svelte-ignore a11y-click-events-have-key-events -->
 									<span on:click={playVideo($store$.video.bts)}>Play now</span>
@@ -248,7 +268,8 @@
 			align-items: center;
 			display: inline-flex;
 			transition: background-color 0.5s;
-			background-color: #dcdcdc;
+			background-color: var(--background-color);
+			background-color: #f5f5f5;
 			z-index: 1;
 
 			:global(svg) {
@@ -263,7 +284,7 @@
 			padding-top: 56.25%;
 			height: 0;
 			overflow: hidden;
-			background: #f5f5f5;
+			background-color: var(--image-placeholder-color);
 
 			.cover,
 			.cover-img {
@@ -321,6 +342,15 @@
 			}
 		}
 
+		.video-info {
+			color: var(--sub-text-color);
+			padding-bottom: 0.65rem;
+
+			.pipe {
+				padding: 0 4px;
+			}
+		}
+
 		.extra-info {
 			display: flex;
 			align-items: center;
@@ -351,7 +381,7 @@
 
 		.label {
 			font-size: 12px;
-			color: var(--subtitle-color);
+			color: var(--sub-text-color);
 			margin-right: 6px;
 		}
 
@@ -369,7 +399,7 @@
 					width: 100%;
 				}
 
-				.video-info {
+				.video-details {
 					padding: 0.65rem 0;
 				}
 			}
@@ -395,10 +425,10 @@
 						max-width: 320px;
 					}
 
-					.video-info {
-						padding: 0.65rem 1rem;
-						flex-grow: 1;
-					}
+					// .video-info {
+					// 	padding: 0.65rem 1rem;
+					// 	flex-grow: 1;
+					// }
 				}
 			}
 		}
