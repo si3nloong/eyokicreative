@@ -14,12 +14,14 @@
 		display: flex;
 		align-items: flex-end;
 		justify-content: space-between;
-		padding: 1rem 0;
+		padding: var(--padding) 0;
 
 		.link {
-			color: red;
+			position: relative;
+			color: #da0037;
 			font-size: 12px;
 			font-weight: bold;
+			top: -1.5px;
 		}
 	}
 </style>

@@ -1,5 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
 
+:root {
+	--text-color: #000;
+	--background-color: #fff;
+	--border-color: #aeb8ca;
+	--sub-text-color: #3a3d42;
+	--image-placeholder-color: #f5f5f5;
+	--padding: 1rem;
+	--margin: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		color-scheme: dark;
+		--text-color: #fff;
+		--background-color: #121212;
+		--border-color: #363636;
+		--sub-text-color: #777;
+		--image-placeholder-color: #292929;
+	}
+}
+
+@media screen and (min-width: 680px) {
+	:root {
+		--padding: 1.5rem;
+		--margin: 1.5rem;
+	}
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -14,19 +42,14 @@ body {
 
 body {
 	line-height: 1.5;
-	// background: #151720;
 	font-family: 'Lato', sans-serif;
-}
-
-.d-16-9 {
-	position: relative;
-	display: block;
-	padding-top: 56.25%;
-	height: 0;
+	color: var(--text-color);
+	background: var(--background-color);
 }
 
 a {
-	color: inherit;
+	// color: #08c;
+	color: #3ea6ff;
 	text-decoration: none;
 
 	&:hover {
@@ -39,4 +62,11 @@ img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+}
+
+.d-16-9 {
+	position: relative;
+	display: block;
+	padding-top: 56.25%;
+	height: 0;
 }

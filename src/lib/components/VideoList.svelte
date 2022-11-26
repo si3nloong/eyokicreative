@@ -45,7 +45,7 @@
 
 			li {
 				width: 100%;
-				margin-bottom: 1rem;
+				margin-bottom: var(--margin);
 			}
 		}
 	}

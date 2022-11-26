@@ -3,7 +3,7 @@ export default [
 		title: `My Ba's Radio`,
 		shortDesc:
 			'An ailing father living in a bubble continues to find connections with his deceased wife through a small radio. This is much to the disapproval of his adult son who has returned from the city to take care of him.',
-		date: [1, 2019],
+		date: [11, 2017],
 		cover: '/images/cover/myba-radio.webp',
 		imageUrl: '/images/myba-cover.jpg',
 		produceBy: 'Eyoki Creative',
@@ -12,9 +12,15 @@ export default [
 		writers: ['Victor Yee Fei Chen', 'Andy Darrel Gomes'],
 		editors: ['Willie (Eyoki Creative)'],
 		casts: ['Fai Chen', 'Yee Swee Tam'],
-		labels: ['Short Film'],
+		type: 'Short Film',
 		link: '7wQbAer9g4k',
-		time: '11:00'
+		time: '11:00',
+		audios: ['Mandarin (中文)'],
+		subtitles: ['Simplified Chinese (简体中文)', 'English'],
+		client: {
+			name: 'Eyoki Creative',
+			imageUrl: '/logo/eyoki-creative.webp'
+		}
 	},
 	{
 		title: `The Kingdom and The Beauty`,
@@ -29,13 +35,41 @@ export default [
 		writers: ['Ong Yui Huan', 'Andy'],
 		editors: ['Willie (Eyoki Creative)'],
 		casts: ['Fabian Loo', 'Pearlly Chua'],
-		labels: ['Short Film'],
+		type: 'Short Film',
+		audios: ['Mandarin (中文)'],
+		subtitles: ['Simplified Chinese (简体中文)', 'English'],
 		link: 'N41rOM88c40',
 		time: '14:59',
 		bts: {
 			title: 'BMW Shorties 2019 (ALOT FUN MOMENTS)',
 			imageUrl: '/images/cover/kingdom-and-beauty.webp',
 			link: 'D9JvcFP2pN4'
+		},
+		client: {
+			name: 'Eyoki Creative',
+			imageUrl: '/logo/eyoki-creative.webp'
+		}
+	},
+	{
+		title: `Gameboy`,
+		shortDesc: `Chasing your dream may be scary, but not even trying may be a lifetime of regret. Inspired by true events, this is a story of P'ng Yi Wei, a Penang boy who gathered his courage to take the road less travelled amidst the family expectations and challenges.<br/><br/>Learn more about the local talent and how you too can realise your creative dream: <a href="https://toa.edu.my/showcase/story/yiwei/?r=youtube">https://toa.edu.my</a>`,
+		date: [11, 2022],
+		cover: '/images/cover/gameboy.webp',
+		imageUrl: '/images/gameboy.webp',
+		produceBy: 'Eyoki Creative',
+		directors: ['Victor Yee Fei Chen'],
+		writers: ['Victor Yee Fei Chen', 'GLL (Eyoki Creative)'],
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: ['Willie (Eyoki Creative)'],
+		casts: ['Eric Chen', 'Shao Hang'],
+		type: 'Commercial',
+		audios: ['Mandarin (中文)'],
+		subtitles: ['Simplified Chinese (简体中文)', 'English'],
+		link: '8csb2zvPgSs',
+		time: '11:22',
+		client: {
+			name: 'The One Academy',
+			imageUrl: '/logo/toa.webp'
 		}
 	},
 	{
@@ -49,7 +83,8 @@ export default [
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: ['WT (Eyoki Creative)'],
 		casts: ['Dianne Dean'],
-		labels: ['Commercial'],
+		type: 'Commercial',
+		audios: ['English'],
 		link: 'vvuvjRDAJAk',
 		time: '00:30',
 		client: {
@@ -66,19 +101,21 @@ export default [
 		title: '凡人不懂愛',
 		shortDesc: `天空漆黑 星不會光照我<br/>輾轉反側 悲傷裡躺臥<br/>我亦習慣一個 怕又試不小心惹禍<br/>無用呼救了 誰又會救助<br/><br/>風中穿梭 只得你心痛我<br/>低聲哭泣 只得你可以聆聽我<br/>如沒身份的魔 凡人不懂愛我<br/>無從解釋對錯 但你卻徹底相信我<br/><br/>無須刻意想起 仍然深刻銘記<br/>如若心聲相通 憑直覺都可感覺你<br/>若消散成為氧氣<br/>停留世界靜靜懷抱你<br/>掉眼淚 原來是掛念你<br/><br/>風中穿梭 只得你温暖我<br/>
 	低聲哭泣 只得你敢再行近我<br/>如沒身份的魔 凡人不懂愛我<br/>懷疑給詛咒過 但你卻放膽擁抱我<br/><br/>無須刻意想起 仍然深刻銘記<br/>如若心聲相通 憑直覺都可感覺你<br/>若灰飛成為氧氣<br/>停留世界靜靜懷抱你<br/>掉眼淚 原來我掛念你<br/><br/>當天真的灰心到 很想拋棄自己<br/>你卻拼命只想與我一起<br/>才明白愛情 超出生與死<br/><br/>無須刻意想起 仍然深刻銘記<br/>如若心聲相通 憑直覺都可感覺你<br/>若灰飛成為氧氣 我只要剩低一口氣<br/>未氣絕 都想叫喚你<br/>掉眼淚 只因掛念你`,
-		date: [12, 2020],
+		date: [10, 2020],
 		cover: '/images/cover/justin-lan.webp',
 		imageUrl: '/images/justin-lan.webp',
 		produceBy: 'Eyoki Creative',
 		directors: ['Yuki (Eyoki Creative)'],
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: ['WT (Eyoki Creative)'],
-		casts: ['Juztin Lan'],
-		labels: ['MV'],
+		casts: ['Juztin Lan - 刘界辉'],
+		type: 'MV',
+		audios: ['Mandarin (中文)'],
+		subtitles: ['Traditional Chinese (繁体中文)'],
 		link: 'rJiLFWnyrD8',
 		time: '03:31',
 		client: {
-			name: '刘界辉 (Juztin Lan)',
+			name: 'Juztin Lan - 刘界辉',
 			imageUrl: '/images/justin-lan.webp'
 		}
 	},
@@ -86,18 +123,21 @@ export default [
 		title: '心声愿',
 		shortDesc: `再大的风雨 那又何妨<br/>只要同心哪儿 都是晴朗<br/>再远的距离又怎样<br/>有梦的人就有 翅膀飞翔<br/><br/>身在世界不同的 地方<br/>只要同心哪儿都一样<br/>同行就不再怕孤单<br/>因为我有了正能量<br/><br/>梦想 让肩膀 长出翅膀翱翔<br/>飞到最远最高的地方<br/>手牵着手 凝聚 力量<br/>让我们共同创造无限的桥梁<br/><br/>梦想 让我们 挥舞翅膀翱翔<br/>心连心同个方向共闯<br/>一种理念 一同期盼<br/>
 	    愿理想 肩并肩 一起和睦共建<br/>明天的辉煌<br/><br/>要勇敢 去承担 敢去闯<br/>一起朝着同一个方向<br/>从不感到迷茫 从不惊慌<br/>让翅膀 带梦想 展翅翱翔<br/><br/>梦想 让我们挥舞翅膀翱翔<br/>心连心同个方向共闯<br/>一种理念 一同期盼<br/>愿理想 肩并肩 一起和睦共建<br/>明天的辉煌<br/><br/>梦想 让肩膀 长出翅膀翱翔<br/>飞到最远最高的地方<br/>手牵着手 凝聚 力量<br/>让我们 一起共同创造无限的桥梁<br/><br/>梦想 让我们挥舞翅膀翱翔<br/>心连心同个方向 共闯<br/>一种理念 一同期盼<br/>愿理想 肩并肩 一起和睦共建<br/>明天的辉煌`,
+		date: [12, 2018],
 		cover: '/images/koe-yeet-cover.webp',
 		imageUrl: '/images/cover/koe-yeet.webp',
 		produceBy: 'Eyoki Creative',
 		directors: ['Yuki (Eyoki Creative)'],
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: ['Willie (Eyoki Creative)'],
-		casts: ['Koe Yeet'],
-		labels: ['MV'],
+		casts: ['Koe Yeet - 高艺'],
+		type: 'MV',
+		audios: ['Mandarin (中文)'],
+		subtitles: ['Simplified Chinese (简体中文)'],
 		link: '1GY8f2zwUh8',
 		time: '03:22',
 		client: {
-			name: '高艺 (Koe Yeet)',
+			name: 'Koe Yeet - 高艺',
 			imageUrl: '/logo/koe-yeet.webp'
 		}
 	},
@@ -112,7 +152,9 @@ export default [
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: ['Chong Kern Wei'],
 		casts: ['TMOG Staffs'],
-		labels: ['Commercial'],
+		type: 'Commercial',
+		audios: ['English'],
+		subtitles: ['English'],
 		link: 'K0yaVQ6vmro',
 		time: '01:33',
 		client: {
@@ -123,13 +165,15 @@ export default [
 	{
 		title: `LG PuriCare™ Self-Service Tankless Water Purifier`,
 		shortDesc: '',
+		date: [8, 2022],
 		cover: '/images/cover/lg-puri-care.webp',
 		imageUrl: '/images/lg.jpeg',
 		directors: ['Esham'],
 		produceBy: 'Eyoki Creative',
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: ['Greyhound Studio'],
-		labels: ['Commercial'],
+		type: 'Commercial',
+		audios: ['English'],
 		link: '52r0k2qptKI',
 		time: '01:30',
 		client: {
@@ -140,6 +184,7 @@ export default [
 	{
 		title: `SK Magic | Aedy Ashraf & Alif Hilman masak juadah Ramadan VIRAL!`,
 		shortDesc: `Korang rasa Aedy boleh masak tak? Jom kita tengok Aedy Ashraf dan Alif Hilman mencabar diri mereka untuk sediakan makanan bazar Ramadan yang paling VIRAL untuk berbuka puasa!`,
+		date: [4, 2022],
 		cover: '/images/cover/sk-magic-ramadan.webp',
 		imageUrl: '/images/lg-cover.jpeg',
 		produceBy: 'Eyoki Creative',
@@ -147,7 +192,9 @@ export default [
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: ['So FC'],
 		casts: ['Aedy Ashraf', 'Alif Hilman'],
-		labels: ['Commercial'],
+		type: 'Commercial',
+		audios: ['Bahasa Melayu'],
+		subtitles: ['English'],
 		link: 'J-s6ql-Gjhw',
 		time: '03:54',
 		client: {
@@ -156,15 +203,17 @@ export default [
 		}
 	},
 	{
-		title: `VIVO Y77 - 5G`,
-		shortDesc: '',
+		title: `VIVO Y77 - That's Y`,
+		shortDesc: `It's big, it's clear and it's long, That's Y It's Superb to own vivo  #Y775G ! 😍 Pre-order now for only RM1,299 with exclusive free gifts worth up to RM597!`,
+		date: [7, 2022],
 		cover: '/images/cover/vivo-y77-5g.webp',
 		imageUrl: '/images/lg.jpeg',
 		directors: ['Eyoki Creative'],
 		produceBy: 'Eyoki Creative',
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: ['Jun Liew (Eyoki Creative)'],
-		labels: ['Commercial'],
+		type: 'Commercial',
+		audios: ['English'],
 		link: 'IWfy2KafeYc',
 		time: '00:30',
 		client: {
@@ -175,13 +224,15 @@ export default [
 	{
 		title: `VIVO Y77 Phone Unboxing`,
 		shortDesc: '',
+		date: [7, 2022],
 		cover: '/images/cover/vivo-y77.webp',
 		imageUrl: '/images/cover/vivo-y77.webp',
 		directors: ['Eyoki Creative'],
 		produceBy: 'Eyoki Creative',
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: ['Jun Liew (Eyoki Creative)'],
-		labels: ['Commercial'],
+		type: 'Commercial',
+		audios: ['English'],
 		link: 'IWfy2KafeYc',
 		time: '00:30',
 		client: {
@@ -192,6 +243,7 @@ export default [
 	{
 		title: `SK magic | Truth or Myth?`,
 		shortDesc: `Is it true that indoor air is cleaner than outdoor air? Or that air purifiers can't protect us from haze? Join Arnold Loh and Justin Yip as they debunk the myths about air pollution and air purifiers while tackling surprise challenges in SK Magic's Truth or Myth! `,
+		date: [6, 2022],
 		cover: '/images/cover/truth-or-myth.webp',
 		imageUrl: '/images/skmagic-cover.png',
 		produceBy: 'Eyoki Creative',
@@ -199,7 +251,9 @@ export default [
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: ['Billy Lau'],
 		casts: ['Arnold', 'Justin'],
-		labels: ['Commercial'],
+		type: 'Commercial',
+		audios: ['English'],
+		subtitles: ['English'],
 		link: 'qDXHVPzqSMQ',
 		time: '04:20',
 		client: {
@@ -210,6 +264,7 @@ export default [
 	{
 		title: `Aun Soon Confectionery 安顺糕饼家：豆沙饼`,
 		shortDesc: `Malacca top rated chinese traditional biscuits.`,
+		date: [2, 2019],
 		cover: '/images/cover/aun-soon-melaka.webp',
 		imageUrl: '/images/skmagic-cover.png',
 		produceBy: 'Eyoki Creative',
@@ -217,7 +272,9 @@ export default [
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: ['Yuki (Eyoki Creative)'],
 		casts: ['Kok Liang'],
-		labels: ['Commercial'],
+		type: 'Commercial',
+		audios: ['Mandarin (中文)'],
+		subtitles: ['Traditional Chinese (繁体中文)'],
 		link: 'pNw6Xj3KUhc',
 		time: '00:40',
 		client: {
@@ -227,7 +284,8 @@ export default [
 	},
 	{
 		title: `Vitruvio Gym`,
-		shortDesc: '',
+		shortDesc: `Breakaway from the boring way of training and start getting addicted to training with us. At Vitruvio, we believe your body should be trained as a whole. Each workout will let you leave wanting for more, knowing that you have trained efficiently.`,
+		date: [4, 2019],
 		cover: '/images/cover/vitruvio-gym.webp',
 		imageUrl: '/images/skmagic-cover.png',
 		produceBy: 'Eyoki Creative',
@@ -235,7 +293,9 @@ export default [
 		dps: ['Yuki (Eyoki Creative)', 'Dixon Koay'],
 		editors: ['Zhao Quan'],
 		casts: ['Vitruvio Staffs'],
-		labels: ['Commercial'],
+		type: 'Commercial',
+		audios: ['English'],
+		subtitles: ['English'],
 		link: 'HlNOU1LwVI8',
 		time: '00:55',
 		client: {
@@ -245,6 +305,7 @@ export default [
 	},
 	{
 		title: 'Appeton The Fighter',
+		date: [7, 2022],
 		cover: '/images/cover/appeton-the-fighter.webp',
 		imageUrl: '/images/cover/appeton-the-fighter.webp',
 		produceBy: 'Eyoki Creative',
@@ -252,7 +313,9 @@ export default [
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: ['Jun Liew (Eyoki Creative)'],
 		casts: ['Amelia Chen'],
-		labels: ['Commercial'],
+		type: 'Commercial',
+		audios: ['English'],
+		subtitles: ['English'],
 		link: 'Sis3cytosgU',
 		time: '00:20',
 		client: {
@@ -262,6 +325,8 @@ export default [
 	},
 	{
 		title: 'Appeton Infomercial',
+		shortDesc: ``,
+		date: [7, 2022],
 		cover: '/images/cover/appeton-infomercial.webp',
 		imageUrl: '/images/cover/appeton-infomercial.webp',
 		produceBy: 'Eyoki Creative',
@@ -269,7 +334,9 @@ export default [
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: ['Jun Liew (Eyoki Creative)'],
 		casts: ['Amelia Chen'],
-		labels: ['Commercial'],
+		type: 'Commercial',
+		audios: ['English'],
+		subtitles: ['English'],
 		link: 'OdqyG1EhEzM',
 		time: '00:20',
 		client: {
@@ -279,15 +346,19 @@ export default [
 	},
 	{
 		title: `The truth about being a China expat in Malaysia`,
+		shortDesc: `Ye Ran Ran reveals why she decided to pursue her career dreams in Kuala Lumpur.`,
+		date: [10, 2020],
 		cover: '/images/cover/ksk-china.webp',
 		produceBy: 'Eyoki Creative',
 		directors: ['Jin Xian'],
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: ['WT (Eyoki Creative)'],
-		labels: ['Commercial'],
+		type: 'Commercial',
+		audios: ['Mandarin (中文)'],
+		subtitles: ['Simplified Chinese (简体中文)', 'English'],
 		link: 'B5e8HWMWGBU',
 		time: '01:50',
-		casts: ['冉冉 Ran Ran'],
+		casts: ['Ran Ran - 冉冉'],
 		client: {
 			name: 'KSK Land',
 			imageUrl: '/logo/ksk-land.webp'
@@ -295,12 +366,16 @@ export default [
 	},
 	{
 		title: `The truth about being a Hong Kong expat in Malaysia`,
+		shortDesc: `Follow Shirley Ng as she reveals the perks of living a semi-retirement life in Kuala Lumpur.`,
+		date: [10, 2020],
 		cover: '/images/cover/ksk-hk.webp',
 		produceBy: 'Eyoki Creative',
 		directors: ['Jin Xian'],
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: ['WT (Eyoki Creative)'],
-		labels: ['Commercial'],
+		type: 'Commercial',
+		audios: ['Cantonese (粤语)'],
+		subtitles: ['Simplified Chinese (简体中文)', 'English'],
 		link: 'Pi-5FoiVjo0',
 		time: '01:39',
 		client: {
@@ -310,13 +385,16 @@ export default [
 	},
 	{
 		title: `KSK Japanese Junji in Malaysia`,
+		date: [10, 2020],
 		cover: '/images/cover/ksk-japanese.webp',
 		produceBy: 'Eyoki Creative',
 		directors: ['Jin Xian'],
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: ['WT (Eyoki Creative)'],
 		casts: ['Kenji Suzuki'],
-		labels: ['Commercial'],
+		type: 'Commercial',
+		audios: ['Japanese'],
+		subtitles: ['Japanese (日本語)', 'English'],
 		link: 'LR7u7gtOaVQ',
 		time: '02:06',
 		client: {
@@ -326,13 +404,16 @@ export default [
 	},
 	{
 		title: `The Lady In Red Who Saved Christmas`,
+		shortDesc: `Little Chanel wants to throw a special surprise for her family this Christmas, and she knows just the perfect person to ask - the Lady in Red at YOO8 serviced by Kempinski.<br/><br/>YOO8 serviced by Kempinski is a development by KSK Land. For more details, visit <a href="https://www.8conlay.com/yoo8-residences/enquire" target="_blank">www.8conlay.com/yoo8-residences/enquire</a>`,
+		date: [12, 2020],
 		cover: '/images/cover/ksk-christmas.webp',
 		produceBy: 'Eyoki Creative',
 		directors: ['Jin Xian'],
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: ['WT (Eyoki Creative)'],
 		casts: ['Chanel'],
-		labels: ['Commercial'],
+		type: 'Commercial',
+		audios: ['English'],
 		link: 'SuwpDPN1RJs',
 		time: '01:18',
 		client: {
