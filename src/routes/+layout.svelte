@@ -2,24 +2,21 @@
 	import MediaPlayer from '$lib/components/MediaPlayer.svelte';
 	import Menu from '$lib/components/Menu.svelte';
 	import './app.scss';
+
+	const title = `Eyoki Creative`;
+	const desctiption = `Eyoki Creative is a Malaysia creative production company that led by a famouse female director of photography (DoP).`;
 </script>
 
 <svelte:head>
-	<title>Eyoki Creative</title>
-	<meta
-		name="description"
-		content="Eyoki Creative is a creative production company that led by an award-winning female director of photography (DP) in Malaysia."
-	/>
+	<title>{title}</title>
+	<meta name="description" content={desctiption} />
 	<meta property="og:locale" content="en_GB" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Eyoki Creative" />
+	<meta property="og:title" content={title} />
 	<meta property="og:image" content="/logo.png" />
-	<meta
-		property="og:description"
-		content="Eyoki Creative is a creative production company that led by an award-winning female director of photography (DP) in Malaysia."
-	/>
+	<meta property="og:description" content={desctiption} />
 	<meta property="og:url" content="https://eyokicreative.com" />
-	<meta property="og:site_name" content="Eyoki Creative" />
+	<meta property="og:site_name" content={title} />
 </svelte:head>
 
 <MediaPlayer>
