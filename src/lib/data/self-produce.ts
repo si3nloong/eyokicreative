@@ -63,9 +63,9 @@ export default [
 		writers: ['Victor Yee Fei Chen', 'GLL (Eyoki Creative)'],
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: ['Willie (Eyoki Creative)'],
-		casts: ['Eric Chen', 'Shao Hang'],
+		casts: ['Eric Chen', 'Shao Hang', 'Tang Zi Yao', 'Adam Chong', 'SBK'],
 		audios: ['Mandarin (中文)'],
-		subtitles: ['Simplified Chinese (简体中文)', 'English'],
+		subtitles: ['English', 'Simplified Chinese (简体中文)'],
 		link: '8csb2zvPgSs',
 		time: '11:22',
 		client: {
