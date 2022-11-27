@@ -10,13 +10,14 @@ export type Media = {
 	writers?: string[];
 	dps: string[];
 	lyrics?: [time: number, lryic: string][];
-	type: string;
+	category: 'Commercial' | 'Short Film';
 	editors: string[];
 	casts?: string[];
 	produceBy: string;
 	audios: string[];
 	subtitles?: string[];
 	bts?: BehindTheScreen;
+
 	client?: {
 		name: string;
 		imageUrl: string;
