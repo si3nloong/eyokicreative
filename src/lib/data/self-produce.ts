@@ -166,7 +166,7 @@ export default [
 	},
 	{
 		title: `LG PuriCare™ Self-Service Tankless Water Purifier`,
-		shortDesc: '',
+		shortDesc: `LG PuriCare™ Self-Service Tankless Water Purifier, the upgraded water purifier comes with auto-sterilisation features and easy filter replacement as well as filter subscription that gives a fresh take to “Total Self-Service.” Additionally, the brand-new “Self-Service” features make a vast difference for consumers with busy schedules; the filter subscription service delivers hassle-free filter replacement where consumers can do the filter change on their own, within their own schedule, without having to wait for customer care services. With a twist and pull, the filter can be changed to a fresh one without using any tools in a matter of seconds. The subscription service ships new filter(s) to consumers doorsteps every six months. Plus, it comes in a stunning Navy Blue, among others, which is a first in the market for this colour variation. The LG PuriCare™ Self-Service Tankless Water Purifier's auto-sterilisation feature sterilises both the internal stainless-steel pipes and outlet with high water temperature, removing 99.99% of germs. The system automatically sterilises internal stainless-steel pipes once a week, or consumers can adjust it as often as they wish. And to think that this is all within one touch of a button. Also, LG’s revolutionary ‘tankless’ technology allows access to clean water free from microorganism growth and the water will be fresh regardless of its temperature. Its 4-Stage All Puri Filter System also eliminates microorganisms, 99.99% norovirus and 9 types of heavy metals including mercury, lead, arsenic, cadmium, iron, copper, aluminum, manganese and zinc contained in water.`,
 		date: [8, 2022],
 		cover: '/images/cover/lg-puri-care.webp',
 		imageUrl: '/images/lg.jpeg',
@@ -344,6 +344,26 @@ export default [
 		client: {
 			name: 'Appeton',
 			imageUrl: '/logo/appeton.webp'
+		}
+	},
+	{
+		title: `8 Conlay Inspiration Series - Setting The Mood`,
+		shortDesc: `"The KSK project is the first project we have done in Malaysia. It felt right for us to be doing this project there, because YOO and KSK wanted us to bring something international but creating something that was accessible. Nobody would come to Kelly Hoppen unless they believed that we could do the project correctly but I think the great thing about YOO and KSK is that you got the Kempinski hotel and they will service the apartments," says Kelly Hoppen, the British interior designer behind YOO8 Tower B's exclusive concepts.`,
+		date: [6, 2018],
+		cover: '/images/cover/ksk-kelly-hoppen.webp',
+		produceBy: 'Eyoki Creative',
+		directors: ['Jin Xian'],
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: ['WT (Eyoki Creative)'],
+		category: 'Commercial',
+		audios: ['English'],
+		subtitles: ['English'],
+		link: 'cZaYupWCTyM',
+		time: '02:53',
+		casts: ['Kelly Hoppen'],
+		client: {
+			name: 'KSK Land',
+			imageUrl: '/logo/ksk-land.webp'
 		}
 	},
 	{

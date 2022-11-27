@@ -173,7 +173,8 @@ export default [
 		dps: ['Yuki (Eyoki Creative)'],
 		casts: ['Cats'],
 		category: 'Commercial',
-		audios: ['English'],
+		audios: ['Bahasa Melayu'],
+		subtitles: ['Bahasa Melayu'],
 		link: 'fXV_dYPvJ7c',
 		time: '02:30'
 	}
