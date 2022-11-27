@@ -43,15 +43,21 @@
 	export let video: Media | null = null;
 	export let show = false;
 
+	let playing = false;
 	const store$ = writable({ show, video, playing: false });
 
 	const close = () => {
 		ytPlayer?.stop();
-		store$.update((v) => Object.assign(v, { show: false, video, playing: false }));
+		show = false;
+		video = null;
+		playing = false;
+		store$.update((v) => Object.assign(v, { show, video, playing }));
 	};
 
 	const preview = (item: Media) => {
-		store$.update((v) => Object.assign(v, { show: true, video: item }));
+		show = true;
+		video = item;
+		store$.update((v) => Object.assign(v, { show, video: item }));
 	};
 
 	const play = (item: { link: string }) => {
@@ -62,7 +68,8 @@
 			});
 			ytPlayer.on('timeupdate', console.log);
 		}
-		store$.update((v) => Object.assign(v, { playing: true }));
+		playing = true;
+		store$.update((v) => Object.assign(v, { playing }));
 		ytPlayer.setVolume(100);
 		ytPlayer.load(item.link, true);
 	};
@@ -74,11 +81,11 @@
 		subscribe: store$.subscribe
 	});
 
-	$: if (browser && $store$.show) {
+	$: if (browser && show) {
 		const { scrollY } = window;
 		document.body.setAttribute('style', `position: fixed; top: -${scrollY}px;`);
 		document.body.setAttribute('data-scrolly', `${scrollY}`);
-	} else if (browser && !$store$.show) {
+	} else if (browser && !show) {
 		document.body.removeAttribute('style');
 		window.scrollTo(0, Number(document.body.getAttribute('data-scrolly')) || 0);
 	}
@@ -91,7 +98,7 @@
 <slot />
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-<div class="modal-box" class:hidden={!$store$.show || !$store$.video} on:click={close}>
+<div class="modal-box" class:hidden={!show || !video} on:click={close}>
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<div class="dialog" role="dialog" on:click|stopPropagation>
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -103,13 +110,13 @@
 		<div class="aspect-ratio">
 			<div class="cover">
 				<div class="video-player" bind:this={player} />
-				{#if $store$.video && !$store$.playing}
-					<img out:fade class="cover-img" src={$store$.video.cover} alt={$store$.video.title} />
+				{#if video && !playing}
+					<img out:fade class="cover-img" src={video.cover} alt={video.title} />
 				{/if}
 			</div>
-			{#if $store$.video && !$store$.playing}
+			{#if video && !playing}
 				<div class="control-list">
-					<button class="play-btn" on:click={playVideo($store$.video)}>
+					<button class="play-btn" on:click={playVideo(video)}>
 						{@html `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16.1378 10.5689L9.60498 7.30252C8.40816 6.70411 7 7.5744 7 8.91249V15.0876C7 16.4257 8.40816 17.2959 9.60498 16.6975L16.1378 13.4311C17.3171 12.8415 17.3171 11.1586 16.1378 10.5689Z" fill="#fff"/></svg>`}
 						<span>Play</span>
@@ -118,31 +125,27 @@
 			{/if}
 		</div>
 		<div class="container">
-			{#if $store$.video}
+			{#if video}
 				<section class="content">
 					<section class="main">
-						<h2>{$store$.video.title}</h2>
+						<h2>{video.title}</h2>
 						<div class="extra-info">
-							{#if $store$.video.client}
-								<span class="client"><img src={$store$.video.client.imageUrl} alt="" /></span>
-								<span class="name">{$store$.video.client.name}</span>
+							{#if video.client}
+								<span class="client"><img src={video.client.imageUrl} alt="" /></span>
+								<span class="name">{video.client.name}</span>
 							{/if}
 						</div>
 						<div class="video-info">
-							<span
-								>{`${monthNames[$store$.video.date[0] - 1].substring(0, 3)} ${
-									$store$.video.date[1]
-								}`}</span
-							>
+							<span>{`${monthNames[video.date[0] - 1].substring(0, 3)} ${video.date[1]}`}</span>
 							<span class="pipe">|</span>
-							<span>{$store$.video.type}</span>
+							<span>{video.category}</span>
 							<span class="pipe">|</span>
-							<span>{`${$store$.video.time}mins`}</span>
+							<span>{`${video.time}mins`}</span>
 						</div>
-						{#if $store$.video.shortDesc}
-							<div>{@html $store$.video.shortDesc}</div>
-						{:else if $store$.video.lyrics}
-							{#each $store$.video.lyrics as [_, lyric]}
+						{#if video.shortDesc}
+							<div>{@html video.shortDesc}</div>
+						{:else if video.lyrics}
+							{#each video.lyrics as [_, lyric]}
 								<div>{lyric}</div>
 							{/each}
 						{/if}
@@ -150,73 +153,63 @@
 					<section class="info">
 						<div>
 							<div>
-								<span class="label"
-									>{`Director${$store$.video.directors.length > 1 ? 's' : ''}:`}</span
-								>
-								<span><TagList items={$store$.video.directors} /></span>
+								<span class="label">{`Director${video.directors.length > 1 ? 's' : ''}:`}</span>
+								<span><TagList items={video.directors} /></span>
 							</div>
-							{#if $store$.video.writers}
+							{#if video.writers}
 								<div>
-									<span class="label"
-										>{`Writer${$store$.video.writers.length > 1 ? 's' : ''}:`}</span
-									>
-									<span><TagList items={$store$.video.writers} /></span>
+									<span class="label">{`Writer${video.writers.length > 1 ? 's' : ''}:`}</span>
+									<span><TagList items={video.writers} /></span>
 								</div>
 							{/if}
-							{#if $store$.video.dps}
+							{#if video.dps}
 								<div>
-									<span class="label"
-										>{`Cinematographer${$store$.video.dps.length > 1 ? 's' : ''}:`}</span
-									>
-									<span><TagList items={$store$.video.dps} /></span>
+									<span class="label">{`Cinematographer${video.dps.length > 1 ? 's' : ''}:`}</span>
+									<span><TagList items={video.dps} /></span>
 								</div>
 							{/if}
-							{#if $store$.video.editors}
+							{#if video.editors}
 								<div>
-									<span class="label">Editor:</span><TagList items={$store$.video.editors} />
+									<span class="label">Editor:</span><TagList items={video.editors} />
 								</div>
 							{/if}
-							{#if $store$.video.casts}
+							{#if video.casts}
 								<div>
 									<span class="label">Cast:</span>
-									<TagList items={$store$.video.casts} />
+									<TagList items={video.casts} />
 								</div>
 							{/if}
 							<div>
-								<span class="label">Produced By:</span><TagList items={[$store$.video.produceBy]} />
+								<span class="label">Produced By:</span><TagList items={[video.produceBy]} />
 							</div>
 						</div>
 
 						<div style="margin-top: 30px">
-							<!-- <div><span class="label">Genres:</span><TagList items={$store$.video.labels} /></div> -->
+							<!-- <div><span class="label">Genres:</span><TagList items={video.labels} /></div> -->
 							<div>
-								<span class="label">Audio:</span><TagList items={$store$.video.audios} />
+								<span class="label">Audio:</span><TagList items={video.audios} />
 							</div>
-							{#if $store$.video.subtitles}
+							{#if video.subtitles}
 								<div>
-									<span class="label">Subtitles:</span><TagList items={$store$.video.subtitles} />
+									<span class="label">Subtitles:</span><TagList items={video.subtitles} />
 								</div>
 							{/if}
 						</div>
 					</section>
 				</section>
-				{#if $store$.video.bts}
+				{#if video.bts}
 					<section style="padding-top: 50px">
 						<ul class="related-video-list">
-							<li on:click={playVideo($store$.video.bts)}>
+							<li on:click={playVideo(video.bts)}>
 								<div class="thumbnail">
 									<div class="aspect-ratio">
-										<img
-											class="cover-img"
-											src={$store$.video.bts.imageUrl}
-											alt={$store$.video.bts.title}
-										/>
+										<img class="cover-img" src={video.bts.imageUrl} alt={video.bts.title} />
 									</div>
 								</div>
 								<div class="video-details">
-									<h3>{$store$.video.bts.title}</h3>
+									<h3>{video.bts.title}</h3>
 									<div class="video-info" style="margin-top: 10px">
-										<span>{`${$store$.video.bts.time}mins`}</span>
+										<span>{`${video.bts.time}mins`}</span>
 									</div>
 								</div>
 							</li>
@@ -228,7 +221,7 @@
 	</div>
 </div>
 
-{#if $store$.show}
+{#if show}
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<div class="overlay" in:fade out:fade />
 {/if}
@@ -355,6 +348,7 @@
 			}
 
 			.info {
+				max-width: 320px;
 				min-width: 280px;
 				padding: 1rem 0;
 				padding-left: 0;
