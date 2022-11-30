@@ -40,12 +40,16 @@ export default [
 		subtitles: ['Simplified Chinese (简体中文)', 'English'],
 		link: 'N41rOM88c40',
 		time: '14:59',
-		bts: {
-			title: 'BMW Shorties 2019 (ALOT FUN MOMENTS)',
-			imageUrl: '/images/cover/kingdom-and-beauty-bts.webp',
-			link: 'D9JvcFP2pN4',
-			time: '07:11'
-		},
+		relatedVideos: [
+			{
+				title: 'BMW Shorties 2019 (ALOT FUN MOMENTS)',
+				imageUrl: '/images/cover/kingdom-and-beauty-bts.webp',
+				editors: ['WT (Eyoki Creative)'],
+				dps: ['Jin Xian'],
+				link: 'D9JvcFP2pN4',
+				time: '07:11'
+			}
+		],
 		client: {
 			name: 'Eyoki Creative',
 			imageUrl: '/logo/eyoki-creative.webp'
@@ -71,7 +75,17 @@ export default [
 		client: {
 			name: 'The One Academy',
 			imageUrl: '/logo/toa.webp'
-		}
+		},
+		relatedVideos: [
+			{
+				title: 'Gameboy - Behind The Scene (Eyoki x The One Academy)',
+				imageUrl: '/images/cover/gameboy-bts.webp',
+				editors: ['Jamieson Chan (Eyoki Creative)'],
+				dps: ['SBK (Eyoki Creative)'],
+				link: '9LvYQomA2mI',
+				time: '08:15'
+			}
+		]
 	},
 	{
 		title: 'VIVO V20 SE Aquamarine',
@@ -92,12 +106,16 @@ export default [
 			name: 'VIVO',
 			imageUrl: '/logo/vivo.webp'
 		},
-		bts: {
-			title: 'BEHIND THE SCENE (EYOKI x VIVO) Be Mer-mazing, Be The Focus',
-			imageUrl: '/images/cover/vivo-v20-bts.webp',
-			link: 'nEVLkBp6gyc',
-			time: '02:07'
-		}
+		relatedVideos: [
+			{
+				title: 'BEHIND THE SCENE (EYOKI x VIVO) Be Mer-mazing, Be The Focus',
+				imageUrl: '/images/cover/vivo-v20-bts.webp',
+				editors: ['Zheng Hao'],
+				dps: ['Zheng Hao'],
+				link: 'nEVLkBp6gyc',
+				time: '02:07'
+			}
+		]
 	},
 	{
 		title: '凡人不懂愛',
@@ -475,6 +493,7 @@ export default [
 	// 	client: {
 	// 		name: 'TGV Cinemas',
 	// 		imageUrl: '/logo/tgv.webp'
-	// 	}
+	// 	},
+	// dps: ['Ben'],
 	// }
 ];
