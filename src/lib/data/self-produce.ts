@@ -460,6 +460,22 @@ export default [
 			name: 'KSK Land',
 			imageUrl: '/logo/ksk-land.webp'
 		}
+	},
+	{
+		title: 'Mercks Pre-diabetes Animation',
+		cover: '/images/cover/merck-prediabetes.webp',
+		imageUrl: '',
+		date: [11, 2022],
+		link: 'TuYXLujP4II',
+		produceBy: 'Eyoki Creative',
+		category: 'Animation',
+		audios: ['English'],
+		subtitles: ['English'],
+		time: '02:48',
+		client: {
+			name: 'Merck',
+			imageUrl: '/logo/merck.webp'
+		}
 	}
 	// {
 	// 	title: '',

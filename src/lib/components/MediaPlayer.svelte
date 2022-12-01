@@ -152,10 +152,12 @@
 					</section>
 					<section class="info">
 						<div>
-							<div>
-								<span class="label">{`Director${video.directors.length > 1 ? 's' : ''}:`}</span>
-								<span><TagList items={video.directors} /></span>
-							</div>
+							{#if video.directors}
+								<div>
+									<span class="label">{`Director${video.directors.length > 1 ? 's' : ''}:`}</span>
+									<span><TagList items={video.directors} /></span>
+								</div>
+							{/if}
 							{#if video.writers}
 								<div>
 									<span class="label">{`Writer${video.writers.length > 1 ? 's' : ''}:`}</span>
