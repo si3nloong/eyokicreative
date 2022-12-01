@@ -16,7 +16,6 @@ export type Media = {
 	produceBy: string;
 	audios: string[];
 	subtitles?: string[];
-	bts?: BehindTheScreen;
 	relatedVideos: Media[];
 	client?: {
 		name: string;

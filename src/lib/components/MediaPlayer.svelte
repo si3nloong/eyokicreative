@@ -152,10 +152,12 @@
 					</section>
 					<section class="info">
 						<div>
-							<div>
-								<span class="label">{`Director${video.directors.length > 1 ? 's' : ''}:`}</span>
-								<span><TagList items={video.directors} /></span>
-							</div>
+							{#if video.directors}
+								<div>
+									<span class="label">{`Director${video.directors.length > 1 ? 's' : ''}:`}</span>
+									<span><TagList items={video.directors} /></span>
+								</div>
+							{/if}
 							{#if video.writers}
 								<div>
 									<span class="label">{`Writer${video.writers.length > 1 ? 's' : ''}:`}</span>
@@ -197,22 +199,30 @@
 						</div>
 					</section>
 				</section>
-				{#if video.bts}
+				{#if video.relatedVideos}
 					<section style="padding-top: 50px">
 						<ul class="related-video-list">
-							<li on:click={playVideo(video.bts)}>
-								<div class="thumbnail">
-									<div class="aspect-ratio">
-										<img class="cover-img" src={video.bts.imageUrl} alt={video.bts.title} />
+							{#each video.relatedVideos as item}
+								<li on:click={playVideo(item)}>
+									<div class="thumbnail">
+										<div class="aspect-ratio">
+											<img class="cover-img" src={item.imageUrl} alt={item.title} />
+										</div>
 									</div>
-								</div>
-								<div class="video-details">
-									<h3>{video.bts.title}</h3>
-									<div class="video-info" style="margin-top: 10px">
-										<span>{`${video.bts.time}mins`}</span>
+									<div class="video-details">
+										<h3>{item.title}</h3>
+										<section style="margin-top: 15px">
+											<div><span class="label">Editor:</span><TagList items={item.editors} /></div>
+											<div>
+												<span class="label">Cinematographer:</span><TagList items={item.dps} />
+											</div>
+										</section>
+										<div class="video-info" style="margin-top: 10px">
+											<span>{`${item.time}mins`}</span>
+										</div>
 									</div>
-								</div>
-							</li>
+								</li>
+							{/each}
 						</ul>
 					</section>
 				{/if}
