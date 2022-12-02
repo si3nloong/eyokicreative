@@ -225,13 +225,13 @@
 		margin: 0 auto;
 
 		@media screen and (min-width: 600px) {
-			width: 85%;
+			width: 80%;
 		}
 	}
 
 	footer {
 		color: var(--text-color);
-		padding: 2rem 0 100px;
+		padding: 2rem var(--padding) 100px;
 		font-size: 0.8rem;
 		display: flex;
 		align-items: center;

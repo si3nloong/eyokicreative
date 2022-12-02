@@ -31,7 +31,7 @@
 </script>
 
 <section class="content">
-	<section class="main">
+	<section class="main-info">
 		<h2>{video.title}</h2>
 		<div class="extra-info">
 			{#if video.client}
@@ -53,9 +53,9 @@
 				<div>{lyric}</div>
 			{/each}
 		{/if}
-		<Button on:click={playVideo} style="margin-top: 1rem; width: 100%">PLAY NOW</Button>
+		<!-- <Button on:click={playVideo} style="margin-top: 1rem; width: 100%">PLAY NOW</Button> -->
 	</section>
-	<section class="info">
+	<section class="addon-info">
 		<div>
 			{#if video.directors}
 				<div>
@@ -113,12 +113,11 @@
 		flex-direction: column;
 		width: 100%;
 
-		.main {
+		.main-info {
 			flex-grow: 1;
-			// padding-right: var(--padding);
 		}
 
-		.info {
+		.addon-info {
 			max-width: 320px;
 			min-width: 280px;
 			padding: 1rem 0;
@@ -127,13 +126,17 @@
 
 		@media screen and (min-width: 680px) {
 			flex-direction: row;
+
+			.main-info {
+				padding-right: var(--padding);
+			}
 		}
 	}
 
 	.video-info {
 		color: var(--sub-text-color);
 		font-size: 0.9rem;
-		padding-bottom: 0.65rem;
+		padding-bottom: var(--padding-sm);
 
 		.pipe {
 			padding: 0 4px;
