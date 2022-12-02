@@ -67,13 +67,17 @@
 <style lang="scss">
 	section {
 		padding: var(--padding);
+
+		@media screen and (min-width: 600px) {
+			padding: var(--padding) 0;
+		}
 	}
 
 	.video-list {
 		list-style: none;
 		list-style-position: inside;
 		display: flex;
-		padding-top: 0.5rem;
+		padding-top: var(--padding-sm);
 		margin: 0 -10px;
 		flex-flow: row wrap;
 		justify-content: space-between;

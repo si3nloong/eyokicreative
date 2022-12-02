@@ -47,12 +47,13 @@
 		width: 60%;
 	}
 
-	.main-container {
+	.main-container,
+	.section {
 		padding: var(--padding);
-	}
 
-	section {
-		padding: var(--padding) 0;
+		@media screen and (min-width: 600px) {
+			padding: var(--padding) 0;
+		}
 	}
 
 	.headline {
