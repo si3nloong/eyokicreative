@@ -2,14 +2,18 @@
 	import Image from './Image.svelte';
 	import type { Media } from './';
 	import { useMediaPlayer } from './MediaPlayer.svelte';
+	import { isMobile } from '$lib/utils';
+	import { goto } from '$app/navigation';
 
 	export let items: Media[] = [];
 
 	const player = useMediaPlayer();
 
-	player.subscribe(console.log);
-
 	const onPreview = (item: Media) => () => {
+		if (isMobile()) {
+			goto(`/work/${item.link}`);
+			return;
+		}
 		player.preview(item);
 	};
 </script>

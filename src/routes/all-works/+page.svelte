@@ -66,7 +66,7 @@
 
 <style lang="scss">
 	section {
-		padding: 2rem 0;
+		padding: var(--padding);
 	}
 
 	.video-list {

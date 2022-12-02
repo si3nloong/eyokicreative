@@ -36,6 +36,8 @@
 	import YouTubePlayer from 'yt-player';
 	import type { Media } from './';
 	import TagList from './TagList.svelte';
+	import { isMobile } from '$lib/utils';
+	import VideoDetail from './VideoDetail.svelte';
 
 	let player: HTMLDivElement;
 	let ytPlayer: YouTubePlayer;
@@ -44,6 +46,7 @@
 	export let show = false;
 
 	let playing = false;
+	const small = browser ? isMobile() : false;
 	const store$ = writable({ show, video, playing: false });
 
 	const close = () => {
@@ -54,24 +57,38 @@
 		store$.update((v) => Object.assign(v, { show, video, playing }));
 	};
 
-	const preview = (item: Media) => {
-		show = true;
-		video = item;
-		store$.update((v) => Object.assign(v, { show, video: item }));
-	};
-
-	const play = (item: { link: string }) => {
+	const setupAndPlay = (link: string) => {
 		if (!ytPlayer) {
-			ytPlayer = new YouTubePlayer(player);
-			ytPlayer.on('playing', () => {
-				console.log(ytPlayer.getDuration()); // => 351.521
+			ytPlayer = new YouTubePlayer(player, {
+				captions: false,
+				fullscreen: true,
+				// controls: false,
+				related: false
 			});
-			ytPlayer.on('timeupdate', console.log);
+			// ytPlayer.on('playing', () => {
+			// 	console.log(ytPlayer.getDuration()); // => 351.521
+			// });
+			// ytPlayer.on('timeupdate', console.log);
 		}
 		playing = true;
 		store$.update((v) => Object.assign(v, { playing }));
 		ytPlayer.setVolume(100);
-		ytPlayer.load(item.link, true);
+		ytPlayer.load(link, true);
+	};
+
+	const preview = (item: Media) => {
+		show = true;
+		video = item;
+		store$.update((v) => Object.assign(v, { show, video: item }));
+		if (small) {
+			setTimeout(() => {
+				setupAndPlay(item.link);
+			}, 100);
+		}
+	};
+
+	const play = (item: { link: string }) => {
+		setupAndPlay(item.link);
 	};
 
 	setContext<MediaPlayer>(KEY, {
@@ -98,7 +115,7 @@
 <slot />
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-<div class="modal-box" class:hidden={!show || !video} on:click={close}>
+<div class="modal-box" class:small class:hidden={!show || !video} on:click={close}>
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<div class="dialog" role="dialog" on:click|stopPropagation>
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -126,79 +143,7 @@
 		</div>
 		<div class="container">
 			{#if video}
-				<section class="content">
-					<section class="main">
-						<h2>{video.title}</h2>
-						<div class="extra-info">
-							{#if video.client}
-								<span class="client"><img src={video.client.imageUrl} alt="" /></span>
-								<span class="name">{video.client.name}</span>
-							{/if}
-						</div>
-						<div class="video-info">
-							<span>{`${monthNames[video.date[0] - 1].substring(0, 3)} ${video.date[1]}`}</span>
-							<span class="pipe">|</span>
-							<span>{video.category}</span>
-							<span class="pipe">|</span>
-							<span>{`${video.time}mins`}</span>
-						</div>
-						{#if video.shortDesc}
-							<div>{@html video.shortDesc}</div>
-						{:else if video.lyrics}
-							{#each video.lyrics as [_, lyric]}
-								<div>{lyric}</div>
-							{/each}
-						{/if}
-					</section>
-					<section class="info">
-						<div>
-							{#if video.directors}
-								<div>
-									<span class="label">{`Director${video.directors.length > 1 ? 's' : ''}:`}</span>
-									<span><TagList items={video.directors} /></span>
-								</div>
-							{/if}
-							{#if video.writers}
-								<div>
-									<span class="label">{`Writer${video.writers.length > 1 ? 's' : ''}:`}</span>
-									<span><TagList items={video.writers} /></span>
-								</div>
-							{/if}
-							{#if video.dps}
-								<div>
-									<span class="label">{`Cinematographer${video.dps.length > 1 ? 's' : ''}:`}</span>
-									<span><TagList items={video.dps} /></span>
-								</div>
-							{/if}
-							{#if video.editors}
-								<div>
-									<span class="label">Editor:</span><TagList items={video.editors} />
-								</div>
-							{/if}
-							{#if video.casts}
-								<div>
-									<span class="label">Cast:</span>
-									<TagList items={video.casts} />
-								</div>
-							{/if}
-							<div>
-								<span class="label">Produced By:</span><TagList items={[video.produceBy]} />
-							</div>
-						</div>
-
-						<div style="margin-top: 30px">
-							<!-- <div><span class="label">Genres:</span><TagList items={video.labels} /></div> -->
-							<div>
-								<span class="label">Audio:</span><TagList items={video.audios} />
-							</div>
-							{#if video.subtitles}
-								<div>
-									<span class="label">Subtitles:</span><TagList items={video.subtitles} />
-								</div>
-							{/if}
-						</div>
-					</section>
-				</section>
+				<VideoDetail {video} />
 				{#if video.relatedVideos}
 					<section style="padding-top: 50px">
 						<ul class="related-video-list">
@@ -265,6 +210,28 @@
 
 		&.hidden {
 			display: none;
+		}
+
+		&.small {
+			.container {
+				display: none;
+			}
+
+			.dialog {
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+
+			.control-list {
+				display: none;
+			}
+
+			.close-btn {
+				position: fixed;
+				top: 15px;
+				right: 15px;
+			}
 		}
 	}
 
@@ -347,68 +314,6 @@
 			padding-bottom: 60px;
 		}
 
-		.content {
-			display: flex;
-			flex-direction: column;
-			width: 100%;
-
-			.main {
-				flex-grow: 1;
-				padding-right: $paddingHorizontal;
-			}
-
-			.info {
-				max-width: 320px;
-				min-width: 280px;
-				padding: 1rem 0;
-				padding-left: 0;
-			}
-		}
-
-		.video-info {
-			color: var(--sub-text-color);
-			font-size: 0.9rem;
-			padding-bottom: 0.65rem;
-
-			.pipe {
-				padding: 0 4px;
-			}
-		}
-
-		.extra-info {
-			display: flex;
-			align-items: center;
-			// justify-content: space-around;
-			padding: 0.65rem 0;
-
-			.client {
-				width: 50px;
-				height: 50px;
-				border-radius: 2px;
-				overflow: hidden;
-			}
-
-			.name {
-				margin-left: 12px;
-			}
-
-			// .timerange {
-			// 	display: inline-flex;
-			// 	border: 1px solid #dcdcdc;
-			// 	line-height: 24px;
-			// 	height: 26px;
-			// 	padding: 0 8px;
-			// 	border-radius: 3px;
-			// 	font-size: 12px;
-			// }
-		}
-
-		.label {
-			font-size: 12px;
-			color: var(--sub-text-color);
-			margin-right: 6px;
-		}
-
 		.related-video-list {
 			list-style: none;
 			list-style-position: inside;
@@ -438,9 +343,9 @@
 			box-shadow: 0 0 26px rgba(0, 0, 0, 0.3);
 			transform-origin: 50% 12.5%;
 
-			.content {
-				flex-direction: row;
-			}
+			// .content {
+			// 	flex-direction: row;
+			// }
 
 			.related-video-list {
 				li {
@@ -450,11 +355,6 @@
 					.thumbnail {
 						max-width: 320px;
 					}
-
-					// .video-info {
-					// 	padding: 0.65rem 1rem;
-					// 	flex-grow: 1;
-					// }
 				}
 			}
 		}

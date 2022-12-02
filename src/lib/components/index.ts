@@ -16,7 +16,7 @@ export type Media = {
 	produceBy: string;
 	audios: string[];
 	subtitles?: string[];
-	relatedVideos: Media[];
+	relatedVideos?: Media[];
 	client?: {
 		name: string;
 		imageUrl: string;

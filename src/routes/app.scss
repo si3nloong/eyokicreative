@@ -70,3 +70,9 @@ img {
 	padding-top: 56.25%;
 	height: 0;
 }
+
+::-webkit-scrollbar {
+	-webkit-appearance: none;
+	width: 0px;
+	background: transparent; /* make scrollbar transparent */
+}

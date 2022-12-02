@@ -150,7 +150,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 2rem 0;
+		padding: 2rem var(--padding);
 
 		.left {
 			flex-grow: 1;
@@ -216,12 +216,17 @@
 
 	main {
 		display: flex;
+		overflow: hidden;
 		flex-direction: column;
 		justify-content: space-between;
 		max-width: 1280px;
-		width: 85%;
+		width: 100%;
 		min-height: 100%;
 		margin: 0 auto;
+
+		@media screen and (min-width: 600px) {
+			width: 85%;
+		}
 	}
 
 	footer {

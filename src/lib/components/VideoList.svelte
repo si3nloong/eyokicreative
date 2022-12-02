@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
+	import { isMobile } from '$lib/utils';
 	import type { Media } from '.';
 	import { useMediaPlayer } from './MediaPlayer.svelte';
 	import Video from './Video.svelte';
@@ -9,9 +11,11 @@
 
 	const player = useMediaPlayer();
 
-	player.subscribe(console.log);
-
 	const onPreview = (item: Media) => () => {
+		if (isMobile()) {
+			goto(`/work/${item.link}`);
+			return;
+		}
 		player.preview(item);
 	};
 </script>
