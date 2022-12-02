@@ -8,7 +8,7 @@
 </script>
 
 <div class="d-16-9 cover">
-	<img src={video.imageUrl} alt={video.title} />
+	<img src={video.cover} alt={video.title} />
 </div>
 <section class="info-box">
 	<VideoDetail {video} />
