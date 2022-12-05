@@ -38,6 +38,7 @@
 	import TagList from './TagList.svelte';
 	import { isMobile } from '$lib/utils';
 	import VideoDetail from './VideoDetail.svelte';
+	import Modal from './Modal.svelte';
 
 	let player: HTMLDivElement;
 	let ytPlayer: YouTubePlayer;
@@ -49,7 +50,7 @@
 	const small = browser ? isMobile() : false;
 	const store$ = writable({ show, video, playing: false });
 
-	const close = () => {
+	const handleClose = () => {
 		ytPlayer?.stop();
 		show = false;
 		video = null;
@@ -92,7 +93,7 @@
 	};
 
 	setContext<MediaPlayer>(KEY, {
-		close,
+		close: handleClose,
 		preview,
 		play,
 		subscribe: store$.subscribe
@@ -110,28 +111,37 @@
 	const playVideo = (item: { link: string }) => () => {
 		play(item);
 	};
+
+	const handleClosePlayer = () => {
+		playing = false;
+	};
 </script>
 
 <slot />
 
+{#if show}
+	<!-- svelte-ignore a11y-click-events-have-key-events -->
+	<div class="overlay" in:fade out:fade />
+{/if}
+
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-<div class="modal-box" class:small class:hidden={!show || !video} on:click={close}>
+<div class="modal-box" class:small class:hidden={!show || !video} on:click={handleClose}>
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<div class="dialog" role="dialog" on:click|stopPropagation>
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
-		<span class="close-btn" on:click={close}
+		<span class="close-btn" on:click={handleClose}
 			>{@html `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M18 6L6 18" stroke="#33363F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M6 6L18 18" stroke="#33363F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`}</span
 		>
 		<div class="aspect-ratio">
 			<div class="cover">
-				<div class="video-player" bind:this={player} />
-				{#if video && !playing}
-					<img out:fade class="cover-img" src={video.cover} alt={video.title} />
+				<!-- <div class="video-player" /> -->
+				{#if video}
+					<img class="cover-img" src={video.cover} alt={video.title} />
 				{/if}
 			</div>
-			{#if video && !playing}
+			{#if video}
 				<div class="control-list">
 					<button class="play-btn" on:click={playVideo(video)}>
 						{@html `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -176,10 +186,11 @@
 	</div>
 </div>
 
-{#if show}
-	<!-- svelte-ignore a11y-click-events-have-key-events -->
-	<div class="overlay" in:fade out:fade />
-{/if}
+<Modal show={playing} on:close={handleClosePlayer}>
+	<div class="video-player-box">
+		<div class="video-player" bind:this={player} />
+	</div>
+</Modal>
 
 <style lang="scss">
 	$paddingHorizontal: 2rem;
@@ -206,7 +217,7 @@
 		justify-content: center;
 		overflow-y: auto;
 		will-change: scroll-position;
-		z-index: 3;
+		z-index: 1;
 
 		&.hidden {
 			display: none;
@@ -285,12 +296,6 @@
 			}
 		}
 
-		.video-player {
-			width: 100%;
-			height: 100%;
-			overflow: hidden;
-		}
-
 		.control-list {
 			position: absolute;
 			bottom: 5%;
@@ -357,6 +362,23 @@
 					}
 				}
 			}
+		}
+	}
+
+	.video-player-box {
+		position: relative;
+		display: block;
+		padding-top: 56.25%;
+		height: 0;
+		overflow: hidden;
+		background-color: var(--image-placeholder-color);
+
+		.video-player {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
 		}
 	}
 </style>
