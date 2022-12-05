@@ -60,6 +60,14 @@
 			.body {
 				padding: 0 var(--padding-sm);
 				flex-grow: 1;
+				min-width: 0;
+
+				.caption {
+					width: 100%;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
 
 				.category {
 					color: var(--sub-text-color);
@@ -90,6 +98,7 @@
 				}
 			}
 		}
+
 		li:last-child {
 			border: none;
 		}
