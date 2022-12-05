@@ -136,7 +136,6 @@
 		>
 		<div class="aspect-ratio">
 			<div class="cover">
-				<!-- <div class="video-player" /> -->
 				{#if video}
 					<img class="cover-img" src={video.cover} alt={video.title} />
 				{/if}

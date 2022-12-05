@@ -223,6 +223,98 @@ export default [
 		}
 	},
 	{
+		title: `VIVO V21`,
+		shortDesc: ``,
+		date: [9, 2019],
+		cover: '/images/cover/vivo-v21.webp',
+		imageUrl: '/images/vivo-y77-5g.webp',
+		directors: ['Yuki (Eyoki Creative)'],
+		produceBy: 'Eyoki Creative',
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: ['WT (Eyoki Creative)'],
+		category: 'Commercial',
+		casts: [
+			'Danny Koo',
+			'Han Xiiao Aii',
+			'Okokokmou',
+			'Caedon',
+			'Rickman Chia',
+			'Angeline',
+			'Hana',
+			'Cody Hong'
+		],
+		audios: ['English'],
+		subtitles: ['English'],
+		link: '00eFx9W7KxY',
+		time: '00:55',
+		client: {
+			name: 'VIVO',
+			imageUrl: '/logo/vivo.webp'
+		}
+	},
+	{
+		title: `BLACK DIP`,
+		shortDesc: ``,
+		date: [9, 2019],
+		cover: '/images/cover/aik-cheong-blackdip.webp',
+		imageUrl: '/images/aik-cheong-blackdip.webp',
+		directors: ['Yuki (Eyoki Creative)'],
+		produceBy: 'Eyoki Creative',
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: ['WT (Eyoki Creative)'],
+		category: 'Commercial',
+		audios: ['English'],
+		subtitles: ['English'],
+		link: '',
+		time: '00:55',
+		client: {
+			name: 'Aik Cheong',
+			imageUrl: '/logo/aik-cheong.webp'
+		}
+	},
+	{
+		title: `Skechers GOWALK 5 x Melissa Tan`,
+		shortDesc: ``,
+		date: [9, 2019],
+		cover: '/images/cover/skechers-melissa-tan.webp',
+		imageUrl: '/images/vivo-y77-5g.webp',
+		directors: ['Yuki (Eyoki Creative)'],
+		produceBy: 'Eyoki Creative',
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: ['WT (Eyoki Creative)'],
+		category: 'Commercial',
+		casts: ['Melissa Tan'],
+		audios: ['English'],
+		subtitles: ['English'],
+		link: '00eFx9W7KxY',
+		time: '02:54',
+		client: {
+			name: 'Skechers',
+			imageUrl: '/logo/skechers.webp'
+		}
+	},
+	{
+		title: `Little Skool House (Singapore)`,
+		shortDesc: ``,
+		date: [2, 2020],
+		cover: '/images/cover/little-skool-house.webp',
+		imageUrl: '/images/vivo-y77-5g.webp',
+		category: 'Commercial',
+		directors: ['Yuki (Eyoki Creative)'],
+		produceBy: 'Eyoki Creative',
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: ['WT (Eyoki Creative)'],
+		casts: ['Little Skool House students and teachers'],
+		audios: ['English'],
+		subtitles: ['English'],
+		link: '00eFx9W7KxY',
+		time: '02:54',
+		client: {
+			name: 'Little Skool House',
+			imageUrl: '/logo/little-skool-house.webp'
+		}
+	},
+	{
 		title: `VIVO Y77 - 5G`,
 		shortDesc: `It's big, it's clear and it's long, That's Y It's Superb to own vivo  #Y775G ! 😍 Pre-order now for only RM1,299 with exclusive free gifts worth up to RM597!`,
 		date: [7, 2022],

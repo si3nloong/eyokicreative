@@ -163,6 +163,26 @@ export default [
 		}
 	},
 	{
+		title: `MAKE YOU IT GLOW`,
+		shortDesc: ``,
+		date: [11, 2021],
+		cover: '/images/cover/pixy-make-you-it-glow.webp',
+		imageUrl: '',
+		produceBy: 'Artisia Productions',
+		directors: [''],
+		dps: ['Yuki (Eyoki Creative)'],
+		casts: ['Nynaa Harizal'],
+		category: 'Commercial',
+		audios: ['English'],
+		subtitles: ['English'],
+		link: 'fXV_dYPvJ7c',
+		time: '00:45',
+		client: {
+			name: 'PIXY',
+			imageUrl: '/logo/pixy.webp'
+		}
+	},
+	{
 		title: `Kami Nak 100% Makanan Laut`,
 		shortDesc: `Haaa… Nak tahu kenapa diorang memberontak?!`,
 		date: [11, 2021],
