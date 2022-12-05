@@ -5,7 +5,7 @@
 <script lang="ts">
 </script>
 
-<div class="main-container">
+<div class="main-box">
 	<section>
 		<h2>Commercial Video or TVC</h2>
 		<article>
@@ -54,7 +54,7 @@
 </div>
 
 <style lang="scss">
-	.main-container {
+	.main-box {
 		padding: var(--padding) 0;
 	}
 

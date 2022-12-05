@@ -14,7 +14,7 @@
 	};
 </script>
 
-<div class="main-container">
+<div class="main-box">
 	<section class="headline">
 		<!-- <h1><span class="highlight">Eyoki Creative</span> is Creative Production House</h1> -->
 		<h1>
@@ -47,7 +47,7 @@
 		width: 60%;
 	}
 
-	.main-container,
+	.main-box,
 	.section {
 		padding: var(--padding);
 

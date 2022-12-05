@@ -151,7 +151,7 @@
 				</div>
 			{/if}
 		</div>
-		<div class="container">
+		<div class="content-box">
 			{#if video}
 				<VideoDetail {video} />
 				{#if video.relatedVideos}
@@ -224,7 +224,7 @@
 		}
 
 		&.small {
-			.container {
+			.box {
 				display: none;
 			}
 
@@ -314,7 +314,7 @@
 			}
 		}
 
-		.container {
+		.content-box {
 			padding: 1rem 1.5rem;
 			padding-bottom: 60px;
 		}

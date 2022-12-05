@@ -7,7 +7,7 @@
 	const { video } = data;
 </script>
 
-<div class="cover-container">
+<div class="cover-box">
 	<div class="d-16-9 cover">
 		<img src={video.cover} alt={video.title} />
 	</div>
@@ -30,7 +30,7 @@
 	}
 
 	@media screen and (min-width: 640px) {
-		.cover-container {
+		.cover-box {
 			padding: 0 var(--padding);
 		}
 	}
