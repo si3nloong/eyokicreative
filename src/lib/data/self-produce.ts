@@ -82,7 +82,7 @@ export default [
 				imageUrl: '/images/cover/gameboy-bts.webp',
 				editors: ['Jamieson Chan (Eyoki Creative)'],
 				dps: ['SBK (Eyoki Creative)'],
-				link: '9LvYQomA2mI',
+				link: 'VcgO9HDImlc',
 				time: '08:15'
 			}
 		]
