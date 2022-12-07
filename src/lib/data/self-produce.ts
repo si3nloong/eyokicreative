@@ -80,7 +80,7 @@ export default [
 			{
 				title: 'Gameboy - Behind The Scene (Eyoki x The One Academy)',
 				imageUrl: '/images/cover/gameboy-bts.webp',
-				editors: ['Jamieson Chan (Eyoki Creative)'],
+				editors: ['Jamieson (Eyoki Creative)'],
 				dps: ['SBK (Eyoki Creative)'],
 				link: 'VcgO9HDImlc',
 				time: '08:15'
@@ -116,6 +116,40 @@ export default [
 				time: '02:07'
 			}
 		]
+	},
+	{
+		title: 'Run it out',
+		shortDesc: `I'll be on my way<br/>有梦放心追<br/><br/>新的lane<br/>计划新的plan<br/>我想低调也没办法<br/>像子弹换发<br/>成为顶级玩家<br/>Run it run it up<br/><br/>Run it run it up<br/>看我在對著新的版圖衝刺 不管親戚的諷刺<br/>媽媽手機收到進帳的通知 打個電話問問近況
+		叫我Dj先關掉音響<br/>媽媽說她在滿庭芳<br/>今年過年想換個冰箱<br/>我告訴她不要省<br/>要就選有三個勾勾的<br/>早就說過等我湊夠了錢 拍個MV做個音樂不要偷偷的<br/>來年似水so像water隨意流淌<br/>不管是非
+		把cash和想要的都抓手上 機會都在手上<br/>ball like dame 投進一顆壓哨 im just doin my thing<br/>不理他們說的應該不算霸道<br/>不理他們的花招<br/>I pull up pull up pull up 剛考到了駕照
+
+
+
+		[Hook]
+		I'll be on my way<br/>有梦放心追<br/><br/>新的 lane
+		计划新的plan<br/>我想低调也没办法<br/>像子弹换发<br/>成为顶级玩家<br/>run it run it up
+
+		[Lokk]
+		Imma go run it up stay solid with my day one从现在和以后<br/>看着妈妈躺在病床但我不能低头wave z you already know<br/>因为你们都在 所以我也没有停下的理由<br/>一直都知道我可以成为那个例外<br/>唔想衰俾佢哋睇 我会用晒所有D计<br/>我在异世界游走 为了让你们追上我的脚步<br/>作为反派英雄 我的fnf让我来保护<br/>回头看看相处的时间其实也没有多少<br/>答应过妈妈的承诺yeah我都会做到<br/>讲不出口的话我唱出来因为 我爱她<br/>yea I need that dough 4real<br/>and I need that cash 4real<br/>我不管他們怎麼說<br/>反正我有的他們都沒有<br/>不再讓你以淚洗面<br/>我只害怕敗給時間<br/>把自己關在studio又是過了幾天<br/>控制台在爆紅 遭罪的又是耳朵<br/>徹夜寫不出歌 但閉眼後又是惡夢<br/>每當我什麼都看不見<br/>腦海裡浮現的你的臉<br/>我知道當我需要守候你會站在我左邊<br/>憑良心說還不夠強and thats a fact<br/>但我想把歌词变成钱给你长点face<br/>
+		i came from riverside 我带动新的wave
+		yall know at swan city 我挥动我的wing<br/><br/>I'll be on my way<br/>有梦放心追<br/><br/>新的lane<br/>计划新的plan<br/>我想低调也没办法<br/>像子弹换发<br/>成为顶级玩家<br/>run it run it up`,
+		cover: '/images/cover/',
+		imageUrl: '',
+		date: [12, 2022],
+		directors: ['Chua (Eyoki Creative)', 'Yuki (Eyoki Creative)'],
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: ['Jun (Eyoki Creative)'],
+		casts: ['Lokk', 'Howsun', 'RG', 'Dicky Kam Dancers'],
+		produceBy: 'Eyoki Creative',
+		category: 'MV',
+		audios: ['Mandarin (中文)'],
+		subtitles: ['English'],
+		time: '02:48',
+		link: '',
+		client: {
+			name: '百格 Pocketimes',
+			imageUrl: '/logo/pocketimes.webp'
+		}
 	},
 	{
 		title: '凡人不懂愛',
@@ -228,7 +262,7 @@ export default [
 		date: [9, 2019],
 		cover: '/images/cover/vivo-v21.webp',
 		imageUrl: '/images/vivo-y77-5g.webp',
-		directors: ['Yuki (Eyoki Creative)'],
+		directors: ['GLL (Eyoki Creative)'],
 		produceBy: 'Eyoki Creative',
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: ['WT (Eyoki Creative)'],
@@ -261,11 +295,11 @@ export default [
 		directors: ['Yuki (Eyoki Creative)'],
 		produceBy: 'Eyoki Creative',
 		dps: ['Yuki (Eyoki Creative)'],
-		editors: ['WT (Eyoki Creative)'],
+		editors: ['Willie (Eyoki Creative)'],
 		category: 'Commercial',
 		audios: ['English'],
 		subtitles: ['English'],
-		link: '',
+		link: 'nPKoYz-TZ9k',
 		time: '00:55',
 		client: {
 			name: 'Aik Cheong',
@@ -280,13 +314,13 @@ export default [
 		imageUrl: '/images/vivo-y77-5g.webp',
 		directors: ['Yuki (Eyoki Creative)'],
 		produceBy: 'Eyoki Creative',
-		dps: ['Yuki (Eyoki Creative)'],
+		dps: ['Yuki (Eyoki Creative)', 'Dixon'],
 		editors: ['WT (Eyoki Creative)'],
 		category: 'Commercial',
 		casts: ['Melissa Tan'],
 		audios: ['English'],
 		subtitles: ['English'],
-		link: '00eFx9W7KxY',
+		link: 'qeswbR1mc28',
 		time: '02:54',
 		client: {
 			name: 'Skechers',
@@ -302,12 +336,12 @@ export default [
 		category: 'Commercial',
 		directors: ['Yuki (Eyoki Creative)'],
 		produceBy: 'Eyoki Creative',
-		dps: ['Yuki (Eyoki Creative)'],
-		editors: ['WT (Eyoki Creative)'],
+		dps: ['Yuki (Eyoki Creative)', 'Dixon'],
+		editors: ['Yuki (Eyoki Creative)'],
 		casts: ['Little Skool House students and teachers'],
 		audios: ['English'],
 		subtitles: ['English'],
-		link: '00eFx9W7KxY',
+		link: '3MnFZTrCr5Q',
 		time: '02:54',
 		client: {
 			name: 'Little Skool House',
@@ -323,7 +357,7 @@ export default [
 		directors: ['Eyoki Creative Team'],
 		produceBy: 'Eyoki Creative',
 		dps: ['Yuki (Eyoki Creative)'],
-		editors: ['Jun Liew (Eyoki Creative)'],
+		editors: ['Jun (Eyoki Creative)'],
 		category: 'Commercial',
 		audios: ['English'],
 		link: '00eFx9W7KxY',
@@ -342,7 +376,7 @@ export default [
 		directors: ['Eyoki Creative Team'],
 		produceBy: 'Eyoki Creative',
 		dps: ['Yuki (Eyoki Creative)'],
-		editors: ['Jun Liew (Eyoki Creative)'],
+		editors: ['Jun (Eyoki Creative)'],
 		category: 'Commercial',
 		audios: ['English'],
 		link: 'IWfy2KafeYc',
@@ -383,7 +417,7 @@ export default [
 		directors: ['Yuki (Eyoki Creative)'],
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: ['Yuki (Eyoki Creative)'],
-		casts: ['Kok Liang'],
+		casts: ['Kok Lian'],
 		category: 'Commercial',
 		audios: ['Mandarin (中文)'],
 		subtitles: ['Traditional Chinese (繁体中文)'],
@@ -402,7 +436,7 @@ export default [
 		imageUrl: '/images/skmagic-cover.png',
 		produceBy: 'Eyoki Creative',
 		directors: ['Eyoki Creative Team'],
-		dps: ['Yuki (Eyoki Creative)', 'Dixon Koay'],
+		dps: ['Yuki (Eyoki Creative)', 'Dixon'],
 		editors: ['Zhao Quan'],
 		casts: ['Vitruvio Staffs'],
 		category: 'Commercial',
@@ -423,7 +457,7 @@ export default [
 		produceBy: 'Eyoki Creative',
 		directors: ['Boon'],
 		dps: ['Yuki (Eyoki Creative)'],
-		editors: ['Jun Liew (Eyoki Creative)'],
+		editors: ['Jun (Eyoki Creative)'],
 		casts: ['Amelia Chen'],
 		category: 'Commercial',
 		audios: ['English'],
@@ -444,7 +478,7 @@ export default [
 		produceBy: 'Eyoki Creative',
 		directors: ['Boon'],
 		dps: ['Yuki (Eyoki Creative)'],
-		editors: ['Jun Liew (Eyoki Creative)'],
+		editors: ['Jun (Eyoki Creative)'],
 		casts: ['Amelia Chen'],
 		category: 'Commercial',
 		audios: ['English'],
@@ -568,40 +602,58 @@ export default [
 			name: 'Merck',
 			imageUrl: '/logo/merck.webp'
 		}
+	},
+	{
+		title: '',
+		date: [11, 2022],
+		cover: '/images/cover/',
+		produceBy: 'Eyoki Creative',
+		directors: ['Bryan Sim'],
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: ['Gerard (Eyoki Creative)'],
+		category: 'Commercial',
+		audios: ['English'],
+		link: '',
+		time: '',
+		client: {
+			name: 'Glucerna',
+			imageUrl: '/logo/glucerna.webp'
+		}
+	},
+	{
+		title: '',
+		date: [10, 2022],
+		cover: '/images/cover/',
+		produceBy: 'Eyoki Creative',
+		directors: ['Dexter'],
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: ['Jun (Eyoki Creative)'],
+		casts: ['Jasmine Suraya Chin'],
+		category: 'Commercial',
+		audios: ['English'],
+		link: '',
+		time: '',
+		client: {
+			name: 'Nespresso',
+			imageUrl: '/logo/nespresso.webp'
+		}
+	},
+	{
+		title: 'TGV',
+		date: [11, 2022],
+		cover: '/images/cover/',
+		produceBy: 'Eyoki Creative',
+		directors: ['Richard'],
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: ['Jun (Eyoki Creative)', 'Gerard (Eyoki Creative)', 'Willie (Eyoki Creative)'],
+		casts: ['Chanel', 'KK Goh'],
+		category: 'Commercial',
+		audios: ['English'],
+		link: '',
+		time: '00:60',
+		client: {
+			name: 'TGV Cinemas',
+			imageUrl: '/logo/tgv.webp'
+		}
 	}
-	// {
-	// 	title: '',
-	// 	date: [11, 2022],
-	// 	cover: '/images/cover/ksk-christmas.webp',
-	// 	produceBy: 'Eyoki Creative',
-	// 	directors: [''],
-	// 	dps: ['Yuki (Eyoki Creative)'],
-	// 	editors: ['Jun Liew (Eyoki Creative)'],
-	// 	category: 'Commercial',
-	// 	audios: ['English'],
-	// 	link: '',
-	// 	time: '',
-	// 	client: {
-	// 		name: 'Nespresso',
-	// 		imageUrl: '/logo/nespresso.webp'
-	// 	}
-	// },
-	// {
-	// 	title: 'TGV',
-	// 	date: [11, 2022],
-	// 	cover: '/images/cover/ksk-christmas.webp',
-	// 	produceBy: 'Eyoki Creative',
-	// 	directors: ['Richard'],
-	// 	dps: ['Yuki (Eyoki Creative)'],
-	// 	editors: ['Jun Liew (Eyoki Creative)', 'Gerard (Eyoki Creative)', 'Willie (Eyoki Creative)'],
-	// 	category: 'Commercial',
-	// 	audios: ['English'],
-	// 	link: '',
-	// 	time: '',
-	// 	client: {
-	// 		name: 'TGV Cinemas',
-	// 		imageUrl: '/logo/tgv.webp'
-	// 	},
-	// dps: ['Ben'],
-	// }
 ];
