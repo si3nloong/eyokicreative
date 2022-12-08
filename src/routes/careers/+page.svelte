@@ -33,6 +33,7 @@
 				>
 			</li>
 		</ul>
+		<div style="margin-top: 2rem; color: red">Note: Kindly attach your resume and portfolio.</div>
 	{:else}
 		<div>Sorry, there are no opening at the moment.</div>
 	{/if}
