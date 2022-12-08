@@ -114,6 +114,7 @@
 
 	const handleClosePlayer = () => {
 		playing = false;
+		ytPlayer?.stop();
 	};
 </script>
 
@@ -160,7 +161,7 @@
 								<li on:click={playVideo(item)}>
 									<div class="thumbnail">
 										<div class="aspect-ratio">
-											<img class="cover-img" src={item.imageUrl} alt={item.title} />
+											<img class="cover-img" src={item.cover} alt={item.title} />
 										</div>
 									</div>
 									<div class="video-details">
@@ -185,7 +186,7 @@
 	</div>
 </div>
 
-<Modal show={playing} on:close={handleClosePlayer}>
+<Modal show={playing} overlayStyle="background: #000" on:close={handleClosePlayer}>
 	<div class="video-player-box">
 		<div class="video-player" bind:this={player} />
 	</div>
@@ -326,6 +327,7 @@
 			li {
 				display: flex;
 				flex-direction: column;
+				margin-bottom: var(--margin);
 				// align-items: center;
 
 				.thumbnail {

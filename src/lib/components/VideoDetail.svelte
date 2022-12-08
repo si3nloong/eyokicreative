@@ -48,10 +48,10 @@
 		</div>
 		{#if video.shortDesc}
 			<div>{@html video.shortDesc}</div>
-		{:else if video.lyrics}
+			<!-- {:else if video.lyrics}
 			{#each video.lyrics as [_, lyric]}
 				<div>{lyric}</div>
-			{/each}
+			{/each} -->
 		{/if}
 		<!-- <Button on:click={playVideo} style="margin-top: 1rem; width: 100%">PLAY NOW</Button> -->
 	</section>
@@ -105,7 +105,7 @@
 	</section>
 </section>
 
-<style lang="scss">
+<style lang="scss" global>
 	$paddingHorizontal: 2rem;
 
 	.content {

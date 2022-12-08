@@ -6,18 +6,31 @@
 
 	let className = '';
 	export { className as class };
+	export let overlayStyle = '';
 	export let show = false;
+
+	const onClose = () => {
+		show = false;
+		dispatch('close', {});
+	};
 </script>
 
+{#if show}
+	<div
+		class="overlay"
+		role="presentation"
+		in:fade
+		out:fade
+		on:click={onClose}
+		style={overlayStyle}
+	/>
+{/if}
 <div class="modal-box {className}" class:hidden={!show}>
 	<div class="dialog" role="dialog">
 		<slot />
 	</div>
 </div>
 
-<!-- {#if show}
-	<div class="overlay" in:fade out:fade on:click={() => (show = false)} />
-{/if} -->
 <style lang="scss">
 	.overlay {
 		position: fixed;
@@ -42,6 +55,7 @@
 		overflow-y: auto;
 		will-change: scroll-position;
 		z-index: 1;
+		pointer-events: none;
 
 		&.hidden {
 			display: none;
@@ -58,6 +72,7 @@
 		min-height: 100px;
 		margin: 0 auto;
 		overflow: hidden;
+		pointer-events: auto;
 		z-index: 2;
 
 		@media screen and (min-width: 680px) {
