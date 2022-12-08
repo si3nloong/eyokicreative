@@ -47,7 +47,7 @@ export default [
 		cover: '/images/cover/allianz-sangka-baik.webp',
 		imageUrl: '/images/allianz-cover.png',
 		produceBy: 'Think Tank',
-		directors: ['Azman'],
+		directors: ['Aiman'],
 		dps: ['Yuki (Eyoki Creative)'],
 		category: 'Commercial',
 		audios: ['Bahasa Melayu'],
@@ -181,6 +181,26 @@ export default [
 		client: {
 			name: 'PIXY',
 			imageUrl: '/logo/pixy.webp'
+		}
+	},
+	{
+		title: `8 Conlay Inspiration Series - Setting The Mood`,
+		shortDesc: `"The KSK project is the first project we have done in Malaysia. It felt right for us to be doing this project there, because YOO and KSK wanted us to bring something international but creating something that was accessible. Nobody would come to Kelly Hoppen unless they believed that we could do the project correctly but I think the great thing about YOO and KSK is that you got the Kempinski hotel and they will service the apartments," says Kelly Hoppen, the British interior designer behind YOO8 Tower B's exclusive concepts.`,
+		date: [6, 2018],
+		cover: '/images/cover/ksk-kelly-hoppen.webp',
+		produceBy: 'Eyoki Creative',
+		directors: ['Jin Xian'],
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: ['WT (Eyoki Creative)'],
+		category: 'Commercial',
+		audios: ['English'],
+		subtitles: ['English'],
+		link: 'cZaYupWCTyM',
+		time: '02:53',
+		casts: ['Kelly Hoppen'],
+		client: {
+			name: 'KSK Land',
+			imageUrl: '/logo/ksk-land.webp'
 		}
 	},
 	{
