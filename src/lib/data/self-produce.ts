@@ -246,8 +246,8 @@ export default [
 			'Hana',
 			'Cody Hong'
 		],
-		audios: ['English'],
-		subtitles: ['English'],
+		audios: ['Mandarin (中文)', 'English'],
+		subtitles: ['English', 'Simplified Chinese (简体中文)'],
 		link: 'VrOwMy8U9mM',
 		time: '03:47',
 		relatedVideos: [
@@ -337,8 +337,8 @@ export default [
 		dps: ['Yuki (Eyoki Creative)', 'Dixon'],
 		editors: ['Yuki (Eyoki Creative)'],
 		casts: ['Little Skool House students and teachers'],
-		audios: ['English'],
-		subtitles: ['English'],
+		audios: ['English', 'Mandarin (中文)'],
+		subtitles: ['English', 'Simplified Chinese (简体中文)'],
 		link: '3MnFZTrCr5Q',
 		time: '02:54',
 		client: {
