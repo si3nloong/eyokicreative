@@ -14,7 +14,7 @@
 	};
 </script>
 
-<div style="min-height: 500px;">
+<div class="main-box">
 	<section class="headline">
 		<!-- <h1><span class="highlight">Eyoki Creative</span> is Creative Production House</h1> -->
 		<h1>
@@ -47,8 +47,13 @@
 		width: 60%;
 	}
 
-	section {
-		padding: 1rem 0;
+	.main-box,
+	.section {
+		padding: var(--padding);
+
+		@media screen and (min-width: 600px) {
+			padding: var(--padding) 0;
+		}
 	}
 
 	.headline {

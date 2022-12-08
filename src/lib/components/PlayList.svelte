@@ -2,14 +2,18 @@
 	import Image from './Image.svelte';
 	import type { Media } from './';
 	import { useMediaPlayer } from './MediaPlayer.svelte';
+	import { isMobile } from '$lib/utils';
+	import { goto } from '$app/navigation';
 
 	export let items: Media[] = [];
 
 	const player = useMediaPlayer();
 
-	player.subscribe(console.log);
-
 	const onPreview = (item: Media) => () => {
+		if (isMobile()) {
+			goto(`/work/${item.link}`);
+			return;
+		}
 		player.preview(item);
 	};
 </script>
@@ -21,7 +25,7 @@
 			<Image src={item.imageUrl} alt={item.title} />
 			<div class="body">
 				<div class="caption">{item.title}</div>
-				<!-- <div class="desc">{item.shortDesc}</div> -->
+				<div class="category">{item.category}</div>
 			</div>
 			<span class="time">{item.time}</span>
 			<!-- <span class="icon"
@@ -54,20 +58,34 @@
 			border-bottom: 1px solid var(--border-color);
 
 			.body {
-				padding-left: 10px;
+				padding: 0 var(--padding-sm);
 				flex-grow: 1;
+				min-width: 0;
+
+				.caption {
+					width: 100%;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
+
+				.category {
+					color: var(--sub-text-color);
+					font-size: var(--font-size-sm);
+				}
 			}
 
 			.time {
-				font-size: 0.8rem;
-				padding: 0 10px;
-				color: #aeb8ca;
+				font-size: var(--font-size-sm);
+				padding: 0 var(--padding-sm);
+				color: var(--sub-text-color);
 			}
 
 			.icon {
 				cursor: pointer;
 				width: 20px;
 				height: 20px;
+				min-width: 20px;
 				text-align: center;
 				margin: 0 0.25rem;
 
@@ -80,6 +98,7 @@
 				}
 			}
 		}
+
 		li:last-child {
 			border: none;
 		}

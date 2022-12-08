@@ -36,6 +36,9 @@
 	import YouTubePlayer from 'yt-player';
 	import type { Media } from './';
 	import TagList from './TagList.svelte';
+	import { isMobile } from '$lib/utils';
+	import VideoDetail from './VideoDetail.svelte';
+	import Modal from './Modal.svelte';
 
 	let player: HTMLDivElement;
 	let ytPlayer: YouTubePlayer;
@@ -44,9 +47,10 @@
 	export let show = false;
 
 	let playing = false;
+	const small = browser ? isMobile() : false;
 	const store$ = writable({ show, video, playing: false });
 
-	const close = () => {
+	const handleClose = () => {
 		ytPlayer?.stop();
 		show = false;
 		video = null;
@@ -54,28 +58,42 @@
 		store$.update((v) => Object.assign(v, { show, video, playing }));
 	};
 
-	const preview = (item: Media) => {
-		show = true;
-		video = item;
-		store$.update((v) => Object.assign(v, { show, video: item }));
-	};
-
-	const play = (item: { link: string }) => {
+	const setupAndPlay = (link: string) => {
 		if (!ytPlayer) {
-			ytPlayer = new YouTubePlayer(player);
-			ytPlayer.on('playing', () => {
-				console.log(ytPlayer.getDuration()); // => 351.521
+			ytPlayer = new YouTubePlayer(player, {
+				captions: false,
+				fullscreen: true,
+				// controls: false,
+				related: false
 			});
-			ytPlayer.on('timeupdate', console.log);
+			// ytPlayer.on('playing', () => {
+			// 	console.log(ytPlayer.getDuration()); // => 351.521
+			// });
+			// ytPlayer.on('timeupdate', console.log);
 		}
 		playing = true;
 		store$.update((v) => Object.assign(v, { playing }));
 		ytPlayer.setVolume(100);
-		ytPlayer.load(item.link, true);
+		ytPlayer.load(link, true);
+	};
+
+	const preview = (item: Media) => {
+		show = true;
+		video = item;
+		store$.update((v) => Object.assign(v, { show, video: item }));
+		if (small) {
+			setTimeout(() => {
+				setupAndPlay(item.link);
+			}, 100);
+		}
+	};
+
+	const play = (item: { link: string }) => {
+		setupAndPlay(item.link);
 	};
 
 	setContext<MediaPlayer>(KEY, {
-		close,
+		close: handleClose,
 		preview,
 		play,
 		subscribe: store$.subscribe
@@ -93,28 +111,37 @@
 	const playVideo = (item: { link: string }) => () => {
 		play(item);
 	};
+
+	const handleClosePlayer = () => {
+		playing = false;
+		ytPlayer?.stop();
+	};
 </script>
 
 <slot />
 
+{#if show}
+	<!-- svelte-ignore a11y-click-events-have-key-events -->
+	<div class="overlay" in:fade out:fade />
+{/if}
+
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-<div class="modal-box" class:hidden={!show || !video} on:click={close}>
+<div class="modal-box" class:small class:hidden={!show || !video} on:click={handleClose}>
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<div class="dialog" role="dialog" on:click|stopPropagation>
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
-		<span class="close-btn" on:click={close}
+		<span class="close-btn" on:click={handleClose}
 			>{@html `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M18 6L6 18" stroke="#33363F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M6 6L18 18" stroke="#33363F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`}</span
 		>
 		<div class="aspect-ratio">
 			<div class="cover">
-				<div class="video-player" bind:this={player} />
-				{#if video && !playing}
-					<img out:fade class="cover-img" src={video.cover} alt={video.title} />
+				{#if video}
+					<img class="cover-img" src={video.cover} alt={video.title} />
 				{/if}
 			</div>
-			{#if video && !playing}
+			{#if video}
 				<div class="control-list">
 					<button class="play-btn" on:click={playVideo(video)}>
 						{@html `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -124,81 +151,9 @@
 				</div>
 			{/if}
 		</div>
-		<div class="container">
+		<div class="content-box">
 			{#if video}
-				<section class="content">
-					<section class="main">
-						<h2>{video.title}</h2>
-						<div class="extra-info">
-							{#if video.client}
-								<span class="client"><img src={video.client.imageUrl} alt="" /></span>
-								<span class="name">{video.client.name}</span>
-							{/if}
-						</div>
-						<div class="video-info">
-							<span>{`${monthNames[video.date[0] - 1].substring(0, 3)} ${video.date[1]}`}</span>
-							<span class="pipe">|</span>
-							<span>{video.category}</span>
-							<span class="pipe">|</span>
-							<span>{`${video.time}mins`}</span>
-						</div>
-						{#if video.shortDesc}
-							<div>{@html video.shortDesc}</div>
-						{:else if video.lyrics}
-							{#each video.lyrics as [_, lyric]}
-								<div>{lyric}</div>
-							{/each}
-						{/if}
-					</section>
-					<section class="info">
-						<div>
-							{#if video.directors}
-								<div>
-									<span class="label">{`Director${video.directors.length > 1 ? 's' : ''}:`}</span>
-									<span><TagList items={video.directors} /></span>
-								</div>
-							{/if}
-							{#if video.writers}
-								<div>
-									<span class="label">{`Writer${video.writers.length > 1 ? 's' : ''}:`}</span>
-									<span><TagList items={video.writers} /></span>
-								</div>
-							{/if}
-							{#if video.dps}
-								<div>
-									<span class="label">{`Cinematographer${video.dps.length > 1 ? 's' : ''}:`}</span>
-									<span><TagList items={video.dps} /></span>
-								</div>
-							{/if}
-							{#if video.editors}
-								<div>
-									<span class="label">Editor:</span><TagList items={video.editors} />
-								</div>
-							{/if}
-							{#if video.casts}
-								<div>
-									<span class="label">Cast:</span>
-									<TagList items={video.casts} />
-								</div>
-							{/if}
-							<div>
-								<span class="label">Produced By:</span><TagList items={[video.produceBy]} />
-							</div>
-						</div>
-
-						<div style="margin-top: 30px">
-							<!-- <div><span class="label">Genres:</span><TagList items={video.labels} /></div> -->
-							<div>
-								<span class="label">Audio:</span><TagList items={video.audios} />
-							</div>
-							{#if video.subtitles}
-								<div>
-									<span class="label">Subtitles:</span><TagList items={video.subtitles} />
-								</div>
-							{/if}
-						</div>
-					</section>
-				</section>
+				<VideoDetail {video} />
 				{#if video.relatedVideos}
 					<section style="padding-top: 50px">
 						<ul class="related-video-list">
@@ -206,7 +161,7 @@
 								<li on:click={playVideo(item)}>
 									<div class="thumbnail">
 										<div class="aspect-ratio">
-											<img class="cover-img" src={item.imageUrl} alt={item.title} />
+											<img class="cover-img" src={item.cover} alt={item.title} />
 										</div>
 									</div>
 									<div class="video-details">
@@ -231,10 +186,11 @@
 	</div>
 </div>
 
-{#if show}
-	<!-- svelte-ignore a11y-click-events-have-key-events -->
-	<div class="overlay" in:fade out:fade />
-{/if}
+<Modal show={playing} overlayStyle="background: #000" on:close={handleClosePlayer}>
+	<div class="video-player-box">
+		<div class="video-player" bind:this={player} />
+	</div>
+</Modal>
 
 <style lang="scss">
 	$paddingHorizontal: 2rem;
@@ -261,10 +217,32 @@
 		justify-content: center;
 		overflow-y: auto;
 		will-change: scroll-position;
-		z-index: 3;
+		z-index: 1;
 
 		&.hidden {
 			display: none;
+		}
+
+		&.small {
+			.box {
+				display: none;
+			}
+
+			.dialog {
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+
+			.control-list {
+				display: none;
+			}
+
+			.close-btn {
+				position: fixed;
+				top: 15px;
+				right: 15px;
+			}
 		}
 	}
 
@@ -318,12 +296,6 @@
 			}
 		}
 
-		.video-player {
-			width: 100%;
-			height: 100%;
-			overflow: hidden;
-		}
-
 		.control-list {
 			position: absolute;
 			bottom: 5%;
@@ -342,71 +314,9 @@
 			}
 		}
 
-		.container {
+		.content-box {
 			padding: 1rem 1.5rem;
 			padding-bottom: 60px;
-		}
-
-		.content {
-			display: flex;
-			flex-direction: column;
-			width: 100%;
-
-			.main {
-				flex-grow: 1;
-				padding-right: $paddingHorizontal;
-			}
-
-			.info {
-				max-width: 320px;
-				min-width: 280px;
-				padding: 1rem 0;
-				padding-left: 0;
-			}
-		}
-
-		.video-info {
-			color: var(--sub-text-color);
-			font-size: 0.9rem;
-			padding-bottom: 0.65rem;
-
-			.pipe {
-				padding: 0 4px;
-			}
-		}
-
-		.extra-info {
-			display: flex;
-			align-items: center;
-			// justify-content: space-around;
-			padding: 0.65rem 0;
-
-			.client {
-				width: 50px;
-				height: 50px;
-				border-radius: 2px;
-				overflow: hidden;
-			}
-
-			.name {
-				margin-left: 12px;
-			}
-
-			// .timerange {
-			// 	display: inline-flex;
-			// 	border: 1px solid #dcdcdc;
-			// 	line-height: 24px;
-			// 	height: 26px;
-			// 	padding: 0 8px;
-			// 	border-radius: 3px;
-			// 	font-size: 12px;
-			// }
-		}
-
-		.label {
-			font-size: 12px;
-			color: var(--sub-text-color);
-			margin-right: 6px;
 		}
 
 		.related-video-list {
@@ -417,6 +327,7 @@
 			li {
 				display: flex;
 				flex-direction: column;
+				margin-bottom: var(--margin);
 				// align-items: center;
 
 				.thumbnail {
@@ -438,9 +349,9 @@
 			box-shadow: 0 0 26px rgba(0, 0, 0, 0.3);
 			transform-origin: 50% 12.5%;
 
-			.content {
-				flex-direction: row;
-			}
+			// .content {
+			// 	flex-direction: row;
+			// }
 
 			.related-video-list {
 				li {
@@ -450,13 +361,25 @@
 					.thumbnail {
 						max-width: 320px;
 					}
-
-					// .video-info {
-					// 	padding: 0.65rem 1rem;
-					// 	flex-grow: 1;
-					// }
 				}
 			}
+		}
+	}
+
+	.video-player-box {
+		position: relative;
+		display: block;
+		padding-top: 56.25%;
+		height: 0;
+		overflow: hidden;
+		background-color: var(--image-placeholder-color);
+
+		.video-player {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
 		}
 	}
 </style>

@@ -2,21 +2,21 @@ export type BehindTheScreen = Required<Pick<Media, 'title' | 'imageUrl' | 'link'
 
 export type Media = {
 	title: string;
-	date: [month: number, year: number];
 	shortDesc?: string;
+	date: [month: number, year: number];
+	category: 'Commercial' | 'Short Film' | 'MV';
 	cover: string;
 	imageUrl: string;
+	produceBy: string;
 	directors: string[];
 	writers?: string[];
 	dps: string[];
-	lyrics?: [time: number, lryic: string][];
-	category: 'Commercial' | 'Short Film' | 'MV';
+	// lyrics?: [time: number, lryic: string][];
 	editors: string[];
 	casts?: string[];
-	produceBy: string;
 	audios: string[];
 	subtitles?: string[];
-	relatedVideos: Media[];
+	relatedVideos?: Media[];
 	client?: {
 		name: string;
 		imageUrl: string;
