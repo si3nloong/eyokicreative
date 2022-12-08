@@ -5,7 +5,7 @@
 <script lang="ts">
 </script>
 
-<div style="margin-top: 2rem">
+<div class="main-box">
 	<section>
 		<h2>Commercial Video or TVC</h2>
 		<article>
@@ -54,7 +54,15 @@
 </div>
 
 <style lang="scss">
+	.main-box {
+		padding: var(--padding) 0;
+	}
+
 	section {
-		margin-bottom: 2rem;
+		margin-bottom: var(--padding-lg);
+
+		h2 {
+			margin-bottom: 10px;
+		}
 	}
 </style>

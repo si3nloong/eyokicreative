@@ -197,6 +197,10 @@
 			}
 		}
 
+		@media screen and (min-width: 600px) {
+			padding: var(--padding) 0;
+		}
+
 		@media screen and (max-width: 600px) {
 			nav {
 				display: none;
@@ -225,7 +229,7 @@
 		margin: 0 auto;
 
 		@media screen and (min-width: 600px) {
-			width: 85%;
+			width: 80%;
 		}
 	}
 

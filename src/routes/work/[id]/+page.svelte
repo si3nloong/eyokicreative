@@ -7,8 +7,10 @@
 	const { video } = data;
 </script>
 
-<div class="d-16-9 cover">
-	<img src={video.imageUrl} alt={video.title} />
+<div class="cover-box">
+	<div class="d-16-9 cover">
+		<img src={video.cover} alt={video.title} />
+	</div>
 </div>
 <section class="info-box">
 	<VideoDetail {video} />
@@ -25,5 +27,11 @@
 
 	.info-box {
 		padding: var(--padding);
+	}
+
+	@media screen and (min-width: 640px) {
+		.cover-box {
+			padding: 0 var(--padding);
+		}
 	}
 </style>

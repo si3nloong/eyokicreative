@@ -163,6 +163,27 @@ export default [
 		}
 	},
 	{
+		title: `MAKE YOU IT GLOW`,
+		shortDesc: ``,
+		date: [11, 2021],
+		cover: '/images/cover/pixy-make-you-it-glow.webp',
+		imageUrl: '',
+		produceBy: 'Just Another Production',
+		directors: ['Jermenn Yip'],
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: ['Jermenn Yip'],
+		casts: ['Nynaa Harizal'],
+		category: 'Commercial',
+		audios: ['English'],
+		subtitles: ['English'],
+		link: 'I4hyxPE6eFk',
+		time: '00:45',
+		client: {
+			name: 'PIXY',
+			imageUrl: '/logo/pixy.webp'
+		}
+	},
+	{
 		title: `Kami Nak 100% Makanan Laut`,
 		shortDesc: `Haaa… Nak tahu kenapa diorang memberontak?!`,
 		date: [11, 2021],

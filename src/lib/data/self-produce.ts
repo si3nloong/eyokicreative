@@ -6,7 +6,7 @@ export default [
 		category: 'Short Film',
 		date: [11, 2017],
 		cover: '/images/cover/myba-radio.webp',
-		imageUrl: '/images/myba-cover.jpg',
+		imageUrl: '/images/myba-radio.webp',
 		produceBy: 'Eyoki Creative',
 		directors: ['Victor Yee Fei Chen'],
 		dps: ['Yuki (Eyoki Creative)'],
@@ -43,6 +43,7 @@ export default [
 		relatedVideos: [
 			{
 				title: 'BMW Shorties 2019 (ALOT FUN MOMENTS)',
+				cover: '/images/cover/kingdom-and-beauty-bts.webp',
 				imageUrl: '/images/cover/kingdom-and-beauty-bts.webp',
 				editors: ['WT (Eyoki Creative)'],
 				dps: ['Jin Xian'],
@@ -79,8 +80,9 @@ export default [
 		relatedVideos: [
 			{
 				title: 'Gameboy - Behind The Scene (Eyoki x The One Academy)',
+				cover: '/images/cover/gameboy-bts.webp',
 				imageUrl: '/images/cover/gameboy-bts.webp',
-				editors: ['Jamieson Chan (Eyoki Creative)'],
+				editors: ['Jamieson (Eyoki Creative)'],
 				dps: ['SBK (Eyoki Creative)'],
 				link: 'VcgO9HDImlc',
 				time: '08:15'
@@ -92,7 +94,7 @@ export default [
 		shortDesc: `The new trendsetter has arrived! VIVO V20 SE #Aquamarine is picking up steam in 2020 with its trendy new colour!`,
 		date: [12, 2021],
 		cover: '/images/cover/vivo-v20.webp',
-		imageUrl: '/images/vivo-cover.png',
+		imageUrl: '/images/vivo-v20.webp',
 		produceBy: 'Eyoki Creative',
 		directors: ['Bryan Sim'],
 		dps: ['Yuki (Eyoki Creative)'],
@@ -109,6 +111,7 @@ export default [
 		relatedVideos: [
 			{
 				title: 'BEHIND THE SCENE (EYOKI x VIVO) Be Mer-mazing, Be The Focus',
+				cover: '/images/cover/vivo-v20-bts.webp',
 				imageUrl: '/images/cover/vivo-v20-bts.webp',
 				editors: ['Zheng Hao'],
 				dps: ['Zheng Hao'],
@@ -144,8 +147,8 @@ export default [
 		shortDesc: `再大的风雨 那又何妨<br/>只要同心哪儿 都是晴朗<br/>再远的距离又怎样<br/>有梦的人就有 翅膀飞翔<br/><br/>身在世界不同的 地方<br/>只要同心哪儿都一样<br/>同行就不再怕孤单<br/>因为我有了正能量<br/><br/>梦想 让肩膀 长出翅膀翱翔<br/>飞到最远最高的地方<br/>手牵着手 凝聚 力量<br/>让我们共同创造无限的桥梁<br/><br/>梦想 让我们 挥舞翅膀翱翔<br/>心连心同个方向共闯<br/>一种理念 一同期盼<br/>
 	    愿理想 肩并肩 一起和睦共建<br/>明天的辉煌<br/><br/>要勇敢 去承担 敢去闯<br/>一起朝着同一个方向<br/>从不感到迷茫 从不惊慌<br/>让翅膀 带梦想 展翅翱翔<br/><br/>梦想 让我们挥舞翅膀翱翔<br/>心连心同个方向共闯<br/>一种理念 一同期盼<br/>愿理想 肩并肩 一起和睦共建<br/>明天的辉煌<br/><br/>梦想 让肩膀 长出翅膀翱翔<br/>飞到最远最高的地方<br/>手牵着手 凝聚 力量<br/>让我们 一起共同创造无限的桥梁<br/><br/>梦想 让我们挥舞翅膀翱翔<br/>心连心同个方向 共闯<br/>一种理念 一同期盼<br/>愿理想 肩并肩 一起和睦共建<br/>明天的辉煌`,
 		date: [12, 2018],
-		cover: '/images/koe-yeet-cover.webp',
-		imageUrl: '/images/cover/koe-yeet.webp',
+		cover: '/images/cover/koe-yeet.webp',
+		imageUrl: '/images/koe-yeet.webp',
 		produceBy: 'Eyoki Creative',
 		directors: ['Yuki (Eyoki Creative)'],
 		dps: ['Yuki (Eyoki Creative)'],
@@ -187,7 +190,7 @@ export default [
 		shortDesc: `LG PuriCare™ Self-Service Tankless Water Purifier, the upgraded water purifier comes with auto-sterilisation features and easy filter replacement as well as filter subscription that gives a fresh take to “Total Self-Service.” Additionally, the brand-new “Self-Service” features make a vast difference for consumers with busy schedules; the filter subscription service delivers hassle-free filter replacement where consumers can do the filter change on their own, within their own schedule, without having to wait for customer care services. With a twist and pull, the filter can be changed to a fresh one without using any tools in a matter of seconds. The subscription service ships new filter(s) to consumers doorsteps every six months. Plus, it comes in a stunning Navy Blue, among others, which is a first in the market for this colour variation. The LG PuriCare™ Self-Service Tankless Water Purifier's auto-sterilisation feature sterilises both the internal stainless-steel pipes and outlet with high water temperature, removing 99.99% of germs. The system automatically sterilises internal stainless-steel pipes once a week, or consumers can adjust it as often as they wish. And to think that this is all within one touch of a button. Also, LG’s revolutionary ‘tankless’ technology allows access to clean water free from microorganism growth and the water will be fresh regardless of its temperature. Its 4-Stage All Puri Filter System also eliminates microorganisms, 99.99% norovirus and 9 types of heavy metals including mercury, lead, arsenic, cadmium, iron, copper, aluminum, manganese and zinc contained in water.`,
 		date: [8, 2022],
 		cover: '/images/cover/lg-puri-care.webp',
-		imageUrl: '/images/lg.jpeg',
+		imageUrl: '',
 		directors: ['Esham'],
 		produceBy: 'Eyoki Creative',
 		dps: ['Yuki (Eyoki Creative)'],
@@ -198,7 +201,7 @@ export default [
 		time: '01:30',
 		client: {
 			name: 'LG',
-			imageUrl: '/images/lg.jpeg'
+			imageUrl: '/logo/lg.webp'
 		}
 	},
 	{
@@ -223,15 +226,136 @@ export default [
 		}
 	},
 	{
+		title: `VIVO V21`,
+		shortDesc: ``,
+		date: [9, 2019],
+		cover: '/images/cover/vivo-v21.webp',
+		imageUrl: '/images/vivo-y77-5g.webp',
+		directors: ['GLL (Eyoki Creative)'],
+		produceBy: 'Eyoki Creative',
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: ['WT (Eyoki Creative)'],
+		category: 'Commercial',
+		casts: [
+			'Danny Koo',
+			'Han Xiiao Aii',
+			'Okokokmou',
+			'Caedon',
+			'Rickman Chia',
+			'Angeline',
+			'Hana',
+			'Cody Hong'
+		],
+		audios: ['English'],
+		subtitles: ['English'],
+		link: 'VrOwMy8U9mM',
+		time: '03:47',
+		relatedVideos: [
+			{
+				title: 'Okokokmou',
+				cover: '/images/cover/vivo-v21-okokokmou.webp',
+				imageUrl: '/images/cover/vivo-v21-okokokmou.webp',
+				dps: ['Yuki (Eyoki Creative)'],
+				editors: ['WT (Eyoki Creative)'],
+				time: '00:59',
+				link: 'iNgn7X0o-9Q'
+			},
+			{
+				title: 'Han Xiiao Aii',
+				cover: '/images/cover/vivo-v21-han-xiiao-aii.webp',
+				imageUrl: '/images/cover/vivo-v21-han-xiiao-aii.webp',
+				dps: ['Yuki (Eyoki Creative)'],
+				editors: ['WT (Eyoki Creative)'],
+				time: '00:59',
+				link: 'PywRIULtJLc'
+			},
+			{
+				title: 'Danny Koo',
+				cover: '/images/cover/vivo-v21-danny-koo.webp',
+				imageUrl: '/images/cover/vivo-v21-danny-koo.webp',
+				dps: ['Yuki (Eyoki Creative)'],
+				editors: ['WT (Eyoki Creative)'],
+				time: '00:59',
+				link: 's1sLebi9-AA'
+			}
+		],
+		client: {
+			name: 'VIVO',
+			imageUrl: '/logo/vivo.webp'
+		}
+	},
+	{
+		title: `BLACK DIP`,
+		shortDesc: ``,
+		date: [9, 2019],
+		cover: '/images/cover/aik-cheong-blackdip.webp',
+		imageUrl: '/images/aik-cheong-blackdip.webp',
+		directors: ['Yuki (Eyoki Creative)'],
+		produceBy: 'Eyoki Creative',
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: ['Willie (Eyoki Creative)', 'Yuki (Eyoki Creative)'],
+		category: 'Commercial',
+		audios: ['English'],
+		subtitles: ['English'],
+		link: 'nPKoYz-TZ9k',
+		time: '00:55',
+		client: {
+			name: 'Aik Cheong',
+			imageUrl: '/logo/aik-cheong.webp'
+		}
+	},
+	{
+		title: `Skechers GOWALK 5 x Melissa Tan`,
+		shortDesc: ``,
+		date: [9, 2019],
+		cover: '/images/cover/skechers-melissa-tan.webp',
+		imageUrl: '/images/vivo-y77-5g.webp',
+		directors: ['Yuki (Eyoki Creative)'],
+		produceBy: 'Eyoki Creative',
+		dps: ['Yuki (Eyoki Creative)', 'Dixon'],
+		editors: ['WT (Eyoki Creative)'],
+		category: 'Commercial',
+		casts: ['Melissa Tan'],
+		audios: ['English'],
+		subtitles: ['English'],
+		link: 'qeswbR1mc28',
+		time: '02:54',
+		client: {
+			name: 'Skechers',
+			imageUrl: '/logo/skechers.webp'
+		}
+	},
+	{
+		title: `Little Skool House (Singapore)`,
+		shortDesc: ``,
+		date: [2, 2020],
+		cover: '/images/cover/little-skool-house.webp',
+		imageUrl: '/images/vivo-y77-5g.webp',
+		category: 'Commercial',
+		directors: ['Yuki (Eyoki Creative)'],
+		produceBy: 'Eyoki Creative',
+		dps: ['Yuki (Eyoki Creative)', 'Dixon'],
+		editors: ['Yuki (Eyoki Creative)'],
+		casts: ['Little Skool House students and teachers'],
+		audios: ['English'],
+		subtitles: ['English'],
+		link: '3MnFZTrCr5Q',
+		time: '02:54',
+		client: {
+			name: 'Little Skool House',
+			imageUrl: '/logo/little-skool-house.webp'
+		}
+	},
+	{
 		title: `VIVO Y77 - 5G`,
 		shortDesc: `It's big, it's clear and it's long, That's Y It's Superb to own vivo  #Y775G ! 😍 Pre-order now for only RM1,299 with exclusive free gifts worth up to RM597!`,
 		date: [7, 2022],
 		cover: '/images/cover/vivo-y77-5g.webp',
-		imageUrl: '/images/lg.jpeg',
+		imageUrl: '/images/vivo-y77-5g.webp',
 		directors: ['Eyoki Creative Team'],
 		produceBy: 'Eyoki Creative',
 		dps: ['Yuki (Eyoki Creative)'],
-		editors: ['Jun Liew (Eyoki Creative)'],
+		editors: ['Jun (Eyoki Creative)'],
 		category: 'Commercial',
 		audios: ['English'],
 		link: '00eFx9W7KxY',
@@ -250,7 +374,7 @@ export default [
 		directors: ['Eyoki Creative Team'],
 		produceBy: 'Eyoki Creative',
 		dps: ['Yuki (Eyoki Creative)'],
-		editors: ['Jun Liew (Eyoki Creative)'],
+		editors: ['Jun (Eyoki Creative)'],
 		category: 'Commercial',
 		audios: ['English'],
 		link: 'IWfy2KafeYc',
@@ -291,7 +415,7 @@ export default [
 		directors: ['Yuki (Eyoki Creative)'],
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: ['Yuki (Eyoki Creative)'],
-		casts: ['Kok Liang'],
+		casts: ['Kok Lian'],
 		category: 'Commercial',
 		audios: ['Mandarin (中文)'],
 		subtitles: ['Traditional Chinese (繁体中文)'],
@@ -310,7 +434,7 @@ export default [
 		imageUrl: '/images/skmagic-cover.png',
 		produceBy: 'Eyoki Creative',
 		directors: ['Eyoki Creative Team'],
-		dps: ['Yuki (Eyoki Creative)', 'Dixon Koay'],
+		dps: ['Yuki (Eyoki Creative)', 'Dixon'],
 		editors: ['Zhao Quan'],
 		casts: ['Vitruvio Staffs'],
 		category: 'Commercial',
@@ -331,7 +455,7 @@ export default [
 		produceBy: 'Eyoki Creative',
 		directors: ['Boon'],
 		dps: ['Yuki (Eyoki Creative)'],
-		editors: ['Jun Liew (Eyoki Creative)'],
+		editors: ['Jun (Eyoki Creative)'],
 		casts: ['Amelia Chen'],
 		category: 'Commercial',
 		audios: ['English'],
@@ -352,7 +476,7 @@ export default [
 		produceBy: 'Eyoki Creative',
 		directors: ['Boon'],
 		dps: ['Yuki (Eyoki Creative)'],
-		editors: ['Jun Liew (Eyoki Creative)'],
+		editors: ['Jun (Eyoki Creative)'],
 		casts: ['Amelia Chen'],
 		category: 'Commercial',
 		audios: ['English'],
@@ -464,7 +588,7 @@ export default [
 	{
 		title: 'Mercks Pre-diabetes Animation',
 		cover: '/images/cover/merck-prediabetes.webp',
-		imageUrl: '',
+		imageUrl: '/images/merck.webp',
 		date: [11, 2022],
 		link: 'TuYXLujP4II',
 		produceBy: 'Eyoki Creative',
@@ -477,39 +601,4 @@ export default [
 			imageUrl: '/logo/merck.webp'
 		}
 	}
-	// {
-	// 	title: '',
-	// 	date: [11, 2022],
-	// 	cover: '/images/cover/ksk-christmas.webp',
-	// 	produceBy: 'Eyoki Creative',
-	// 	directors: [''],
-	// 	dps: ['Yuki (Eyoki Creative)'],
-	// 	editors: ['Jun Liew (Eyoki Creative)'],
-	// 	category: 'Commercial',
-	// 	audios: ['English'],
-	// 	link: '',
-	// 	time: '',
-	// 	client: {
-	// 		name: 'Nespresso',
-	// 		imageUrl: '/logo/nespresso.webp'
-	// 	}
-	// },
-	// {
-	// 	title: 'TGV',
-	// 	date: [11, 2022],
-	// 	cover: '/images/cover/ksk-christmas.webp',
-	// 	produceBy: 'Eyoki Creative',
-	// 	directors: ['Richard'],
-	// 	dps: ['Yuki (Eyoki Creative)'],
-	// 	editors: ['Jun Liew (Eyoki Creative)', 'Gerard (Eyoki Creative)', 'Willie (Eyoki Creative)'],
-	// 	category: 'Commercial',
-	// 	audios: ['English'],
-	// 	link: '',
-	// 	time: '',
-	// 	client: {
-	// 		name: 'TGV Cinemas',
-	// 		imageUrl: '/logo/tgv.webp'
-	// 	},
-	// dps: ['Ben'],
-	// }
 ];
