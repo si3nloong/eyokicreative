@@ -13,7 +13,7 @@
 	</div>
 </div>
 <section class="info-box">
-	<VideoDetail {video} />
+	<VideoDetail {video} type="small" />
 </section>
 
 <style lang="scss">

@@ -10,7 +10,7 @@ export default [
 		produceBy: 'Eyoki Creative',
 		directors: ['Victor Yee Fei Chen'],
 		dps: ['Yuki (Eyoki Creative)'],
-		writers: ['Victor Yee Fei Chen', 'Andy Darrel Gomes'],
+		writers: ['Victor Yee Fei Chen', 'Andy'],
 		editors: ['Willie (Eyoki Creative)'],
 		casts: ['Fai Chen', 'Yee Swee Tam'],
 		link: '7wQbAer9g4k',
@@ -42,10 +42,10 @@ export default [
 		time: '14:59',
 		relatedVideos: [
 			{
-				title: 'BMW Shorties 2019 (ALOT FUN MOMENTS)',
+				title: 'BMW Shorties 2019 (A LOT FUN MOMENTS)',
 				cover: '/images/cover/kingdom-and-beauty-bts.webp',
 				imageUrl: '/images/cover/kingdom-and-beauty-bts.webp',
-				editors: ['WT (Eyoki Creative)'],
+				editors: ['Winnie (Eyoki Creative)'],
 				dps: ['Jin Xian'],
 				link: 'D9JvcFP2pN4',
 				time: '07:11'
@@ -65,7 +65,7 @@ export default [
 		imageUrl: '/images/cover/gameboy.webp',
 		produceBy: 'Eyoki Creative',
 		directors: ['Victor Yee Fei Chen'],
-		writers: ['Victor Yee Fei Chen', 'GLL (Eyoki Creative)'],
+		writers: ['Victor Yee Fei Chen', 'Andy', 'GLL (Eyoki Creative)'],
 		dps: ['Yuki (Eyoki Creative)'],
 		editors: ['Willie (Eyoki Creative)'],
 		casts: ['Eric Chen', 'Shao Hang', 'Tang Zi Yao', 'Adam Chong', 'SBK'],
@@ -98,7 +98,7 @@ export default [
 		produceBy: 'Eyoki Creative',
 		directors: ['Bryan Sim'],
 		dps: ['Yuki (Eyoki Creative)'],
-		editors: ['WT (Eyoki Creative)'],
+		editors: ['Winnie (Eyoki Creative)'],
 		casts: ['Dianne Dean'],
 		category: 'Commercial',
 		audios: ['English'],
@@ -130,7 +130,7 @@ export default [
 		produceBy: 'Eyoki Creative',
 		directors: ['Yuki (Eyoki Creative)'],
 		dps: ['Yuki (Eyoki Creative)'],
-		editors: ['WT (Eyoki Creative)'],
+		editors: ['Winnie (Eyoki Creative)'],
 		casts: ['Juztin Lan - 刘界辉'],
 		category: 'MV',
 		audios: ['Mandarin (中文)'],
@@ -162,6 +162,27 @@ export default [
 		client: {
 			name: 'Koe Yeet - 高艺',
 			imageUrl: '/logo/koe-yeet.webp'
+		}
+	},
+	{
+		title: `Little Skool House (Singapore)`,
+		shortDesc: ``,
+		date: [2, 2020],
+		cover: '/images/cover/little-skool-house.webp',
+		imageUrl: '/images/little-skool-house.webp',
+		category: 'Commercial',
+		directors: ['Yuki (Eyoki Creative)'],
+		produceBy: 'Eyoki Creative',
+		dps: ['Yuki (Eyoki Creative)', 'Dixon'],
+		editors: ['Yuki (Eyoki Creative)'],
+		casts: ['Little Skool House students and teachers'],
+		audios: ['English', 'Mandarin (中文)'],
+		subtitles: ['English', 'Simplified Chinese (简体中文)'],
+		link: '3MnFZTrCr5Q',
+		time: '02:54',
+		client: {
+			name: 'Little Skool House',
+			imageUrl: '/logo/little-skool-house.webp'
 		}
 	},
 	{
@@ -205,36 +226,15 @@ export default [
 		}
 	},
 	{
-		title: `SK Magic | Aedy Ashraf & Alif Hilman masak juadah Ramadan VIRAL!`,
-		shortDesc: `Korang rasa Aedy boleh masak tak? Jom kita tengok Aedy Ashraf dan Alif Hilman mencabar diri mereka untuk sediakan makanan bazar Ramadan yang paling VIRAL untuk berbuka puasa!`,
-		date: [4, 2022],
-		cover: '/images/cover/sk-magic-ramadan.webp',
-		imageUrl: '/images/lg-cover.jpeg',
-		produceBy: 'Eyoki Creative',
-		directors: ['Bryan Sim'],
-		dps: ['Yuki (Eyoki Creative)'],
-		editors: ['So FC'],
-		casts: ['Aedy Ashraf', 'Alif Hilman'],
-		category: 'Commercial',
-		audios: ['Bahasa Melayu'],
-		subtitles: ['English'],
-		link: 'J-s6ql-Gjhw',
-		time: '03:54',
-		client: {
-			name: 'SK Magic',
-			imageUrl: '/logo/sk-magic.webp'
-		}
-	},
-	{
 		title: `VIVO V21`,
 		shortDesc: ``,
 		date: [9, 2019],
 		cover: '/images/cover/vivo-v21.webp',
-		imageUrl: '/images/vivo-y77-5g.webp',
+		imageUrl: '/images/vivo-v21.webp',
 		directors: ['GLL (Eyoki Creative)'],
 		produceBy: 'Eyoki Creative',
 		dps: ['Yuki (Eyoki Creative)'],
-		editors: ['WT (Eyoki Creative)'],
+		editors: ['Winnie (Eyoki Creative)'],
 		category: 'Commercial',
 		casts: [
 			'Danny Koo',
@@ -252,31 +252,85 @@ export default [
 		time: '03:47',
 		relatedVideos: [
 			{
-				title: 'Okokokmou',
+				title: 'VIVO V21 x Okokokmou',
 				cover: '/images/cover/vivo-v21-okokokmou.webp',
 				imageUrl: '/images/cover/vivo-v21-okokokmou.webp',
 				dps: ['Yuki (Eyoki Creative)'],
-				editors: ['WT (Eyoki Creative)'],
+				editors: ['Winnie (Eyoki Creative)'],
 				time: '00:59',
 				link: 'iNgn7X0o-9Q'
 			},
 			{
-				title: 'Han Xiiao Aii',
+				title: 'VIVO V21 x Han Xiiao Aii',
 				cover: '/images/cover/vivo-v21-han-xiiao-aii.webp',
 				imageUrl: '/images/cover/vivo-v21-han-xiiao-aii.webp',
 				dps: ['Yuki (Eyoki Creative)'],
-				editors: ['WT (Eyoki Creative)'],
+				editors: ['Winnie (Eyoki Creative)'],
 				time: '00:59',
 				link: 'PywRIULtJLc'
 			},
 			{
-				title: 'Danny Koo',
+				title: 'VIVO V21 x Danny Koo',
 				cover: '/images/cover/vivo-v21-danny-koo.webp',
 				imageUrl: '/images/cover/vivo-v21-danny-koo.webp',
 				dps: ['Yuki (Eyoki Creative)'],
-				editors: ['WT (Eyoki Creative)'],
+				editors: ['Winnie (Eyoki Creative)'],
 				time: '00:59',
 				link: 's1sLebi9-AA'
+			},
+			{
+				title: 'VIVO V21 x Cody Hong',
+				cover: '/images/cover/vivo-v21-cody-hong.webp',
+				imageUrl: '/images/cover/vivo-v21-cody-hong.webp',
+				dps: ['Yuki (Eyoki Creative)'],
+				editors: ['Winnie (Eyoki Creative)'],
+				time: '00:59',
+				link: 'cmW8OrEQVu8'
+			},
+			{
+				title: 'VIVO V21 x Rickman Chia',
+				cover: '/images/cover/vivo-v21-rickman-chia.webp',
+				imageUrl: '/images/cover/vivo-v21-rickman-chia.webp',
+				dps: ['Yuki (Eyoki Creative)'],
+				editors: ['Winnie (Eyoki Creative)'],
+				time: '00:59',
+				link: 'N8hr8Hu7dJU'
+			},
+			{
+				title: 'VIVO V21 x Merrie',
+				cover: '/images/cover/vivo-v21-merrie.webp',
+				imageUrl: '/images/cover/vivo-v21-merrie.webp',
+				dps: ['Yuki (Eyoki Creative)'],
+				editors: ['Winnie (Eyoki Creative)'],
+				time: '00:59',
+				link: '0ybDYbt6tc0'
+			},
+			{
+				title: 'VIVO V21 x Caedon',
+				cover: '/images/cover/vivo-v21-caedon.webp',
+				imageUrl: '/images/cover/vivo-v21-caedon.webp',
+				dps: ['Yuki (Eyoki Creative)'],
+				editors: ['Winnie (Eyoki Creative)'],
+				time: '00:59',
+				link: 'fJwYcRd9fdA'
+			},
+			{
+				title: 'VIVO V21 x Angeline',
+				cover: '/images/cover/vivo-v21-angeline.webp',
+				imageUrl: '/images/cover/vivo-v21-angeline.webp',
+				dps: ['Yuki (Eyoki Creative)'],
+				editors: ['Winnie (Eyoki Creative)'],
+				time: '00:59',
+				link: 'HS3-n9g7JbI'
+			},
+			{
+				title: 'VIVO V21 x Hana',
+				cover: '/images/cover/vivo-v21-hana.webp',
+				imageUrl: '/images/cover/vivo-v21-hana.webp',
+				dps: ['Yuki (Eyoki Creative)'],
+				editors: ['Winnie (Eyoki Creative)'],
+				time: '00:59',
+				link: 'QDX0jl8ZLS0'
 			}
 		],
 		client: {
@@ -305,64 +359,65 @@ export default [
 		}
 	},
 	{
+		title: `SK Magic | Aedy Ashraf & Alif Hilman masak juadah Ramadan VIRAL!`,
+		shortDesc: `Korang rasa Aedy boleh masak tak? Jom kita tengok Aedy Ashraf dan Alif Hilman mencabar diri mereka untuk sediakan makanan bazar Ramadan yang paling VIRAL untuk berbuka puasa!`,
+		date: [4, 2022],
+		cover: '/images/cover/sk-magic-ramadan.webp',
+		imageUrl: '/images/lg-cover.jpeg',
+		produceBy: 'Eyoki Creative',
+		directors: ['Bryan Sim'],
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: ['So FC'],
+		casts: ['Aedy Ashraf', 'Alif Hilman'],
+		category: 'Commercial',
+		audios: ['Bahasa Melayu'],
+		subtitles: ['English'],
+		link: 'J-s6ql-Gjhw',
+		time: '03:54',
+		client: {
+			name: 'SK Magic',
+			imageUrl: '/logo/sk-magic.webp'
+		}
+	},
+	{
 		title: `Skechers GOWALK 5 x Melissa Tan`,
 		shortDesc: ``,
 		date: [9, 2019],
 		cover: '/images/cover/skechers-melissa-tan.webp',
-		imageUrl: '/images/vivo-y77-5g.webp',
+		imageUrl: '/images/skechers-melissa-tan.webp',
 		directors: ['Yuki (Eyoki Creative)'],
 		produceBy: 'Eyoki Creative',
 		dps: ['Yuki (Eyoki Creative)', 'Dixon'],
-		editors: ['WT (Eyoki Creative)'],
+		editors: ['Winnie (Eyoki Creative)'],
 		category: 'Commercial',
 		casts: ['Melissa Tan'],
 		audios: ['English'],
 		subtitles: ['English'],
 		link: 'qeswbR1mc28',
 		time: '02:54',
+		relatedVideos: [
+			{
+				title: `Skechers GOWALK 5 x JC Chee`,
+				cover: '/images/cover/skechers-jc-chee.webp',
+				imageUrl: '/images/cover/skechers-jc-chee.webp',
+				dps: ['Yuki (Eyoki Creative)'],
+				editors: ['Winnie (Eyoki Creative)'],
+				time: '00:46',
+				link: 'LIkIoQMChZw'
+			},
+			{
+				title: `Skechers GOWALK 5 x Fikrie`,
+				cover: '/images/cover/skechers-fikrie.webp',
+				imageUrl: '/images/cover/skechers-fikrie.webp',
+				dps: ['Yuki (Eyoki Creative)'],
+				editors: ['Winnie (Eyoki Creative)'],
+				time: '00:46',
+				link: 'LIkIoQMChZw'
+			}
+		],
 		client: {
 			name: 'Skechers',
 			imageUrl: '/logo/skechers.webp'
-		}
-	},
-	{
-		title: `Little Skool House (Singapore)`,
-		shortDesc: ``,
-		date: [2, 2020],
-		cover: '/images/cover/little-skool-house.webp',
-		imageUrl: '/images/vivo-y77-5g.webp',
-		category: 'Commercial',
-		directors: ['Yuki (Eyoki Creative)'],
-		produceBy: 'Eyoki Creative',
-		dps: ['Yuki (Eyoki Creative)', 'Dixon'],
-		editors: ['Yuki (Eyoki Creative)'],
-		casts: ['Little Skool House students and teachers'],
-		audios: ['English', 'Mandarin (中文)'],
-		subtitles: ['English', 'Simplified Chinese (简体中文)'],
-		link: '3MnFZTrCr5Q',
-		time: '02:54',
-		client: {
-			name: 'Little Skool House',
-			imageUrl: '/logo/little-skool-house.webp'
-		}
-	},
-	{
-		title: `VIVO Y77 - 5G`,
-		shortDesc: `It's big, it's clear and it's long, That's Y It's Superb to own vivo  #Y775G ! 😍 Pre-order now for only RM1,299 with exclusive free gifts worth up to RM597!`,
-		date: [7, 2022],
-		cover: '/images/cover/vivo-y77-5g.webp',
-		imageUrl: '/images/vivo-y77-5g.webp',
-		directors: ['Eyoki Creative Team'],
-		produceBy: 'Eyoki Creative',
-		dps: ['Yuki (Eyoki Creative)'],
-		editors: ['Jun (Eyoki Creative)'],
-		category: 'Commercial',
-		audios: ['English'],
-		link: '00eFx9W7KxY',
-		time: '00:15',
-		client: {
-			name: 'VIVO',
-			imageUrl: '/logo/vivo.webp'
 		}
 	},
 	{
@@ -379,6 +434,19 @@ export default [
 		audios: ['English'],
 		link: 'IWfy2KafeYc',
 		time: '00:30',
+		relatedVideos: [
+			{
+				title: `VIVO Y77 - 5G`,
+				shortDesc: `It's big, it's clear and it's long, That's Y It's Superb to own vivo  #Y775G ! 😍 Pre-order now for only RM1,299 with exclusive free gifts worth up to RM597!`,
+				cover: '/images/cover/vivo-y77-5g.webp',
+				imageUrl: '/images/vivo-y77-5g.webp',
+				directors: ['Eyoki Creative Team'],
+				dps: ['Yuki (Eyoki Creative)'],
+				editors: ['Jun (Eyoki Creative)'],
+				link: '00eFx9W7KxY',
+				time: '00:15'
+			}
+		],
 		client: {
 			name: 'VIVO',
 			imageUrl: '/logo/vivo.webp'
@@ -448,26 +516,6 @@ export default [
 		}
 	},
 	{
-		title: 'Appeton The Fighter',
-		date: [7, 2022],
-		cover: '/images/cover/appeton-the-fighter.webp',
-		imageUrl: '/images/cover/appeton-the-fighter.webp',
-		produceBy: 'Eyoki Creative',
-		directors: ['Boon'],
-		dps: ['Yuki (Eyoki Creative)'],
-		editors: ['Jun (Eyoki Creative)'],
-		casts: ['Amelia Chen'],
-		category: 'Commercial',
-		audios: ['English'],
-		subtitles: ['English'],
-		link: 'Sis3cytosgU',
-		time: '00:20',
-		client: {
-			name: 'Appeton',
-			imageUrl: '/logo/appeton.webp'
-		}
-	},
-	{
 		title: 'Appeton Infomercial',
 		shortDesc: ``,
 		date: [7, 2022],
@@ -483,6 +531,23 @@ export default [
 		subtitles: ['English'],
 		link: 'OdqyG1EhEzM',
 		time: '00:20',
+		relatedVideos: [
+			{
+				title: 'Appeton The Fighter',
+				cover: '/images/cover/appeton-the-fighter.webp',
+				imageUrl: '/images/cover/appeton-the-fighter.webp',
+				produceBy: 'Eyoki Creative',
+				directors: ['Boon'],
+				dps: ['Yuki (Eyoki Creative)'],
+				editors: ['Jun (Eyoki Creative)'],
+				casts: ['Amelia Chen'],
+				category: 'Commercial',
+				audios: ['English'],
+				subtitles: ['English'],
+				link: 'Sis3cytosgU',
+				time: '00:20'
+			}
+		],
 		client: {
 			name: 'Appeton',
 			imageUrl: '/logo/appeton.webp'
@@ -496,51 +561,45 @@ export default [
 		produceBy: 'Eyoki Creative',
 		directors: ['Jin Xian'],
 		dps: ['Yuki (Eyoki Creative)'],
-		editors: ['WT (Eyoki Creative)'],
+		editors: ['Winnie (Eyoki Creative)'],
 		category: 'Commercial',
 		audios: ['Mandarin (中文)'],
 		subtitles: ['Simplified Chinese (简体中文)', 'English'],
 		link: 'B5e8HWMWGBU',
 		time: '01:50',
 		casts: ['Ran Ran - 冉冉'],
-		client: {
-			name: 'KSK Land',
-			imageUrl: '/logo/ksk-land.webp'
-		}
-	},
-	{
-		title: `The truth about being a Hong Kong expat in Malaysia`,
-		shortDesc: `Follow Shirley Ng as she reveals the perks of living a semi-retirement life in Kuala Lumpur.`,
-		date: [10, 2020],
-		cover: '/images/cover/ksk-hk.webp',
-		produceBy: 'Eyoki Creative',
-		directors: ['Jin Xian'],
-		dps: ['Yuki (Eyoki Creative)'],
-		editors: ['WT (Eyoki Creative)'],
-		category: 'Commercial',
-		audios: ['Cantonese (粤语)'],
-		subtitles: ['Simplified Chinese (简体中文)', 'English'],
-		link: 'Pi-5FoiVjo0',
-		time: '01:39',
-		client: {
-			name: 'KSK Land',
-			imageUrl: '/logo/ksk-land.webp'
-		}
-	},
-	{
-		title: `KSK Japanese Junji in Malaysia`,
-		date: [10, 2020],
-		cover: '/images/cover/ksk-japanese.webp',
-		produceBy: 'Eyoki Creative',
-		directors: ['Jin Xian'],
-		dps: ['Yuki (Eyoki Creative)'],
-		editors: ['WT (Eyoki Creative)'],
-		casts: ['Kenji Suzuki - 鈴木健二'],
-		category: 'Commercial',
-		audios: ['Japanese'],
-		subtitles: ['Japanese (日本語)', 'English'],
-		link: 'LR7u7gtOaVQ',
-		time: '02:06',
+		relatedVideos: [
+			{
+				title: `The truth about being a Hong Kong expat in Malaysia`,
+				shortDesc: `Follow Shirley Ng as she reveals the perks of living a semi-retirement life in Kuala Lumpur.`,
+				date: [10, 2020],
+				cover: '/images/cover/ksk-hk.webp',
+				produceBy: 'Eyoki Creative',
+				directors: ['Jin Xian'],
+				dps: ['Yuki (Eyoki Creative)'],
+				editors: ['Winnie (Eyoki Creative)'],
+				category: 'Commercial',
+				audios: ['Cantonese (粤语)'],
+				subtitles: ['Simplified Chinese (简体中文)', 'English'],
+				link: 'Pi-5FoiVjo0',
+				time: '01:39'
+			},
+			{
+				title: `The truth about being a Japanese expat in Malaysia`,
+				date: [10, 2020],
+				cover: '/images/cover/ksk-japanese.webp',
+				produceBy: 'Eyoki Creative',
+				directors: ['Jin Xian'],
+				dps: ['Yuki (Eyoki Creative)'],
+				editors: ['Winnie (Eyoki Creative)'],
+				casts: ['Kenji Suzuki - 鈴木健二'],
+				category: 'Commercial',
+				audios: ['Japanese'],
+				subtitles: ['Japanese (日本語)', 'English'],
+				link: 'LR7u7gtOaVQ',
+				time: '02:06'
+			}
+		],
 		client: {
 			name: 'KSK Land',
 			imageUrl: '/logo/ksk-land.webp'
@@ -554,7 +613,7 @@ export default [
 		produceBy: 'Eyoki Creative',
 		directors: ['Jin Xian'],
 		dps: ['Yuki (Eyoki Creative)'],
-		editors: ['WT (Eyoki Creative)'],
+		editors: ['Winnie (Eyoki Creative)'],
 		casts: ['Chanel'],
 		category: 'Commercial',
 		audios: ['English'],

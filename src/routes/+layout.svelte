@@ -1,20 +1,24 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import MediaPlayer from '$lib/components/MediaPlayer.svelte';
 	import Menu from '$lib/components/Menu.svelte';
 	import './app.scss';
 
-	const title = `Eyoki Creative`;
-	const desctiption = `Eyoki Creative is a Malaysia creative production company that led by a famouse female director of photography (DoP).`;
+	const thumbnail = '/logo.png';
+	const title = $page.data.title || `Eyoki Creative`;
+	const description =
+		$page.data.description ||
+		`Eyoki Creative is a Malaysia creative production company that led by a famouse female director of photography (DoP).`;
 </script>
 
 <svelte:head>
 	<title>{title}</title>
-	<meta name="description" content={desctiption} />
+	<meta name="description" content={description} />
 	<meta property="og:locale" content="en_GB" />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content={title} />
-	<meta property="og:image" content="/logo.png" />
-	<meta property="og:description" content={desctiption} />
+	<meta property="og:image" content={thumbnail} />
+	<meta property="og:description" content={description} />
 	<meta property="og:url" content="https://eyokicreative.com" />
 	<meta property="og:site_name" content={title} />
 </svelte:head>

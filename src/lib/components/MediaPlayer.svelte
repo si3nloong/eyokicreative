@@ -13,21 +13,6 @@
 	export const useMediaPlayer = () => {
 		return getContext(KEY) as MediaPlayer;
 	};
-
-	const monthNames = [
-		'January',
-		'February',
-		'March',
-		'April',
-		'May',
-		'June',
-		'July',
-		'August',
-		'September',
-		'October',
-		'November',
-		'December'
-	];
 </script>
 
 <script lang="ts">
@@ -81,11 +66,6 @@
 		show = true;
 		video = item;
 		store$.update((v) => Object.assign(v, { show, video: item }));
-		if (small) {
-			setTimeout(() => {
-				setupAndPlay(item.link);
-			}, 100);
-		}
 	};
 
 	const play = (item: { link: string }) => {
@@ -166,10 +146,17 @@
 									</div>
 									<div class="video-details">
 										<h3>{item.title}</h3>
+										<!-- <div>{item.shortDesc}</div> -->
 										<section style="margin-top: 15px">
-											<div><span class="label">Editor:</span><TagList items={item.editors} /></div>
 											<div>
-												<span class="label">Cinematographer:</span><TagList items={item.dps} />
+												<span class="label"
+													>{`Cinematographer${video.dps.length > 1 ? 's' : ''}:`}</span
+												>
+												<TagList items={item.dps} />
+											</div>
+											<div>
+												<span class="label">{`Editor${video.dps.length > 1 ? 's' : ''}:`}</span
+												><TagList items={item.editors} />
 											</div>
 										</section>
 										<div class="video-info" style="margin-top: 10px">
