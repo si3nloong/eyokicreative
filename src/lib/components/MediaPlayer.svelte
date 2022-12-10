@@ -13,21 +13,6 @@
 	export const useMediaPlayer = () => {
 		return getContext(KEY) as MediaPlayer;
 	};
-
-	const monthNames = [
-		'January',
-		'February',
-		'March',
-		'April',
-		'May',
-		'June',
-		'July',
-		'August',
-		'September',
-		'October',
-		'November',
-		'December'
-	];
 </script>
 
 <script lang="ts">
@@ -81,11 +66,6 @@
 		show = true;
 		video = item;
 		store$.update((v) => Object.assign(v, { show, video: item }));
-		if (small) {
-			setTimeout(() => {
-				setupAndPlay(item.link);
-			}, 100);
-		}
 	};
 
 	const play = (item: { link: string }) => {

@@ -22,11 +22,12 @@
 	import TagList from './TagList.svelte';
 
 	export let video: Media;
+	export let type = 'none';
 
 	const player = useMediaPlayer();
 
 	const playVideo = () => {
-		player.preview(video);
+		player.play(video);
 	};
 </script>
 
@@ -53,7 +54,9 @@
 				<div>{lyric}</div>
 			{/each} -->
 		{/if}
-		<!-- <Button on:click={playVideo} style="margin-top: 1rem; width: 100%">PLAY NOW</Button> -->
+		{#if type == 'small'}
+			<Button on:click={playVideo} style="margin-top: 1rem; width: 100%">PLAY NOW</Button>
+		{/if}
 	</section>
 	<section class="addon-info">
 		<div>

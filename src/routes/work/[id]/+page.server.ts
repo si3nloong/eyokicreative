@@ -1,10 +1,11 @@
-import selfProduce from '$lib/data/self-produce';
-import dp from '$lib/data/dp';
+import data from '$lib/data';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = ({ params }) => {
-	const video = selfProduce.concat(dp).find((v) => v.link == params.id);
+	const video = data.find((v) => v.link == params.id)!!;
 	return {
+		title: video.title,
+		description: video.shortDesc || '',
 		video
 	};
 };

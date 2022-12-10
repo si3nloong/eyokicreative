@@ -1,8 +1,10 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
+	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import type { Media } from '$lib/components';
 	import { useMediaPlayer } from '$lib/components/MediaPlayer.svelte';
+	import { isMobile } from '$lib/utils';
 
 	export let data: { producedBys: Media[]; dps: Media[] } = { dps: [], producedBys: [] };
 
@@ -15,7 +17,8 @@
 			if (show && video) {
 				history.pushState({}, '', `#id=${video.link}`);
 			} else if (!show) {
-				history.pushState({}, '', `#`);
+				console.log(show, video);
+				history.pushState({}, '');
 			}
 		});
 	}
@@ -28,6 +31,10 @@
 	}
 
 	const onPreview = (item: Media) => () => {
+		if (isMobile()) {
+			goto(`/work/${item.link}`);
+			return;
+		}
 		player.preview(item);
 	};
 
