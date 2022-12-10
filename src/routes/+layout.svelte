@@ -4,7 +4,7 @@
 	import Menu from '$lib/components/Menu.svelte';
 	import './app.scss';
 
-	const thumbnail = '/logo.png';
+	const image = $page.data.image || '/logo.png';
 	const title = $page.data.title || `Eyoki Creative`;
 	const description =
 		$page.data.description ||
@@ -17,7 +17,7 @@
 	<meta property="og:locale" content="en_GB" />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content={title} />
-	<meta property="og:image" content={thumbnail} />
+	<meta property="og:image" content={image} />
 	<meta property="og:description" content={description} />
 	<meta property="og:url" content="https://eyokicreative.com" />
 	<meta property="og:site_name" content={title} />
