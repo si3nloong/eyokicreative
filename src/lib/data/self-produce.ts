@@ -42,7 +42,7 @@ export default [
 		time: '14:59',
 		relatedVideos: [
 			{
-				title: 'BMW Shorties 2019 (ALOT FUN MOMENTS)',
+				title: 'BMW Shorties 2019 (A LOT FUN MOMENTS)',
 				cover: '/images/cover/kingdom-and-beauty-bts.webp',
 				imageUrl: '/images/cover/kingdom-and-beauty-bts.webp',
 				editors: ['Winnie (Eyoki Creative)'],
@@ -230,7 +230,7 @@ export default [
 		shortDesc: ``,
 		date: [9, 2019],
 		cover: '/images/cover/vivo-v21.webp',
-		imageUrl: '/images/vivo-y77-5g.webp',
+		imageUrl: '/images/vivo-v21.webp',
 		directors: ['GLL (Eyoki Creative)'],
 		produceBy: 'Eyoki Creative',
 		dps: ['Yuki (Eyoki Creative)'],
@@ -363,7 +363,7 @@ export default [
 		shortDesc: ``,
 		date: [9, 2019],
 		cover: '/images/cover/skechers-melissa-tan.webp',
-		imageUrl: '/images/vivo-y77-5g.webp',
+		imageUrl: '/images/skechers-melissa-tan.webp',
 		directors: ['Yuki (Eyoki Creative)'],
 		produceBy: 'Eyoki Creative',
 		dps: ['Yuki (Eyoki Creative)', 'Dixon'],
@@ -374,6 +374,26 @@ export default [
 		subtitles: ['English'],
 		link: 'qeswbR1mc28',
 		time: '02:54',
+		relatedVideos: [
+			{
+				title: `Skechers GOWALK 5 x JC Chee`,
+				cover: '/images/cover/skechers-jc-chee.webp',
+				imageUrl: '/images/cover/skechers-jc-chee.webp',
+				dps: ['Yuki (Eyoki Creative)'],
+				editors: ['Winnie (Eyoki Creative)'],
+				time: '00:46',
+				link: 'LIkIoQMChZw'
+			},
+			{
+				title: `Skechers GOWALK 5 x Fikrie`,
+				cover: '/images/cover/skechers-fikrie.webp',
+				imageUrl: '/images/cover/skechers-fikrie.webp',
+				dps: ['Yuki (Eyoki Creative)'],
+				editors: ['Winnie (Eyoki Creative)'],
+				time: '00:46',
+				link: 'LIkIoQMChZw'
+			}
+		],
 		client: {
 			name: 'Skechers',
 			imageUrl: '/logo/skechers.webp'
@@ -384,7 +404,7 @@ export default [
 		shortDesc: ``,
 		date: [2, 2020],
 		cover: '/images/cover/little-skool-house.webp',
-		imageUrl: '/images/vivo-y77-5g.webp',
+		imageUrl: '/images/little-skool-house.webp',
 		category: 'Commercial',
 		directors: ['Yuki (Eyoki Creative)'],
 		produceBy: 'Eyoki Creative',
@@ -401,25 +421,6 @@ export default [
 		}
 	},
 	{
-		title: `VIVO Y77 - 5G`,
-		shortDesc: `It's big, it's clear and it's long, That's Y It's Superb to own vivo  #Y775G ! 😍 Pre-order now for only RM1,299 with exclusive free gifts worth up to RM597!`,
-		date: [7, 2022],
-		cover: '/images/cover/vivo-y77-5g.webp',
-		imageUrl: '/images/vivo-y77-5g.webp',
-		directors: ['Eyoki Creative Team'],
-		produceBy: 'Eyoki Creative',
-		dps: ['Yuki (Eyoki Creative)'],
-		editors: ['Jun (Eyoki Creative)'],
-		category: 'Commercial',
-		audios: ['English'],
-		link: '00eFx9W7KxY',
-		time: '00:15',
-		client: {
-			name: 'VIVO',
-			imageUrl: '/logo/vivo.webp'
-		}
-	},
-	{
 		title: `VIVO Y77 - That's Y`,
 		shortDesc: `It's big, it's clear and it's long, That's Y It's Superb to own vivo  #Y775G ! 😍 Pre-order now for only RM1,299 with exclusive free gifts worth up to RM597!`,
 		date: [7, 2022],
@@ -433,6 +434,19 @@ export default [
 		audios: ['English'],
 		link: 'IWfy2KafeYc',
 		time: '00:30',
+		relatedVideos: [
+			{
+				title: `VIVO Y77 - 5G`,
+				shortDesc: `It's big, it's clear and it's long, That's Y It's Superb to own vivo  #Y775G ! 😍 Pre-order now for only RM1,299 with exclusive free gifts worth up to RM597!`,
+				cover: '/images/cover/vivo-y77-5g.webp',
+				imageUrl: '/images/vivo-y77-5g.webp',
+				directors: ['Eyoki Creative Team'],
+				dps: ['Yuki (Eyoki Creative)'],
+				editors: ['Jun (Eyoki Creative)'],
+				link: '00eFx9W7KxY',
+				time: '00:15'
+			}
+		],
 		client: {
 			name: 'VIVO',
 			imageUrl: '/logo/vivo.webp'
