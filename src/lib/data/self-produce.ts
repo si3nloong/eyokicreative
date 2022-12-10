@@ -165,6 +165,27 @@ export default [
 		}
 	},
 	{
+		title: `Little Skool House (Singapore)`,
+		shortDesc: ``,
+		date: [2, 2020],
+		cover: '/images/cover/little-skool-house.webp',
+		imageUrl: '/images/little-skool-house.webp',
+		category: 'Commercial',
+		directors: ['Yuki (Eyoki Creative)'],
+		produceBy: 'Eyoki Creative',
+		dps: ['Yuki (Eyoki Creative)', 'Dixon'],
+		editors: ['Yuki (Eyoki Creative)'],
+		casts: ['Little Skool House students and teachers'],
+		audios: ['English', 'Mandarin (中文)'],
+		subtitles: ['English', 'Simplified Chinese (简体中文)'],
+		link: '3MnFZTrCr5Q',
+		time: '02:54',
+		client: {
+			name: 'Little Skool House',
+			imageUrl: '/logo/little-skool-house.webp'
+		}
+	},
+	{
 		title: `We are the Makeover Guys - Manifesto`,
 		shortDesc: `Our team may be large, but we're driven all the same. Our passion to create, to connect and to pave the way for future homes are pretty much the DNA that ties us together.`,
 		date: [1, 2022],
@@ -202,27 +223,6 @@ export default [
 		client: {
 			name: 'LG',
 			imageUrl: '/logo/lg.webp'
-		}
-	},
-	{
-		title: `SK Magic | Aedy Ashraf & Alif Hilman masak juadah Ramadan VIRAL!`,
-		shortDesc: `Korang rasa Aedy boleh masak tak? Jom kita tengok Aedy Ashraf dan Alif Hilman mencabar diri mereka untuk sediakan makanan bazar Ramadan yang paling VIRAL untuk berbuka puasa!`,
-		date: [4, 2022],
-		cover: '/images/cover/sk-magic-ramadan.webp',
-		imageUrl: '/images/lg-cover.jpeg',
-		produceBy: 'Eyoki Creative',
-		directors: ['Bryan Sim'],
-		dps: ['Yuki (Eyoki Creative)'],
-		editors: ['So FC'],
-		casts: ['Aedy Ashraf', 'Alif Hilman'],
-		category: 'Commercial',
-		audios: ['Bahasa Melayu'],
-		subtitles: ['English'],
-		link: 'J-s6ql-Gjhw',
-		time: '03:54',
-		client: {
-			name: 'SK Magic',
-			imageUrl: '/logo/sk-magic.webp'
 		}
 	},
 	{
@@ -359,6 +359,27 @@ export default [
 		}
 	},
 	{
+		title: `SK Magic | Aedy Ashraf & Alif Hilman masak juadah Ramadan VIRAL!`,
+		shortDesc: `Korang rasa Aedy boleh masak tak? Jom kita tengok Aedy Ashraf dan Alif Hilman mencabar diri mereka untuk sediakan makanan bazar Ramadan yang paling VIRAL untuk berbuka puasa!`,
+		date: [4, 2022],
+		cover: '/images/cover/sk-magic-ramadan.webp',
+		imageUrl: '/images/lg-cover.jpeg',
+		produceBy: 'Eyoki Creative',
+		directors: ['Bryan Sim'],
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: ['So FC'],
+		casts: ['Aedy Ashraf', 'Alif Hilman'],
+		category: 'Commercial',
+		audios: ['Bahasa Melayu'],
+		subtitles: ['English'],
+		link: 'J-s6ql-Gjhw',
+		time: '03:54',
+		client: {
+			name: 'SK Magic',
+			imageUrl: '/logo/sk-magic.webp'
+		}
+	},
+	{
 		title: `Skechers GOWALK 5 x Melissa Tan`,
 		shortDesc: ``,
 		date: [9, 2019],
@@ -397,27 +418,6 @@ export default [
 		client: {
 			name: 'Skechers',
 			imageUrl: '/logo/skechers.webp'
-		}
-	},
-	{
-		title: `Little Skool House (Singapore)`,
-		shortDesc: ``,
-		date: [2, 2020],
-		cover: '/images/cover/little-skool-house.webp',
-		imageUrl: '/images/little-skool-house.webp',
-		category: 'Commercial',
-		directors: ['Yuki (Eyoki Creative)'],
-		produceBy: 'Eyoki Creative',
-		dps: ['Yuki (Eyoki Creative)', 'Dixon'],
-		editors: ['Yuki (Eyoki Creative)'],
-		casts: ['Little Skool House students and teachers'],
-		audios: ['English', 'Mandarin (中文)'],
-		subtitles: ['English', 'Simplified Chinese (简体中文)'],
-		link: '3MnFZTrCr5Q',
-		time: '02:54',
-		client: {
-			name: 'Little Skool House',
-			imageUrl: '/logo/little-skool-house.webp'
 		}
 	},
 	{
@@ -516,26 +516,6 @@ export default [
 		}
 	},
 	{
-		title: 'Appeton The Fighter',
-		date: [7, 2022],
-		cover: '/images/cover/appeton-the-fighter.webp',
-		imageUrl: '/images/cover/appeton-the-fighter.webp',
-		produceBy: 'Eyoki Creative',
-		directors: ['Boon'],
-		dps: ['Yuki (Eyoki Creative)'],
-		editors: ['Jun (Eyoki Creative)'],
-		casts: ['Amelia Chen'],
-		category: 'Commercial',
-		audios: ['English'],
-		subtitles: ['English'],
-		link: 'Sis3cytosgU',
-		time: '00:20',
-		client: {
-			name: 'Appeton',
-			imageUrl: '/logo/appeton.webp'
-		}
-	},
-	{
 		title: 'Appeton Infomercial',
 		shortDesc: ``,
 		date: [7, 2022],
@@ -551,6 +531,23 @@ export default [
 		subtitles: ['English'],
 		link: 'OdqyG1EhEzM',
 		time: '00:20',
+		relatedVideos: [
+			{
+				title: 'Appeton The Fighter',
+				cover: '/images/cover/appeton-the-fighter.webp',
+				imageUrl: '/images/cover/appeton-the-fighter.webp',
+				produceBy: 'Eyoki Creative',
+				directors: ['Boon'],
+				dps: ['Yuki (Eyoki Creative)'],
+				editors: ['Jun (Eyoki Creative)'],
+				casts: ['Amelia Chen'],
+				category: 'Commercial',
+				audios: ['English'],
+				subtitles: ['English'],
+				link: 'Sis3cytosgU',
+				time: '00:20'
+			}
+		],
 		client: {
 			name: 'Appeton',
 			imageUrl: '/logo/appeton.webp'
@@ -571,44 +568,38 @@ export default [
 		link: 'B5e8HWMWGBU',
 		time: '01:50',
 		casts: ['Ran Ran - 冉冉'],
-		client: {
-			name: 'KSK Land',
-			imageUrl: '/logo/ksk-land.webp'
-		}
-	},
-	{
-		title: `The truth about being a Hong Kong expat in Malaysia`,
-		shortDesc: `Follow Shirley Ng as she reveals the perks of living a semi-retirement life in Kuala Lumpur.`,
-		date: [10, 2020],
-		cover: '/images/cover/ksk-hk.webp',
-		produceBy: 'Eyoki Creative',
-		directors: ['Jin Xian'],
-		dps: ['Yuki (Eyoki Creative)'],
-		editors: ['Winnie (Eyoki Creative)'],
-		category: 'Commercial',
-		audios: ['Cantonese (粤语)'],
-		subtitles: ['Simplified Chinese (简体中文)', 'English'],
-		link: 'Pi-5FoiVjo0',
-		time: '01:39',
-		client: {
-			name: 'KSK Land',
-			imageUrl: '/logo/ksk-land.webp'
-		}
-	},
-	{
-		title: `KSK Japanese Junji in Malaysia`,
-		date: [10, 2020],
-		cover: '/images/cover/ksk-japanese.webp',
-		produceBy: 'Eyoki Creative',
-		directors: ['Jin Xian'],
-		dps: ['Yuki (Eyoki Creative)'],
-		editors: ['Winnie (Eyoki Creative)'],
-		casts: ['Kenji Suzuki - 鈴木健二'],
-		category: 'Commercial',
-		audios: ['Japanese'],
-		subtitles: ['Japanese (日本語)', 'English'],
-		link: 'LR7u7gtOaVQ',
-		time: '02:06',
+		relatedVideos: [
+			{
+				title: `The truth about being a Hong Kong expat in Malaysia`,
+				shortDesc: `Follow Shirley Ng as she reveals the perks of living a semi-retirement life in Kuala Lumpur.`,
+				date: [10, 2020],
+				cover: '/images/cover/ksk-hk.webp',
+				produceBy: 'Eyoki Creative',
+				directors: ['Jin Xian'],
+				dps: ['Yuki (Eyoki Creative)'],
+				editors: ['Winnie (Eyoki Creative)'],
+				category: 'Commercial',
+				audios: ['Cantonese (粤语)'],
+				subtitles: ['Simplified Chinese (简体中文)', 'English'],
+				link: 'Pi-5FoiVjo0',
+				time: '01:39'
+			},
+			{
+				title: `The truth about being a Japanese expat in Malaysia`,
+				date: [10, 2020],
+				cover: '/images/cover/ksk-japanese.webp',
+				produceBy: 'Eyoki Creative',
+				directors: ['Jin Xian'],
+				dps: ['Yuki (Eyoki Creative)'],
+				editors: ['Winnie (Eyoki Creative)'],
+				casts: ['Kenji Suzuki - 鈴木健二'],
+				category: 'Commercial',
+				audios: ['Japanese'],
+				subtitles: ['Japanese (日本語)', 'English'],
+				link: 'LR7u7gtOaVQ',
+				time: '02:06'
+			}
+		],
 		client: {
 			name: 'KSK Land',
 			imageUrl: '/logo/ksk-land.webp'

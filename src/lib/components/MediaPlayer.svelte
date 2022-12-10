@@ -166,6 +166,7 @@
 									</div>
 									<div class="video-details">
 										<h3>{item.title}</h3>
+										<!-- <div>{item.shortDesc}</div> -->
 										<section style="margin-top: 15px">
 											<div>
 												<span class="label"
