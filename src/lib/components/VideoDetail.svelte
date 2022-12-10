@@ -77,7 +77,9 @@
 			{/if}
 			{#if video.editors}
 				<div>
-					<span class="label">Editor:</span><TagList items={video.editors} />
+					<span class="label">{`Editor${video.dps.length > 1 ? 's' : ''}:`}</span><TagList
+						items={video.editors}
+					/>
 				</div>
 			{/if}
 			{#if video.casts}

@@ -167,9 +167,15 @@
 									<div class="video-details">
 										<h3>{item.title}</h3>
 										<section style="margin-top: 15px">
-											<div><span class="label">Editor:</span><TagList items={item.editors} /></div>
 											<div>
-												<span class="label">Cinematographer:</span><TagList items={item.dps} />
+												<span class="label"
+													>{`Cinematographer${video.dps.length > 1 ? 's' : ''}:`}</span
+												>
+												<TagList items={item.dps} />
+											</div>
+											<div>
+												<span class="label">{`Editor${video.dps.length > 1 ? 's' : ''}:`}</span
+												><TagList items={item.editors} />
 											</div>
 										</section>
 										<div class="video-info" style="margin-top: 10px">
