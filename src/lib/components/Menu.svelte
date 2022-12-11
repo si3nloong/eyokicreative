@@ -1,16 +1,27 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
+
+	export let items: { label: string; href: string }[] = [];
+
+	let toggle: HTMLInputElement;
+
+	const onRedirect = (e: Event) => {
+		e.preventDefault();
+		e.stopPropagation();
+		const el = e.target as HTMLAnchorElement;
+		toggle.checked = false;
+		goto(el.href);
+	};
 </script>
 
 <span class="menu-toggle">
-	<input type="checkbox" />
+	<input bind:this={toggle} type="checkbox" />
 	{@html `<svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7H19M1 1H19M1 13H19" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`}
 	<!-- <aside class="menu"> -->
 	<ul class="menu">
-		<li><a href="#">Home</a></li>
-		<li><a href="#">About</a></li>
-		<li><a href="#">Info</a></li>
-		<li><a href="#">Contact</a></li>
-		<li><a href="#">Show me more</a></li>
+		{#each items as item}
+			<li><a href={item.href} on:click={onRedirect}>{item.label}</a></li>
+		{/each}
 	</ul>
 	<!-- </aside> -->
 </span>

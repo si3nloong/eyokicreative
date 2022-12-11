@@ -5,7 +5,7 @@ export const load: PageServerLoad = ({ params }) => {
 	const video = data.find((v) => v.link == params.id)!!;
 
 	return {
-		image: video.imageUrl || '',
+		image: video.cover || '',
 		title: `EYOKI - ${video.title}`,
 		description: video.shortDesc || '',
 		video
