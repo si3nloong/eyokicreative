@@ -148,16 +148,20 @@
 										<h3>{item.title}</h3>
 										<!-- <div>{item.shortDesc}</div> -->
 										<section style="margin-top: 15px">
-											<div>
-												<span class="label"
-													>{`Cinematographer${video.dps.length > 1 ? 's' : ''}:`}</span
-												>
-												<TagList items={item.dps} />
-											</div>
-											<div>
-												<span class="label">{`Editor${video.dps.length > 1 ? 's' : ''}:`}</span
-												><TagList items={item.editors} />
-											</div>
+											{#if item.dps}
+												<div>
+													<span class="label"
+														>{`Cinematographer${item.dps.length > 1 ? 's' : ''}:`}</span
+													>
+													<TagList items={item.dps} />
+												</div>
+											{/if}
+											{#if item.editors}
+												<div>
+													<span class="label">{`Editor${item.editors.length > 1 ? 's' : ''}:`}</span
+													><TagList items={item.editors} />
+												</div>
+											{/if}
 										</section>
 										<div class="video-info" style="margin-top: 10px">
 											<span>{`${item.time}mins`}</span>

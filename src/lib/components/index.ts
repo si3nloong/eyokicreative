@@ -3,20 +3,19 @@ export type BehindTheScreen = Required<Pick<Media, 'title' | 'imageUrl' | 'link'
 export type Media = {
 	title: string;
 	shortDesc?: string;
-	date: [month: number, year: number];
-	category: 'Commercial' | 'Short Film' | 'MV';
+	// date: [month: number, year: number];
+	category: string;
 	cover: string;
 	imageUrl: string;
 	produceBy: string;
-	directors: string[];
+	directors?: string[];
 	writers?: string[];
-	dps: string[];
-	// lyrics?: [time: number, lryic: string][];
-	editors: string[];
+	dps?: string[];
+	editors?: string[];
 	casts?: string[];
 	audios: string[];
 	subtitles?: string[];
-	relatedVideos?: Media[];
+	relatedVideos?: Pick<Media, 'title' | 'link' | 'time' | 'cover' | 'dps' | 'editors'>[];
 	client?: {
 		name: string;
 		imageUrl: string;

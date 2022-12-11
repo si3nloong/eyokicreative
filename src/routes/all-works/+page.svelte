@@ -12,17 +12,6 @@
 	const id = params.get('id');
 	const player = useMediaPlayer();
 
-	if (browser) {
-		player.subscribe(({ show, video }) => {
-			if (show && video) {
-				history.pushState({}, '', `#id=${video.link}`);
-			} else if (!show) {
-				console.log(show, video);
-				history.pushState({}, '');
-			}
-		});
-	}
-
 	if (id) {
 		const video = data.producedBys.concat(data.dps).find((v) => v.link == id);
 		if (video) {
