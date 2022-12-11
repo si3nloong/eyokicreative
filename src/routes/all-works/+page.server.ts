@@ -3,6 +3,8 @@ import dp from '$lib/data/dp';
 import type { PageServerLoad } from './$types';
 import data from '$lib/data';
 import type { Media } from '$lib/components';
+import { isMobile } from '$lib/utils';
+import { redirect } from '@sveltejs/kit';
 
 export const load: PageServerLoad = ({ request }) => {
 	const uri = new URL(request.url);
@@ -17,6 +19,10 @@ export const load: PageServerLoad = ({ request }) => {
 		video
 	};
 	if (video) {
+		if (isMobile(request.headers)) {
+			throw redirect(303, `/work/${video.link}`);
+		}
+
 		return Object.assign(resp, {
 			image: `${uri.origin}${video.imageUrl}` || '',
 			title: `EYOKI - ${video.title}`,
