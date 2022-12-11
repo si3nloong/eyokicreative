@@ -24,9 +24,10 @@
 			href: '/contact-us'
 		}
 	];
-	const params = new URLSearchParams($page.url.hash.substring(1));
-	const id = params.get('id');
+
 	const player = useMediaPlayer();
+	const params = new URLSearchParams($page.url.searchParams);
+	const id = params.get('id');
 
 	if (browser) {
 		let first = true;
@@ -37,9 +38,9 @@
 			}
 
 			if (show && video) {
-				history.pushState({}, '', `#id=${video.link}`);
+				history.pushState({}, '', `?id=${video.link}`);
 			} else if (!show) {
-				history.pushState({}, '', '#');
+				history.pushState({}, '', '?');
 			}
 		});
 	}

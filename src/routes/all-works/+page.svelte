@@ -1,21 +1,28 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import type { Media } from '$lib/components';
 	import { useMediaPlayer } from '$lib/components/MediaPlayer.svelte';
 	import { isMobile } from '$lib/utils';
 
-	export let data: { producedBys: Media[]; dps: Media[] } = { dps: [], producedBys: [] };
+	export let data: { video: Media | null; producedBys: Media[]; dps: Media[] } = {
+		video: null,
+		dps: [],
+		producedBys: []
+	};
 
-	const params = new URLSearchParams($page.url.hash.substring(1));
-	const id = params.get('id');
 	const player = useMediaPlayer();
+	if (data.video) {
+		player.preview(data.video);
+	} else {
+		const params = new URLSearchParams($page.url.searchParams);
+		const id = params.get('id');
 
-	if (id) {
-		const video = data.producedBys.concat(data.dps).find((v) => v.link == id);
-		if (video) {
-			player.preview(video);
+		if (id) {
+			const video = data.producedBys.concat(data.dps).find((v) => v.link == id);
+			if (video) {
+				player.preview(video);
+			}
 		}
 	}
 
