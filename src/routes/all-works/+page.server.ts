@@ -18,7 +18,7 @@ export const load: PageServerLoad = ({ request }) => {
 	};
 	if (video) {
 		return Object.assign(resp, {
-			image: video.cover || '',
+			image: `${uri.origin}${video.imageUrl}` || '',
 			title: `EYOKI - ${video.title}`,
 			description: video.shortDesc || ''
 		});
