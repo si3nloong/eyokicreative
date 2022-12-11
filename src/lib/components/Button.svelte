@@ -11,7 +11,10 @@
 		display: flex;
 		align-items: center;
 		border: none;
-		min-height: 36px;
+		height: 42px;
+		line-height: 42px;
+		font-weight: 600;
+		font-size: var(--font-size);
 		padding: 0 2.5rem 0 2rem;
 		border-radius: 3px;
 		justify-content: center;
