@@ -1,8 +1,8 @@
 import selfProduce from '$lib/data/self-produce';
 import dp from '$lib/data/dp';
+import type { PageServerLoad } from './$types';
 
-/** @type {import('./$types').PageServerLoad} */
-export async function load() {
+export const load: PageServerLoad = ({ request }) => {
 	return {
 		popularVideos: selfProduce.slice().splice(0, 4),
 		dps: dp.slice(),
@@ -14,4 +14,4 @@ export async function load() {
 			})
 			.slice(0, 5)
 	};
-}
+};
