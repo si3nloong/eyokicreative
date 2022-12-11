@@ -134,44 +134,6 @@
 		<div class="content-box">
 			{#if video}
 				<VideoDetail {video} />
-				{#if video.relatedVideos}
-					<section style="padding-top: 50px">
-						<ul class="related-video-list">
-							{#each video.relatedVideos as item}
-								<li on:click={playVideo(item)}>
-									<div class="thumbnail">
-										<div class="aspect-ratio">
-											<img class="cover-img" src={item.cover} alt={item.title} />
-										</div>
-									</div>
-									<div class="video-details">
-										<h3>{item.title}</h3>
-										<!-- <div>{item.shortDesc}</div> -->
-										<section style="margin-top: 15px">
-											{#if item.dps}
-												<div>
-													<span class="label"
-														>{`Cinematographer${item.dps.length > 1 ? 's' : ''}:`}</span
-													>
-													<TagList items={item.dps} />
-												</div>
-											{/if}
-											{#if item.editors}
-												<div>
-													<span class="label">{`Editor${item.editors.length > 1 ? 's' : ''}:`}</span
-													><TagList items={item.editors} />
-												</div>
-											{/if}
-										</section>
-										<div class="video-info" style="margin-top: 10px">
-											<span>{`${item.time}mins`}</span>
-										</div>
-									</div>
-								</li>
-							{/each}
-						</ul>
-					</section>
-				{/if}
 			{/if}
 		</div>
 	</div>
@@ -215,10 +177,6 @@
 		}
 
 		&.small {
-			.box {
-				display: none;
-			}
-
 			.dialog {
 				top: 50%;
 				left: 50%;
@@ -310,28 +268,6 @@
 			padding-bottom: 60px;
 		}
 
-		.related-video-list {
-			list-style: none;
-			list-style-position: inside;
-			margin-top: 12px;
-
-			li {
-				display: flex;
-				flex-direction: column;
-				margin-bottom: var(--margin);
-				// align-items: center;
-
-				.thumbnail {
-					width: 100%;
-				}
-
-				.video-details {
-					flex-grow: 1;
-					padding: 0.65rem var(--padding);
-				}
-			}
-		}
-
 		@media screen and (min-width: 680px) {
 			width: 80%;
 			top: 2rem;
@@ -339,21 +275,6 @@
 			border-radius: 12px;
 			box-shadow: 0 0 26px rgba(0, 0, 0, 0.3);
 			transform-origin: 50% 12.5%;
-
-			// .content {
-			// 	flex-direction: row;
-			// }
-
-			.related-video-list {
-				li {
-					cursor: pointer;
-					flex-direction: row;
-
-					.thumbnail {
-						max-width: 320px;
-					}
-				}
-			}
 		}
 	}
 
