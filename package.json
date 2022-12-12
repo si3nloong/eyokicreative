@@ -34,7 +34,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@sveltejs/adapter-node": "^1.0.0-next.102",
+		"@sveltejs/adapter-node": "^1.0.0-next.104",
 		"events": "^3.3.0",
 		"rxjs": "^7.6.0",
 		"yt-player": "^3.6.1"
