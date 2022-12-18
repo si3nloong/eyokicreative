@@ -41,7 +41,7 @@
 			{/if}
 		</div>
 		<div class="video-info">
-			<span>{`${monthNames[video.month].substring(0, 3)} ${video.year}`}</span>
+			<span>{`${monthNames[video.month - 1].substring(0, 3)} ${video.year}`}</span>
 			<span class="pipe">|</span>
 			<span>{video.category}</span>
 			<span class="pipe">|</span>
