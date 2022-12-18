@@ -5,10 +5,16 @@
 	import { useMediaPlayer } from '$lib/components/MediaPlayer.svelte';
 	import { isMobile } from '$lib/utils';
 
-	export let data: { video: Media | null; producedBys: Media[]; dps: Media[] } = {
+	export let data: {
+		video: Media | null;
+		producedBys: Media[];
+		dps: Media[];
+		socialMedias: Media[];
+	} = {
 		video: null,
 		dps: [],
-		producedBys: []
+		producedBys: [],
+		socialMedias: []
 	};
 
 	const player = useMediaPlayer();
@@ -35,7 +41,7 @@
 	};
 
 	const getID = (item: Media, i: number) => {
-		return `no-${i}`;
+		return `no-${item.link}`;
 	};
 </script>
 
@@ -57,6 +63,20 @@
 	<h2>Cinematography works</h2>
 	<ul class="video-list">
 		{#each data.dps as item, i (getID(item, i))}
+			<li>
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<div class="d-16-9 thumbnail" on:click={onPreview(item)}>
+					<img src={item.cover} alt={item.title} />
+				</div>
+			</li>
+		{/each}
+	</ul>
+</section>
+
+<section>
+	<h2>Social media</h2>
+	<ul class="video-list">
+		{#each data.socialMedias as item, i (getID(item, i))}
 			<li>
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<div class="d-16-9 thumbnail" on:click={onPreview(item)}>

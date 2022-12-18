@@ -8,8 +8,8 @@ export const load: PageServerLoad = ({ request }) => {
 		dps: dp.slice(),
 		latestVideos: [...selfProduce]
 			.sort((a, b) => {
-				const d1 = new Date(a.date[1], a.date[0], 1);
-				const d2 = new Date(b.date[1], b.date[0], 1);
+				const d1 = new Date(a.year, a.month, 1);
+				const d2 = new Date(b.year, b.month, 1);
 				return Number(d2) - Number(d1);
 			})
 			.slice(0, 5)

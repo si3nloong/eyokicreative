@@ -1,5 +1,6 @@
 import selfProduce from '$lib/data/self-produce';
 import dp from '$lib/data/dp';
+import socialMedias from '$lib/data/social-media';
 import type { PageServerLoad } from './$types';
 import data from '$lib/data';
 import type { Media } from '$lib/components';
@@ -16,6 +17,7 @@ export const load: PageServerLoad = ({ request }) => {
 	let resp = {
 		producedBys: selfProduce.slice(),
 		dps: dp.slice(),
+		socialMedias: socialMedias.slice(),
 		video
 	};
 	if (video) {
