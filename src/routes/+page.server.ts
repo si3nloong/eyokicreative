@@ -1,8 +1,6 @@
 import selfProduce from '$lib/data/self-produce';
 import type { PageServerLoad } from './$types';
 
-export const prerender = true;
-
 export const load: PageServerLoad = () => {
 	const sortedList = selfProduce.slice().sort((a, b) => b.score - a.score);
 	const allTimeFavorite = sortedList.slice().splice(0, 4);
