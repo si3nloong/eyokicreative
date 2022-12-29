@@ -42,6 +42,12 @@
 			&:hover {
 				transform: scale(1.05);
 			}
+
+			@media (hover: none) {
+				&:hover {
+					transform: none;
+				}
+			}
 		}
 
 		@media screen and (max-width: 600px) {

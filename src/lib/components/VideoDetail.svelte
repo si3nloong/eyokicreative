@@ -26,8 +26,8 @@
 
 	const player = useMediaPlayer();
 
-	const playVideo = () => {
-		player.play(video);
+	const playVideo = (video: Partial<Media>) => () => {
+		player.play(video as Media);
 	};
 </script>
 
@@ -41,7 +41,7 @@
 			{/if}
 		</div>
 		<div class="video-info">
-			<span>{`${monthNames[video.date[0] - 1].substring(0, 3)} ${video.date[1]}`}</span>
+			<span>{`${monthNames[video.month - 1].substring(0, 3)} ${video.year}`}</span>
 			<span class="pipe">|</span>
 			<span>{video.category}</span>
 			<span class="pipe">|</span>
@@ -49,13 +49,9 @@
 		</div>
 		{#if video.shortDesc}
 			<div>{@html video.shortDesc}</div>
-			<!-- {:else if video.lyrics}
-			{#each video.lyrics as [_, lyric]}
-				<div>{lyric}</div>
-			{/each} -->
 		{/if}
 		{#if type == 'small'}
-			<Button on:click={playVideo} style="margin-top: 1rem; width: 100%">PLAY NOW</Button>
+			<Button on:click={playVideo(video)} style="margin-top: 1rem; width: 100%">PLAY NOW</Button>
 		{/if}
 	</section>
 	<section class="addon-info">
@@ -80,7 +76,7 @@
 			{/if}
 			{#if video.editors}
 				<div>
-					<span class="label">{`Editor${video.dps.length > 1 ? 's' : ''}:`}</span><TagList
+					<span class="label">{`Editor${video.editors.length > 1 ? 's' : ''}:`}</span><TagList
 						items={video.editors}
 					/>
 				</div>
@@ -109,6 +105,42 @@
 		</div>
 	</section>
 </section>
+{#if video.relatedVideos}
+	<section>
+		<ul class="related-video-list">
+			{#each video.relatedVideos as item}
+				<li role="presentation" on:click={playVideo(item)}>
+					<div class="thumbnail">
+						<div class="aspect-ratio">
+							<img class="cover-img" src={item.cover} alt={item.title} />
+						</div>
+					</div>
+					<div class="video-details">
+						<h3>{item.title}</h3>
+						<!-- <div>{item.shortDesc}</div> -->
+						<section style="margin-top: 15px">
+							{#if item.dps}
+								<div>
+									<span class="label">{`Cinematographer${item.dps.length > 1 ? 's' : ''}:`}</span>
+									<TagList items={item.dps} />
+								</div>
+							{/if}
+							{#if item.editors}
+								<div>
+									<span class="label">{`Editor${item.editors.length > 1 ? 's' : ''}:`}</span
+									><TagList items={item.editors} />
+								</div>
+							{/if}
+						</section>
+						<div class="video-info" style="margin-top: 10px">
+							<span>{`${item.time}mins`}</span>
+						</div>
+					</div>
+				</li>
+			{/each}
+		</ul>
+	</section>
+{/if}
 
 <style lang="scss" global>
 	$paddingHorizontal: 2rem;
@@ -170,5 +202,44 @@
 		font-size: 12px;
 		color: var(--sub-text-color);
 		margin-right: 6px;
+	}
+
+	.related-video-list {
+		list-style: none;
+		list-style-position: inside;
+		margin-top: 60px;
+
+		li {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: var(--margin);
+			// align-items: center;
+
+			.thumbnail {
+				width: 100%;
+			}
+
+			.video-details {
+				flex-grow: 1;
+				padding: 0.65rem 0;
+			}
+		}
+
+		@media screen and (min-width: 680px) {
+			// margin-top: var(--margin);
+
+			li {
+				cursor: pointer;
+				flex-direction: row;
+
+				.thumbnail {
+					max-width: 320px;
+				}
+
+				.video-details {
+					padding: 0.65rem var(--padding);
+				}
+			}
+		}
 	}
 </style>

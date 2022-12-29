@@ -3,7 +3,9 @@ export type BehindTheScreen = Required<Pick<Media, 'title' | 'imageUrl' | 'link'
 export type Media = {
 	title: string;
 	shortDesc?: string;
-	// date: [month: number, year: number];
+	month: number;
+	year: number;
+	score: number;
 	category: string;
 	cover: string;
 	imageUrl: string;

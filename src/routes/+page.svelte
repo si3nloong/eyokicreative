@@ -4,7 +4,8 @@
 	import PlayList from '$lib/components/PlayList.svelte';
 	import VideoList from '$lib/components/VideoList.svelte';
 
-	export let data: { latestVideos: Media[]; popularVideos: Media[] } = {
+	export let data: { allTimeFavorite: Media[]; latestVideos: Media[]; popularVideos: Media[] } = {
+		allTimeFavorite: [],
 		latestVideos: [],
 		popularVideos: []
 	};
@@ -25,17 +26,17 @@
 
 	<section class="">
 		<Header href={getRedirectLink()}>All Time Favourite</Header>
-		<VideoList items={data.popularVideos.slice()} />
+		<VideoList items={data.allTimeFavorite} />
 	</section>
 
 	<section class="works">
 		<div>
 			<Header href={getRedirectLink()}>Latest works</Header>
-			<PlayList items={data.latestVideos.slice()} />
+			<PlayList items={data.latestVideos} />
 		</div>
 		<div>
 			<Header href={getRedirectLink()}>Most Popular</Header>
-			<PlayList items={data.latestVideos.slice()} />
+			<PlayList items={data.popularVideos} />
 		</div>
 	</section>
 </div>
