@@ -73,20 +73,18 @@
 	</ul>
 </section>
 
-<section>
+<!-- <section>
 	<h2>Social media</h2>
 	<ul class="video-list">
 		{#each data.socialMedias as item, i (getID(item, i))}
 			<li>
-				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<div class="d-16-9 thumbnail" on:click={onPreview(item)}>
 					<img src={item.cover} alt={item.title} />
 				</div>
 			</li>
 		{/each}
 	</ul>
-</section>
-
+</section> -->
 <style lang="scss">
 	section {
 		padding: var(--padding);
