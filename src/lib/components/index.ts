@@ -5,6 +5,7 @@ export type Media = {
 	shortDesc?: string;
 	month: number;
 	year: number;
+	score: number;
 	category: string;
 	cover: string;
 	imageUrl: string;
