@@ -7,6 +7,7 @@ export const load: PageServerLoad = () => {
 	const popularVideos = sortedList.slice(4, 9);
 
 	return {
+		latestHit: sortedList.slice().splice(0, 4),
 		allTimeFavorite,
 		popularVideos,
 		latestVideos: sortedList
