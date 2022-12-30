@@ -16,12 +16,20 @@
 			href: '/all-works'
 		},
 		{
+			label: 'Services',
+			href: '/services'
+		},
+		{
 			label: 'About Us',
 			href: '/about-us'
 		},
 		{
 			label: 'Contact Us',
 			href: '/contact-us'
+		},
+		{
+			label: 'Careers',
+			href: '/careers'
 		}
 	];
 

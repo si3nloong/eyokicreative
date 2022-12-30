@@ -54,8 +54,14 @@
 </div>
 
 <style lang="scss">
+	@import '../global.scss';
+
 	.main-box {
-		padding: var(--padding) 0;
+		padding: var(--padding);
+
+		@media screen and (min-width: $minWidth) {
+			padding: var(--padding) 0;
+		}
 	}
 
 	section {
