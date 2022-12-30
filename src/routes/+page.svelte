@@ -44,14 +44,14 @@
 <style lang="scss">
 	@import './global.scss';
 
-	h1 {
-		font-size: 48px;
-		line-height: 1.1;
-		width: 60%;
-	}
-
 	.headline {
 		padding: 6rem 0 8rem;
+
+		h1 {
+			font-size: 48px;
+			line-height: 1.1;
+			width: 60%;
+		}
 
 		@media screen and (max-width: $minWidth) {
 			padding: 0 0 3.5rem;

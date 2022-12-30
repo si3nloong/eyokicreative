@@ -129,6 +129,32 @@ export default [
 		]
 	},
 	{
+		title: 'Run it out',
+		shortDesc: `I'll be on my way<br/>有梦放心追<br/><br/>新的lane<br/>计划新的plan<br/>我想低调也没办法<br/>像子弹换发<br/>成为顶级玩家<br/>Run it run it up<br/><br/>Run it run it up<br/>看我在對著新的版圖衝刺 不管親戚的諷刺<br/>媽媽手機收到進帳的通知 打個電話問問近況
+		叫我Dj先關掉音響<br/>媽媽說她在滿庭芳<br/>今年過年想換個冰箱<br/>我告訴她不要省<br/>要就選有三個勾勾的<br/>早就說過等我湊夠了錢 拍個MV做個音樂不要偷偷的<br/>來年似水so像water隨意流淌<br/>不管是非
+		把cash和想要的都抓手上 機會都在手上<br/>ball like dame 投進一顆壓哨 im just doin my thing<br/>不理他們說的應該不算霸道<br/>不理他們的花招<br/>I pull up pull up pull up 剛考到了駕照<br/>I'll be on my way<br/>有梦放心追<br/><br/>新的lane<br/>计划新的plan<br/>我想低调也没办法<br/>像子弹换发<br/>成为顶级玩家<br/>run it run it up<br/>Imma go run it up stay solid with my day one从现在和以后<br/>看着妈妈躺在病床但我不能低头wave z you already know<br/>因为你们都在 所以我也没有停下的理由<br/>一直都知道我可以成为那个例外<br/>唔想衰俾佢哋睇 我会用晒所有D计<br/>我在异世界游走 为了让你们追上我的脚步<br/>作为反派英雄 我的fnf让我来保护<br/>回头看看相处的时间其实也没有多少<br/>答应过妈妈的承诺yeah我都会做到<br/>讲不出口的话我唱出来因为 我爱她<br/>yea I need that dough 4real<br/>and I need that cash 4real<br/>我不管他們怎麼說<br/>反正我有的他們都沒有<br/>不再讓你以淚洗面<br/>我只害怕敗給時間<br/>把自己關在studio又是過了幾天<br/>控制台在爆紅 遭罪的又是耳朵<br/>徹夜寫不出歌 但閉眼後又是惡夢<br/>每當我什麼都看不見<br/>腦海裡浮現的你的臉<br/>我知道當我需要守候你會站在我左邊<br/>憑良心說還不夠強and thats a fact<br/>但我想把歌词变成钱给你长点face<br/>
+		I came from riverside 我带动新的wave<br/>yall know at swan city 我挥动我的wing<br/><br/>I'll be on my way<br/>有梦放心追<br/><br/>新的lane<br/>计划新的plan<br/>我想低调也没办法<br/>像子弹换发<br/>成为顶级玩家<br/>run it run it up`,
+		category: 'MV',
+		year: 2022,
+		month: 12,
+		score: 9,
+		cover: '/images/cover/',
+		imageUrl: '/images/',
+		directors: ['Chua (Eyoki Creative)', 'Yuki (Eyoki Creative)'],
+		dps: ['Yuki (Eyoki Creative)', 'YP'],
+		editors: ['Jun (Eyoki Creative)', 'Gerard (Eyoki Creative)'],
+		casts: ['Lokk', 'Howsun', 'RG', 'Dicky Kam Dancers'],
+		produceBy: 'Eyoki Creative',
+		audios: ['Mandarin (中文)'],
+		subtitles: ['Simplified Chinese (简体中文)', 'English'],
+		time: '02:48',
+		link: 'nEVLkBp6gyc',
+		client: {
+			name: '百格 Pocketimes',
+			imageUrl: '/logo/pocketimes.webp'
+		}
+	},
+	{
 		title: '凡人不懂愛',
 		shortDesc: `天空漆黑 星不會光照我<br/>輾轉反側 悲傷裡躺臥<br/>我亦習慣一個 怕又試不小心惹禍<br/>無用呼救了 誰又會救助<br/><br/>風中穿梭 只得你心痛我<br/>低聲哭泣 只得你可以聆聽我<br/>如沒身份的魔 凡人不懂愛我<br/>無從解釋對錯 但你卻徹底相信我<br/><br/>無須刻意想起 仍然深刻銘記<br/>如若心聲相通 憑直覺都可感覺你<br/>若消散成為氧氣<br/>停留世界靜靜懷抱你<br/>掉眼淚 原來是掛念你<br/><br/>風中穿梭 只得你温暖我<br/>
 	低聲哭泣 只得你敢再行近我<br/>如沒身份的魔 凡人不懂愛我<br/>懷疑給詛咒過 但你卻放膽擁抱我<br/><br/>無須刻意想起 仍然深刻銘記<br/>如若心聲相通 憑直覺都可感覺你<br/>若灰飛成為氧氣<br/>停留世界靜靜懷抱你<br/>掉眼淚 原來我掛念你<br/><br/>當天真的灰心到 很想拋棄自己<br/>你卻拼命只想與我一起<br/>才明白愛情 超出生與死<br/><br/>無須刻意想起 仍然深刻銘記<br/>如若心聲相通 憑直覺都可感覺你<br/>若灰飛成為氧氣 我只要剩低一口氣<br/>未氣絕 都想叫喚你<br/>掉眼淚 只因掛念你`,
