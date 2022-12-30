@@ -7,14 +7,16 @@
 	const { video } = data;
 </script>
 
-<div class="cover-box">
-	<div class="d-16-9 cover">
-		<img src={video.cover} alt={video.title} />
+<div class="main-box">
+	<div class="cover-box">
+		<div class="d-16-9 cover">
+			<img src={video.cover} alt={video.title} />
+		</div>
 	</div>
+	<section class="info-box">
+		<VideoDetail {video} type="small" />
+	</section>
 </div>
-<section class="info-box">
-	<VideoDetail {video} type="small" />
-</section>
 
 <style lang="scss">
 	@import '../../global.scss';
@@ -27,13 +29,15 @@
 		}
 	}
 
-	.info-box {
-		padding: var(--padding);
+	.cover-box {
+		padding: 0;
 	}
 
-	@media screen and (min-width: $minWidth) {
-		.cover-box {
-			padding: 0 var(--padding);
+	.info-box {
+		padding: var(--padding);
+
+		@media screen and (min-width: $minWidth) {
+			padding: var(--padding) 0;
 		}
 	}
 </style>
