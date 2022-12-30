@@ -40,13 +40,23 @@
 </section>
 
 <style lang="scss">
+	@import '../global.scss';
+
+	section {
+		padding: var(--padding);
+
+		@media screen and (min-width: $minWidth) {
+			padding: var(--padding) 0;
+		}
+	}
+
 	ul,
 	ol {
 		list-style-position: inside;
 	}
 
 	.job-list {
-		margin-top: 2rem;
+		margin-top: var(--margin);
 
 		li {
 			display: flex;

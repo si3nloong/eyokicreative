@@ -86,10 +86,12 @@
 	</ul>
 </section> -->
 <style lang="scss">
+	@import '../global.scss';
+
 	section {
 		padding: var(--padding);
 
-		@media screen and (min-width: 600px) {
+		@media screen and (min-width: $minWidth) {
 			padding: var(--padding) 0;
 		}
 	}
@@ -105,7 +107,7 @@
 
 		li {
 			width: 100%;
-			padding: 10px;
+			padding: var(--padding-sm);
 
 			.thumbnail {
 				cursor: pointer;

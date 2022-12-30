@@ -17,6 +17,8 @@
 </section>
 
 <style lang="scss">
+	@import '../../global.scss';
+
 	.cover {
 		img {
 			position: absolute;
@@ -29,7 +31,7 @@
 		padding: var(--padding);
 	}
 
-	@media screen and (min-width: 640px) {
+	@media screen and (min-width: $minWidth) {
 		.cover-box {
 			padding: 0 var(--padding);
 		}

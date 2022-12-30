@@ -1,11 +1,7 @@
-<script context="module" lang="ts">
-	export const prerender = true;
-</script>
-
 <script lang="ts">
 </script>
 
-<div>
+<section>
 	<article>
 		<h3>For enquiry</h3>
 		<ul class="info-list">
@@ -37,9 +33,19 @@
 			</li>
 		</ul>
 	</article>
-</div>
+</section>
 
 <style lang="scss">
+	@import '../global.scss';
+
+	section {
+		padding: var(--padding);
+
+		@media screen and (min-width: $minWidth) {
+			padding: var(--padding) 0;
+		}
+	}
+
 	article {
 		padding: 1rem 0;
 	}
