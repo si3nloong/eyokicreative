@@ -1,5 +1,5 @@
 <script context="module" lang="ts">
-	import { getContext, setContext } from 'svelte';
+	import { getContext, setContext, createEventDispatcher } from 'svelte';
 	import { writable, type Readable } from 'svelte/store';
 
 	const KEY = {};
@@ -20,10 +20,11 @@
 	import { fade } from 'svelte/transition';
 	import YouTubePlayer from 'yt-player';
 	import type { Media } from './';
-	import TagList from './TagList.svelte';
 	import { isMobile } from '$lib/utils';
 	import VideoDetail from './VideoDetail.svelte';
 	import Modal from './Modal.svelte';
+
+	const dispatch = createEventDispatcher();
 
 	let player: HTMLDivElement;
 	let ytPlayer: YouTubePlayer;
@@ -51,10 +52,9 @@
 				// controls: false,
 				related: false
 			});
-			// ytPlayer.on('playing', () => {
-			// 	console.log(ytPlayer.getDuration()); // => 351.521
-			// });
-			// ytPlayer.on('timeupdate', console.log);
+			ytPlayer.on('timeupdate', (v) => {
+				dispatch('timeupdate', v);
+			});
 		}
 		playing = true;
 		store$.update((v) => Object.assign(v, { playing }));

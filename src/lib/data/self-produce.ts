@@ -550,8 +550,8 @@ export default [
 		}
 	},
 	{
-		title: 'Appeton Infomercial',
-		shortDesc: ``,
+		title: 'Appeton The Fighter',
+		shortDesc: '',
 		category: 'Commercial',
 		year: 2022,
 		month: 7,
@@ -567,23 +567,29 @@ export default [
 		subtitles: ['English'],
 		link: 'Sis3cytosgU',
 		time: '00:20',
-		relatedVideos: [
-			{
-				title: 'Appeton The Fighter',
-				cover: '/images/cover/appeton-the-fighter.webp',
-				imageUrl: '/images/cover/appeton-the-fighter.webp',
-				produceBy: 'Eyoki Creative',
-				directors: ['Boon'],
-				dps: ['Yuki (Eyoki Creative)'],
-				editors: ['Jun (Eyoki Creative)'],
-				casts: ['Amelia Chen'],
-				category: 'Commercial',
-				audios: ['English'],
-				subtitles: ['English'],
-				link: 'OdqyG1EhEzM',
-				time: '00:20'
-			}
-		],
+		client: {
+			name: 'Appeton',
+			imageUrl: '/logo/appeton.webp'
+		}
+	},
+	{
+		title: 'Appeton Infomercial',
+		shortDesc: '',
+		category: 'Commercial',
+		year: 2022,
+		month: 7,
+		score: 6,
+		cover: '/images/cover/appeton-the-fighter.webp',
+		imageUrl: '/images/cover/appeton-the-fighter.webp',
+		produceBy: 'Eyoki Creative',
+		directors: ['Boon'],
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: ['Jun (Eyoki Creative)'],
+		casts: ['Amelia Chen'],
+		audios: ['English'],
+		subtitles: ['English'],
+		link: 'OdqyG1EhEzM',
+		time: '00:20',
 		client: {
 			name: 'Appeton',
 			imageUrl: '/logo/appeton.webp'
