@@ -55,6 +55,14 @@
 <style lang="scss">
 	@import './global.scss';
 
+	.main-box {
+		padding: var(--padding);
+
+		@media screen and (min-width: $minWidth) {
+			padding: var(--padding) 0;
+		}
+	}
+
 	.headline {
 		padding: 6rem 0 8rem;
 

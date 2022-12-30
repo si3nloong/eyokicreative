@@ -17,6 +17,7 @@ export type Media = {
 	casts?: string[];
 	audios: string[];
 	subtitles?: string[];
+	pictures?: Partial<{ jpeg: string; webp: string }>;
 	relatedVideos?: Pick<Media, 'title' | 'link' | 'time' | 'cover' | 'dps' | 'editors'>[];
 	client?: {
 		name: string;
