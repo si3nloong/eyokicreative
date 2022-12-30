@@ -11,9 +11,9 @@
 		`Eyoki Creative is a Malaysia creative production company that led by a famouse female director of photography (DoP).`;
 
 	const onTimeUpdate = (v: CustomEvent<number>) => {
-		const params = new URLSearchParams($page.url.searchParams);
-		params.set('time', `${v.detail}`);
-		history.replaceState({}, '', `?${params.toString()}`);
+		// const params = new URLSearchParams($page.url.searchParams);
+		// params.set('time', `${v.detail}`);
+		// history.replaceState({}, '', `?${params.toString()}`);
 	};
 </script>
 

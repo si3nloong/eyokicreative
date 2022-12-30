@@ -11,7 +11,7 @@ export const load: PageServerLoad = ({ params, request }) => {
 		imageUrl = video.pictures?.jpeg || video.pictures?.webp || '';
 	}
 	return {
-		image: `${uri.origin}${imageUrl}`,
+		image: imageUrl,
 		title: `EYOKI - ${video.title}`,
 		description: video.shortDesc || '',
 		video
