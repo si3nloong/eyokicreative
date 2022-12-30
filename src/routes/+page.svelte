@@ -42,25 +42,18 @@
 </div>
 
 <style lang="scss">
+	@import './global.scss';
+
 	h1 {
 		font-size: 48px;
 		line-height: 1.1;
 		width: 60%;
 	}
 
-	.main-box,
-	.section {
-		padding: var(--padding);
-
-		@media screen and (min-width: 600px) {
-			padding: var(--padding) 0;
-		}
-	}
-
 	.headline {
 		padding: 6rem 0 8rem;
 
-		@media screen and (max-width: 600px) {
+		@media screen and (max-width: $minWidth) {
 			padding: 0 0 3.5rem;
 		}
 	}
@@ -83,7 +76,7 @@
 			width: 100%;
 		}
 
-		@media screen and (min-width: 640px) {
+		@media screen and (min-width: $minWidth) {
 			flex-direction: row;
 
 			& > div {

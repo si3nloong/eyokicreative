@@ -46,7 +46,8 @@
 			}
 
 			if (show && video) {
-				history.pushState({}, '', `?id=${video.link}`);
+				params.set('id', video.link);
+				history.pushState({}, '', `?${params.toString()}`);
 			} else if (!show) {
 				history.pushState({}, '', '?');
 			}

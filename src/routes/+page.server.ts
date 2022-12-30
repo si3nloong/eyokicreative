@@ -5,6 +5,7 @@ export const load: PageServerLoad = () => {
 	const sortedList = selfProduce.slice().sort((a, b) => b.score - a.score);
 	const allTimeFavorite = sortedList.slice().splice(0, 4);
 	const popularVideos = sortedList.slice(4, 9);
+
 	return {
 		allTimeFavorite,
 		popularVideos,
