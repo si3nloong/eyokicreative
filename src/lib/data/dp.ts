@@ -202,6 +202,28 @@ export default [
 		}
 	},
 	{
+		title: 'The Fennel at Sentul East',
+		shortDesc: `The Fennel by YTL Land & Development Berhad is the most recent chapter in its urban renewal initiative to revitalise Sentul East, a historical railway town just 5km north-west of Kuala Lumpur city centre. Cutting a distinctive shape through the Kuala Lumpur skyline, its 916 condominium units are spread over four 38-storey seductively skewed towers. Residents enjoy spectacular views of KLCC and naturally ventilated living spaces amidst a lush and natural landscape setting. Most unprecedented are its two Olympic-length salt-water swimming pools suspended dramatically over two majestic vehicular arrival courtyards.`,
+		category: 'Commercial',
+		year: 2021,
+		month: 12,
+		score: 10,
+		cover: '/images/cover/ytl-the-fennel.webp',
+		imageUrl: '',
+		produceBy: 'Arts In Motion',
+		directors: ['Chong Kern Wei'],
+		dps: ['Yuki (Eyoki Creative)'],
+		editors: ['Chong Kern Wei'],
+		audios: ['English'],
+		subtitles: ['English'],
+		link: 'QJjbONGZNoc',
+		time: '01:59',
+		client: {
+			name: 'YTL',
+			imageUrl: '/logo/ytl.webp'
+		}
+	},
+	{
 		title: `8 Conlay Inspiration Series - Setting The Mood`,
 		shortDesc: `"The KSK project is the first project we have done in Malaysia. It felt right for us to be doing this project there, because YOO and KSK wanted us to bring something international but creating something that was accessible. Nobody would come to Kelly Hoppen unless they believed that we could do the project correctly but I think the great thing about YOO and KSK is that you got the Kempinski hotel and they will service the apartments," says Kelly Hoppen, the British interior designer behind YOO8 Tower B's exclusive concepts.`,
 		category: 'Commercial',
