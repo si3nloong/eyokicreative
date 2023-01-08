@@ -105,8 +105,8 @@
 	<!-- Footer section -->
 	<footer>
 		<div>
-			<p>Copyright Reserved © 2022 Eyoki Creative.</p>
-			<div>Registered in Malaysia. (002865528-A)</div>
+			<p>Copyright Reserved © 2022 Eyoki Sdn Bhd.</p>
+			<div>Registered in Malaysia. (1492261-D)</div>
 			<p>
 				<!-- svelte-ignore security-anchor-rel-noreferrer -->
 				Designed & Made by
